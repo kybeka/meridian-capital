@@ -38,3 +38,7 @@ The logo was supplied by the team. The website uses a background-cleaned derivat
 `dist/assets/meridian-capital-official.png` is the polished official web logo, used in the header, hero, footer and browser icon. A download link appears in the team section. Preserve its proportions and use it on light backgrounds. This is a transparent raster PNG, not a vector master; the original supplied artwork remains unchanged.
 
 Polished with the built-in image generation tool. Prompt: Preserve the existing globe, orbit rings, compass star, endpoint dots and MERIDIAN CAPITAL lettering; remove checkerboard contamination, reduce grain, refine gold shading and edges, retain navy/ivory/gold and the original composition, with a transparent background and no added glow or shadow.
+
+## Team portraits
+
+The five `dist/assets/team/member-0N-white.png` files are the website portraits, in the same order as the named team cards. The original JPEGs are retained. White-background versions were edited using the built-in image generation tool with this shared prompt: replace only the background with solid white; preserve identity, facial features, expression, hair, skin texture, accessories and clothing; use a centered square headshot with headroom and subtle exposure balancing. AI-assisted background edits can introduce small visual differences from the originals.
