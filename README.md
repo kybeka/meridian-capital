@@ -1,20 +1,34 @@
 # Meridian Capital
 
-Private first website draft for the Asset Management Challenge 2026.
+Website for Meridian Capital's participation in the Asset Management Challenge 2026 at USI.
 
-## Edit
+## Website
 
-- `dist/index.html`: content, navigation, document links and sections.
-- `dist/styles.css`: responsive layout and navy/gold/ivory theme.
-- `dist/app.js`: accessible performance and research tabs, mobile menu.
-- `dist/assets/meridian-logo.png`: background-cleaned draft of the supplied logo.
+GitHub Pages publishes the `dist` directory automatically when changes are pushed to `main`. Deployment status and the current website address are available under **Actions → Deploy website to GitHub Pages** and **Settings → Pages**.
 
-Run `node preview.mjs` from this directory for http://127.0.0.1:4173.
+## Edit the website
 
-Before sharing with the class, confirm the investment policy, add approved team profiles, replace unpublished document entries with actual links, and provide dated performance observations. Keep historical backtests separate from live results. The site currently contains no invented financial observations or holdings. Challenge constraints come from the supplied AMC 2026 guidelines.
+- `dist/index.html`: page content, team profiles and document links.
+- `dist/styles.css`: responsive layout, DM Sans body typography and navy/gold/ivory theme.
+- `dist/app.js`: research tabs, performance tabs and mobile navigation.
+- `dist/assets/`: images and downloadable materials.
 
-## Logo provenance
+The site uses plain HTML, CSS and JavaScript. No dependency installation or build step is required. DM Sans loads from Google Fonts.
 
-Original: user-supplied `0968264c-b6f8-4155-8040-4624599ae67a.png`; original left unchanged. Built-in imagegen produced the transparent draft asset. It retains the voted composition but introduced soft glow around portions of the mark; replace with the original transparent export if available.
+To preview locally with Node.js:
 
-Prompt: Remove the baked gray-white checkerboard completely into genuine transparent alpha, including spaces between letters and orbit lines. Preserve the navy/gold globe, textured shading, orbital rings, four-point star, endpoints, composition, exact MERIDIAN CAPITAL text and typography. Change only the background; no redesign, new elements, shadows, backdrop or checkerboard.
+```sh
+node preview.mjs
+```
+
+Open http://127.0.0.1:4173. Stop the server with Ctrl+C.
+
+Use relative links for local assets and documents so the site works under the repository's Pages path. Add reports to `dist/documents/` and link to `documents/filename.pdf`.
+
+## Content status
+
+This is an academic simulation, not an investment offering. Team profiles, approved investment policy, holdings and performance observations still need to be supplied. Unpublished materials are labelled accordingly. Keep live challenge results separate from historical backtests, and include dates and sources when adding results.
+
+## Logo
+
+The logo was supplied by the team. The website uses a background-cleaned derivative that preserves its composition but slightly softens parts of the artwork. Replace it with the original transparent export when available. The original supplied image was not modified.
