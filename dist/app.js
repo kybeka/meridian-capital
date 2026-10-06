@@ -35,3 +35,25 @@ document.querySelectorAll('[role="tablist"]').forEach(list => {
     });
   });
 });
+
+const sectionLinks = [...navigation.querySelectorAll('a')];
+const sectionObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    sectionLinks.forEach(link => {
+      if (link.hash === `#${entry.target.id}`) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  });
+}, { rootMargin: '-15% 0px -60% 0px' });
+sectionLinks.forEach(link => {
+  const section = document.querySelector(link.hash);
+  if (section) sectionObserver.observe(section);
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+    menuButton.setAttribute('aria-expanded', 'false');
+    navigation.classList.remove('open');
+    menuButton.focus();
+  }
+});

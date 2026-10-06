@@ -3,3 +3,22 @@
 @media(max-width:1000px){header{gap:20px}nav{gap:18px}.edition{display:none}.hero{padding-top:60px;min-height:auto}h1{font-size:4rem}.approach,.portfolio{gap:40px;grid-template-columns:1fr 1.2fr}.principles{grid-template-columns:1fr}.principles article{display:grid;grid-template-columns:30px 1fr;gap:0 15px}.principles p{grid-column:2}.index{border:0;padding:0;margin:0}.performance-top{display:block}.tabs{margin-top:25px;width:fit-content}.round-intro{display:block}.round-intro p{margin-top:15px}.document-list li{grid-template-columns:130px 1fr auto}}
 @media(max-width:700px){html{scroll-padding-top:20px}header{height:85px;position:relative;flex-wrap:wrap;justify-content:space-between}.wordmark{font-size:1.3rem}.wordmark span{font-size:.6rem}.menu-toggle{display:block;background:none;border:1px solid #aab3b4;padding:9px 13px;font-size:.875rem}nav{display:none;position:absolute;top:84px;left:-5.5%;right:-5.5%;z-index:10;background:var(--paper);padding:20px 7%;box-shadow:0 10px 16px #0a223310;flex-direction:column;gap:5px}nav.open{display:flex}.hero{grid-template-columns:1fr;padding:45px 6% 35px;gap:25px}h1{font-size:clamp(3.2rem,12vw,4.5rem)}.hero-copy .eyebrow{font-size:.7rem}.hero-art{max-width:470px;width:100%;margin:0 auto}.hero-note{margin-top:30px;gap:10px;font-size:.7rem}.hero-note span+span{padding-left:10px}.art-caption{margin-top:15px}.mandate-strip{grid-template-columns:1fr 1fr;gap:25px;padding:30px 6%}.mandate-strip>div:nth-child(2){border:0}.metric-label{font-size:.8rem;line-height:1.5;max-width:145px}.mandate-strip strong{font-size:2.4rem}.mandate-strip .text-metric{font-size:1.3rem}.section{padding:60px 6%}.approach,.portfolio,.team{grid-template-columns:1fr;gap:15px}.large-copy{font-size:1.15rem}.principles{margin-top:30px}.portfolio-panel{padding:22px;margin-top:10px}.panel-top{align-items:flex-start}.panel-top h3{font-size:1rem}.allocation-empty{gap:20px}.allocation-number{font-size:3.5rem}.allocation-empty h4{font-size:1.1rem}.mandate-details div{gap:20px;font-size:.8rem}.performance-metrics{grid-template-columns:1fr 1fr;gap:30px}.tabs{gap:20px}.tabs button{font-size:.8rem}.backtest-checklist{grid-template-columns:1fr 1fr}.research-heading{display:block}.research-heading>p{max-width:none}.round-tabs button{padding:15px 8px;font-size:.85rem}.round-tabs button span{font-size:.8rem;line-height:1.4}.document-list li{grid-template-columns:1fr auto;gap:10px}.document-type{grid-column:1/-1}.document-list li>span:nth-child(2){font-size:.9rem}.document-state{font-size:.75rem}.team{gap:10px}footer{flex-wrap:wrap;padding:32px 6%;gap:25px}footer p{max-width:200px}footer>a:last-child{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Brand refinements */
+header{height:112px;position:relative}
+.brand-logo{display:block;width:142px;height:94px;object-fit:contain}
+header nav a{border-bottom:2px solid transparent;transition:color .18s,border-color .18s}
+header nav a:hover,header nav a[aria-current="location"]{color:#795827;border-bottom-color:var(--gold)}
+.hero{padding-top:64px;padding-bottom:64px}
+.hero-art img{max-width:620px;margin-inline:auto}
+.intro{font-size:1.125rem;max-width:410px;line-height:1.75}
+.button{border-radius:3px;padding:17px 26px}
+.section{scroll-margin-top:24px}
+.principles h3{line-height:1.4}
+.tabs button,.round-tabs button{transition:color .18s,background .18s}
+.round-tabs button:hover{background:#ecebe4}
+.document-list li{transition:background .18s}
+.document-list li:hover{background:#efeee7}
+.logo-download{display:inline-block;margin-top:18px;color:#795827;border-bottom:1px solid #b28a4d;padding-bottom:4px;font-size:.875rem}
+footer .brand-logo{width:170px;height:114px}
+@media(max-width:700px){header{height:94px}.brand-logo{width:120px;height:80px}nav{top:93px}.hero{padding-top:36px;padding-bottom:36px}.hero-art{max-width:380px}.intro{font-size:1.05rem}.hero-note{flex-wrap:wrap}.panel-top{flex-wrap:wrap}.document-list li{grid-template-columns:1fr}.document-state{grid-column:1}.tabs button{min-height:48px}.round-tabs button{min-height:80px}footer .brand-logo{width:145px;height:97px}}

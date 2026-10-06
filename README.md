@@ -32,3 +32,9 @@ This is an academic simulation, not an investment offering. Team profiles, appro
 ## Logo
 
 The logo was supplied by the team. The website uses a background-cleaned derivative that preserves its composition but slightly softens parts of the artwork. Replace it with the original transparent export when available. The original supplied image was not modified.
+
+### Official website logo
+
+`dist/assets/meridian-capital-official.png` is the polished official web logo, used in the header, hero, footer and browser icon. A download link appears in the team section. Preserve its proportions and use it on light backgrounds. This is a transparent raster PNG, not a vector master; the original supplied artwork remains unchanged.
+
+Polished with the built-in image generation tool. Prompt: Preserve the existing globe, orbit rings, compass star, endpoint dots and MERIDIAN CAPITAL lettering; remove checkerboard contamination, reduce grain, refine gold shading and edges, retain navy/ivory/gold and the original composition, with a transparent background and no added glow or shadow.
