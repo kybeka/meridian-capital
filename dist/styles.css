@@ -23,19 +23,21 @@ header nav a:hover,header nav a[aria-current="location"]{color:#795827;border-bo
 footer .brand-logo{width:170px;height:114px}
 @media(max-width:700px){header{height:94px}.brand-logo{width:120px;height:80px}nav{top:93px}.hero{padding-top:36px;padding-bottom:36px}.hero-art{max-width:380px}.intro{font-size:1.05rem}.hero-note{flex-wrap:wrap}.panel-top{flex-wrap:wrap}.document-list li{grid-template-columns:1fr}.document-state{grid-column:1}.tabs button{min-height:48px}.round-tabs button{min-height:80px}footer .brand-logo{width:145px;height:97px}}
 
-/* Consistent portraits and balanced team rows. */
-.team{display:block}
-.team-heading{max-width:760px;margin-bottom:44px}
+/* Team: compact portrait cards with integrated nameplates. */
+.team{display:block;padding-top:80px;padding-bottom:80px}
+.team-heading{max-width:660px;margin:0 auto 48px;text-align:center}
+.team-heading .eyebrow{margin-bottom:16px}
 .team-heading h2{margin-bottom:20px}
-.team-heading .large-copy{font-size:1.05rem;color:var(--muted);line-height:1.8;margin:0}
-.team-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:38px 30px;max-width:1020px;margin:0 auto}
-.team-member{grid-column:span 2;margin:0;min-width:0}
+.team-heading .large-copy{font-size:1rem;color:var(--muted);line-height:1.8;margin:0}
+.team-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:28px;max-width:900px;margin:0 auto}
+.team-member{grid-column:span 2;margin:0;min-width:0;background:#fff;border:1px solid var(--line);border-radius:3px;overflow:hidden}
 .team-member:nth-child(4){grid-column:2 / span 2}
 .team-member:nth-child(5){grid-column:4 / span 2}
-.portrait-frame{aspect-ratio:1;overflow:hidden;background:#fff;border:1px solid #e2e4e1}
-.portrait{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
-.team-member figcaption{margin-top:0;padding:20px 8px 0;text-align:center;min-height:76px}
-.team-member h3{font-size:1.125rem;line-height:1.5;font-weight:500;margin:0;text-wrap:balance}
-.team-links{display:flex;justify-content:space-between;gap:25px;margin-top:40px;padding-top:10px;border-top:1px solid var(--line)}
-@media(max-width:700px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 18px}.team-member,.team-member:nth-child(4),.team-member:nth-child(5){grid-column:auto}.team-member:last-child{grid-column:1/-1;width:calc((100% - 18px)/2);justify-self:center}.team-member h3{font-size:1rem}.team-heading{margin-bottom:28px}.team-links{flex-direction:column;align-items:start;gap:0}}
-@media(max-width:420px){.team-grid{display:flex;flex-direction:column;align-items:center;gap:28px}.team-member,.team-member:last-child{width:100%;max-width:290px}.team-member figcaption{min-height:0;padding-top:15px}}
+.portrait-frame{aspect-ratio:1;overflow:hidden;background:#fff;padding:12px 12px 0}
+.portrait{display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom}
+.team-member figcaption{margin:0;padding:20px 12px;min-height:88px;display:flex;align-items:center;justify-content:center;text-align:center;background:var(--navy);color:var(--paper);border-top:1px solid #b4a382}
+.team-member h3{font-size:1.0625rem;line-height:1.45;font-weight:500;margin:0;text-wrap:balance;max-width:23ch}
+.team-links{display:flex;justify-content:center;align-items:center;gap:32px;margin-top:40px;padding-top:24px;border-top:1px solid var(--line)}
+.team-links a{margin-top:0;font-size:.875rem}
+@media(max-width:700px){.team{padding-top:56px;padding-bottom:56px}.team-heading{margin-bottom:32px}.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:520px}.team-member,.team-member:nth-child(4),.team-member:nth-child(5){grid-column:auto}.team-member:last-child{grid-column:1/-1;width:calc((100% - 20px)/2);justify-self:center}.team-member h3{font-size:1rem}.portrait-frame{padding:8px 8px 0}.team-member figcaption{padding:16px 8px;min-height:88px}.team-links{gap:20px;flex-wrap:wrap}}
+@media(max-width:380px){.team-grid{gap:12px}.team-member:last-child{width:calc((100% - 12px)/2)}.team-member figcaption{padding:14px 6px;min-height:96px}.team-member h3{font-size:.9375rem}.team-links{flex-direction:column}}
