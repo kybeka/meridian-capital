@@ -31,13 +31,7 @@ This is an academic simulation, not an investment offering. Team names and portr
 
 ## Logo
 
-The logo was supplied by the team. The downloadable version is an AI-assisted cleanup with transparent surroundings and cool champagne gold. The original supplied image was not modified.
-
-### Official website logo
-
-`dist/assets/meridian-capital-official.png` is the downloadable full logo, a transparent 1536 × 1024 PNG intended for light backgrounds. The navigation and favicon use separate icon assets. This is a raster file, not a vector master.
-
-Cleaned with the built-in image editing tool. Prompt: Preserve the globe, compass, rings and exact MERIDIAN CAPITAL wording; remove all surrounding haze and glow, use fully transparent surroundings, crisp edges, navy/ivory and cool desaturated champagne gold. Transparency was checked numerically and by compositing a preview onto a light background.
+The downloadable `dist/assets/meridian-capital-official.png` restores the approved artwork from commit a21e4a8. Only RGB values of fully transparent pixels were cleared. Every visible pixel and every alpha value was verified unchanged. No regeneration, recolouring or shape changes were applied. This is a 1536 × 1024 transparent raster PNG, intended for light backgrounds, not a vector master. The original supplied image remains unchanged. Navigation and favicon assets are separate.
 
 ## Team portraits
 
