@@ -42,3 +42,9 @@ Polished with the built-in image generation tool. Prompt: Preserve the existing 
 ## Team portraits
 
 The five `dist/assets/team/member-0N-white.png` files are the website portraits, in the same order as the named team cards. The original JPEGs are retained. White-background versions were edited using the built-in image generation tool with this shared prompt: replace only the background with solid white; preserve identity, facial features, expression, hair, skin texture, accessories and clothing; use a centered square headshot with headroom and subtle exposure balancing. AI-assisted background edits can introduce small visual differences from the originals.
+
+## Icon and hero
+
+The transparent `dist/assets/meridian-icon.png` appears beside the navigation wordmark. Its 128px derivative `meridian-favicon.png` is the browser icon. The hero uses a decorative SVG meridian diagram, not financial data.
+
+Icon created with the built-in image editing tool from the official logo. Prompt: Extract only the globe, compass star and orbit rings; remove lettering and surrounding glow; preserve the navy/ivory emblem with cool champagne gold on a transparent square background.
