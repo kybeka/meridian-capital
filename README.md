@@ -31,13 +31,13 @@ This is an academic simulation, not an investment offering. Team names and portr
 
 ## Logo
 
-The logo was supplied by the team. The website uses a background-cleaned derivative that preserves its composition but slightly softens parts of the artwork. Replace it with the original transparent export when available. The original supplied image was not modified.
+The logo was supplied by the team. The downloadable version is an AI-assisted cleanup with transparent surroundings and cool champagne gold. The original supplied image was not modified.
 
 ### Official website logo
 
-`dist/assets/meridian-capital-official.png` is the polished official web logo, used in the hero. Text wordmarks keep the header and footer readable, and a simple M monogram serves as the browser icon. A logo download link appears in the footer. Preserve its proportions and use it on light backgrounds. This is a transparent raster PNG, not a vector master; the original supplied artwork remains unchanged.
+`dist/assets/meridian-capital-official.png` is the downloadable full logo, a transparent 1536 × 1024 PNG intended for light backgrounds. The navigation and favicon use separate icon assets. This is a raster file, not a vector master.
 
-Polished with the built-in image generation tool. Prompt: Preserve the existing globe, orbit rings, compass star, endpoint dots and MERIDIAN CAPITAL lettering; remove checkerboard contamination, reduce grain, refine gold shading and edges, retain navy/ivory/gold and the original composition, with a transparent background and no added glow or shadow.
+Cleaned with the built-in image editing tool. Prompt: Preserve the globe, compass, rings and exact MERIDIAN CAPITAL wording; remove all surrounding haze and glow, use fully transparent surroundings, crisp edges, navy/ivory and cool desaturated champagne gold. Transparency was checked numerically and by compositing a preview onto a light background.
 
 ## Team portraits
 
