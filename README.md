@@ -10,7 +10,7 @@ GitHub Pages publishes the `dist` directory automatically when changes are pushe
 
 - `dist/index.html`: page content, team profiles and document links.
 - `dist/styles.css`: responsive layout, DM Sans body typography and navy/gold/ivory theme.
-- `dist/app.js`: research tabs, performance tabs and mobile navigation.
+- `dist/app.js`: research tabs, active section tracking and mobile navigation.
 - `dist/assets/`: images and downloadable materials.
 
 The site uses plain HTML, CSS and JavaScript. No dependency installation or build step is required. DM Sans loads from Google Fonts.
@@ -27,7 +27,7 @@ Use relative links for local assets and documents so the site works under the re
 
 ## Content status
 
-This is an academic simulation, not an investment offering. Team profiles, approved investment policy, holdings and performance observations still need to be supplied. Unpublished materials are labelled accordingly. Keep live challenge results separate from historical backtests, and include dates and sources when adding results.
+This is an academic simulation, not an investment offering. Team names and portraits are published. Approved investment policy, holdings and performance observations still need to be supplied. Unpublished materials are labelled accordingly. Keep live challenge results separate from historical backtests, and include dates and sources when adding results.
 
 ## Logo
 
@@ -35,7 +35,7 @@ The logo was supplied by the team. The website uses a background-cleaned derivat
 
 ### Official website logo
 
-`dist/assets/meridian-capital-official.png` is the polished official web logo, used in the header, hero, footer and browser icon. A download link appears in the team section. Preserve its proportions and use it on light backgrounds. This is a transparent raster PNG, not a vector master; the original supplied artwork remains unchanged.
+`dist/assets/meridian-capital-official.png` is the polished official web logo, used in the hero. Text wordmarks keep the header and footer readable, and a simple M monogram serves as the browser icon. A logo download link appears in the footer. Preserve its proportions and use it on light backgrounds. This is a transparent raster PNG, not a vector master; the original supplied artwork remains unchanged.
 
 Polished with the built-in image generation tool. Prompt: Preserve the existing globe, orbit rings, compass star, endpoint dots and MERIDIAN CAPITAL lettering; remove checkerboard contamination, reduce grain, refine gold shading and edges, retain navy/ivory/gold and the original composition, with a transparent background and no added glow or shadow.
 
