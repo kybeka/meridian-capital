@@ -48,3 +48,5 @@ The five `dist/assets/team/member-0N-white.png` files are the website portraits,
 The transparent `dist/assets/meridian-icon.png` appears beside the navigation wordmark. Its 128px derivative `meridian-favicon.png` is the browser icon. The hero uses a decorative SVG meridian diagram, not financial data.
 
 Icon created with the built-in image editing tool from the official logo. Prompt: Extract only the globe, compass star and orbit rings; remove lettering and surrounding glow; preserve the navy/ivory emblem with cool champagne gold on a transparent square background.
+
+The browser favicon uses `dist/favicon.svg` with an embedded PNG and a tighter viewBox around the globe and compass. This enlarges the central emblem at fixed browser-tab sizes; the navigation retains the full emblem.
