@@ -25,6 +25,10 @@ Open http://127.0.0.1:4173. Stop the server with Ctrl+C.
 
 Use relative links for local assets and documents so the site works under the repository's Pages path. Add reports to `dist/documents/` and link to `documents/filename.pdf`.
 
+## Round 1 code
+
+The [Round 1 research folder](research/round-1/README.md) contains the constrained optimizer, corrected fixed-SAA backtest, independent verification script, input data and reference results. Its README explains the method, source data, commands and limitations. The website’s research-library entry links to this folder on GitHub; the code does not execute in visitors’ browsers.
+
 ## Content status
 
 This is an academic simulation, not an investment offering. Team names and portraits are published. Approved investment policy, holdings and performance observations still need to be supplied. Unpublished materials are labelled accordingly. Keep live challenge results separate from historical backtests, and include dates and sources when adding results.
