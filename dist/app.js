@@ -95,6 +95,12 @@ if (globe) {
       return [Math.atan2(v[1],v[0])/radians,Math.asin(v[2])/radians];
     };
   });
+  const routeBursts = routes.map((route, i) => ({
+    start: i === 0 ? -2200 : 2000 + i * 2400 + Math.random() * 5000,
+    duration: 8000 + Math.random() * 6000,
+    reverse: Math.random() < .5
+  }));
+  const smooth = value => { const t = Math.max(0, Math.min(1, value)); return t*t*(3-2*t); };
   const geography = globeLandPoints.map(([longitude, latitude]) => ({
     longitude: longitude * radians,
     sine: Math.sin(latitude * radians),
@@ -133,19 +139,35 @@ if (globe) {
     for (let lon = -180; lon < 180; lon += 30) line(Array.from({length: 91}, (_, i) => [lon, -90 + 2 * i]));
     for (let lat = -60; lat <= 60; lat += 30) line(Array.from({length: 181}, (_, i) => [-180 + 2 * i, lat]));
     grid.setAttribute('d', lines);
-    lines = '';
-    routes.forEach(route => line(Array.from({length:65},(_,i)=>route(i/64))));
-    routePath.setAttribute('d',lines);
+    let routeMarkup = '';
     let dots = '';
-    function signal(coordinates, moving) {
+    function signal(coordinates, moving, strength = 1) {
       const [lon,lat] = coordinates;
       const p = project(lon*radians,Math.sin(lat*radians),Math.cos(lat*radians));
       if(p.z < .08) return;
-      const opacity = Math.min(1,p.z*2).toFixed(2);
+      const opacity = (Math.min(1,p.z*2)*strength).toFixed(2);
       dots += '<g opacity="'+opacity+'"><circle cx="'+p.x+'" cy="'+p.y+'" r="'+(moving?5:3.5)+'" fill="#d6c4a2" fill-opacity=".15"/><circle cx="'+p.x+'" cy="'+p.y+'" r="'+(moving?1.8:1.3)+'" fill="#eadfc9"/></g>';
     }
-    cities.forEach(city=>signal(city,false));
-    routes.forEach((route,i)=>signal(route((time/12000+i/routes.length)%1),true));
+    routes.forEach((route,i) => {
+      const burst = routeBursts[i];
+      if (time > burst.start + burst.duration) {
+        burst.start = time + 9000 + Math.random()*22000;
+        burst.duration = 8000 + Math.random()*6000;
+        burst.reverse = Math.random() < .5;
+      }
+      const progress = (time-burst.start)/burst.duration;
+      if (progress < 0 || progress > 1) return;
+      const opacity = smooth(progress/.18)*smooth((1-progress)/.25);
+      const travel = smooth((progress-.1)/.72);
+      const point = t => route(burst.reverse ? 1-t : t);
+      lines = '';
+      line(Array.from({length:65},(_,j)=>point(j/64*travel)));
+      routeMarkup += '<path d="'+lines+'" opacity="'+(.6*opacity).toFixed(3)+'"/>';
+      signal(point(0),false,opacity*.7);
+      signal(point(1),false,opacity*smooth((progress-.6)/.15));
+      signal(point(travel),true,opacity);
+    });
+    routePath.innerHTML = routeMarkup;
     signals.innerHTML = dots;
   }
   let elapsed = 0;
@@ -166,7 +188,7 @@ if (globe) {
     });
   }
   function tick(time) {
-    if (lastTime !== null) elapsed = (elapsed + time - lastTime) % 240000;
+    if (lastTime !== null) elapsed += time - lastTime;
     lastTime = time;
     draw();
     frame = requestAnimationFrame(tick);
