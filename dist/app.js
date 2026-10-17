@@ -47,7 +47,7 @@ const sectionObserver = new IntersectionObserver(entries => {
   });
 }, { rootMargin: '-15% 0px -60% 0px' });
 sectionLinks.forEach(link => {
-  const section = document.querySelector(link.hash);
+  const section = link.pathname === location.pathname && link.hash ? document.querySelector(link.hash) : null;
   if (section) sectionObserver.observe(section);
 });
 document.addEventListener('keydown', event => {
