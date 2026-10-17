@@ -77,12 +77,56 @@ if (globe) {
   const markers = [...globe.querySelectorAll('.orbit-traveller')];
   const pauseButton = document.querySelector('.globe-pause');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const land = globe.querySelector('.globe-land');
+  const limb = globe.querySelector('.globe-land-limb');
+  const grid = globe.querySelector('.globe-grid');
+  const radians = Math.PI / 180;
+  const geography = globeLandPoints.map(([longitude, latitude]) => ({
+    longitude: longitude * radians,
+    sine: Math.sin(latitude * radians),
+    cosine: Math.cos(latitude * radians)
+  }));
+  let lastSurfaceTime = -Infinity;
+  function drawSurface(time) {
+    if (time - lastSurfaceTime < 40 && time >= lastSurfaceTime) return;
+    lastSurfaceTime = time;
+    const rotation = 15 * radians + time / 240000 * Math.PI * 2;
+    const project = (longitude, sine, cosine) => {
+      const relative = longitude - rotation;
+      return {x: 270 + 167 * cosine * Math.sin(relative), y: 220 - 167 * sine, z: cosine * Math.cos(relative)};
+    };
+    let near = '', edge = '';
+    geography.forEach(point => {
+      const p = project(point.longitude, point.sine, point.cosine);
+      if (p.z <= 0) return;
+      const radius = (1.1 * Math.sqrt(p.z)).toFixed(2);
+      const dot = 'M' + (p.x - Number(radius)).toFixed(2) + ' ' + p.y.toFixed(2) + 'a' + radius + ' ' + radius + ' 0 1 0 ' + (2 * Number(radius)).toFixed(2) + ' 0a' + radius + ' ' + radius + ' 0 1 0 -' + (2 * Number(radius)).toFixed(2) + ' 0';
+      if (p.z > .3) near += dot;
+      else edge += dot;
+    });
+    land.setAttribute('d', near);
+    limb.setAttribute('d', edge);
+    let lines = '';
+    function line(coordinates) {
+      let drawing = false;
+      coordinates.forEach(([lon, lat]) => {
+        const p = project(lon * radians, Math.sin(lat * radians), Math.cos(lat * radians));
+        if (p.z < 0) { drawing = false; return; }
+        lines += (drawing ? 'L' : 'M') + p.x.toFixed(2) + ' ' + p.y.toFixed(2);
+        drawing = true;
+      });
+    }
+    for (let lon = -180; lon < 180; lon += 30) line(Array.from({length: 91}, (_, i) => [lon, -90 + 2 * i]));
+    for (let lat = -60; lat <= 60; lat += 30) line(Array.from({length: 181}, (_, i) => [-180 + 2 * i, lat]));
+    grid.setAttribute('d', lines);
+  }
   let elapsed = 0;
   let lastTime = null;
   let frame = null;
   let visible = false;
   let paused = false;
   function draw() {
+    drawSurface(elapsed);
     const angle = Math.PI / 6 + elapsed / 120000 * Math.PI * 2;
     const depth = Math.sin(angle);
     const x = 270 + 224 * Math.cos(angle);
@@ -93,7 +137,7 @@ if (globe) {
     });
   }
   function tick(time) {
-    if (lastTime !== null) elapsed = (elapsed + time - lastTime) % 120000;
+    if (lastTime !== null) elapsed = (elapsed + time - lastTime) % 240000;
     lastTime = time;
     draw();
     frame = requestAnimationFrame(tick);
