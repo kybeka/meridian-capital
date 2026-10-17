@@ -71,3 +71,50 @@ measureButtons.forEach(button => button.addEventListener('click', () => {
     ? 'Share of total capital allocated to each ETF.'
     : 'Share of estimated portfolio variance contributed by each ETF.';
 }));
+
+const globe = document.querySelector('.hero-map');
+if (globe) {
+  const markers = [...globe.querySelectorAll('.orbit-traveller')];
+  const pauseButton = document.querySelector('.globe-pause');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let elapsed = 0;
+  let lastTime = null;
+  let frame = null;
+  let visible = false;
+  let paused = false;
+  function draw() {
+    const angle = Math.PI / 6 + elapsed / 120000 * Math.PI * 2;
+    const depth = Math.sin(angle);
+    const x = 270 + 224 * Math.cos(angle);
+    const y = 220 + 83 * depth;
+    markers.forEach(marker => {
+      marker.setAttribute('transform', 'translate(' + x + ' ' + y + ') scale(' + (.9 + .15 * depth) + ')');
+      marker.style.opacity = String(.8 + .2 * depth);
+    });
+  }
+  function tick(time) {
+    if (lastTime !== null) elapsed = (elapsed + time - lastTime) % 120000;
+    lastTime = time;
+    draw();
+    frame = requestAnimationFrame(tick);
+  }
+  function sync() {
+    if (frame !== null) cancelAnimationFrame(frame);
+    frame = null;
+    lastTime = null;
+    if (visible && !document.hidden && !paused && !reducedMotion.matches) frame = requestAnimationFrame(tick);
+  }
+  new IntersectionObserver(entries => {
+    visible = entries[0].isIntersecting;
+    sync();
+  }).observe(globe);
+  pauseButton.addEventListener('click', () => {
+    paused = !paused;
+    pauseButton.setAttribute('aria-pressed', String(paused));
+    pauseButton.textContent = paused ? 'Resume globe animation' : 'Pause globe animation';
+    sync();
+  });
+  reducedMotion.addEventListener('change', sync);
+  document.addEventListener('visibilitychange', sync);
+  draw();
+}

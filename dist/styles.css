@@ -6,7 +6,6 @@
 
 .nav-brand{display:flex;align-items:center;gap:12px;flex-shrink:0}.nav-brand>img{width:56px;height:56px;object-fit:contain}.hero-map{width:100%;max-width:540px;margin:auto}.hero-map svg{display:block;width:100%;height:auto}@media(max-width:700px){.nav-brand{gap:8px}.nav-brand>img{width:42px;height:42px}.nav-brand .wordmark{font-size:1.1rem}.hero-map{max-width:330px}.site-header{gap:12px}}
 
-.hero-orbit{transform-origin:270px 220px;animation:meridian-orbit 120s linear infinite}@keyframes meridian-orbit{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.hero-orbit{animation:none}}
 
 .team-member figcaption{text-wrap:initial}.member-name{display:block;text-wrap:balance}.member-degree{display:block;font-size:.8rem;font-weight:400;line-height:1.55;color:var(--muted);margin-top:7px}.member-links{display:flex;align-items:center;gap:10px;margin-top:10px;font-size:.8rem;font-weight:400}.member-links>a{padding:6px 0;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}.member-links>a:hover{color:var(--navy);text-decoration-color:currentColor}.member-links>span{color:var(--muted)}
 
@@ -20,3 +19,5 @@
 .research-back{max-width:1440px;margin:auto;padding:25px 5% 0}.research-back+.allocation-section{padding-top:40px}.round-overview-title{font:1.8rem Georgia,serif;margin:24px 0 16px}.portfolio-content>p{color:var(--muted)}.portfolio-content>.button{margin-top:16px}.method-breakdown{margin-top:45px;max-width:850px}.method-breakdown>h3{font:1.8rem Georgia,serif}.method-breakdown ol{padding-left:24px}.method-breakdown li{padding:10px 0 10px 8px;color:var(--muted);font-size:.95rem}.method-breakdown strong{color:var(--navy)}
 
 .research-title{font-size:clamp(2.2rem,4vw,3.6rem)}
+
+.globe-controls{max-width:1440px;margin:-32px auto 22px;padding:0 5%;text-align:right}.globe-pause{font:inherit;font-size:.7rem;color:var(--muted);border:0;border-bottom:1px solid var(--line);padding:6px 0;background:none;cursor:pointer}.globe-pause:hover{color:var(--navy)}@media(prefers-reduced-motion:reduce){.globe-controls{display:none}}
