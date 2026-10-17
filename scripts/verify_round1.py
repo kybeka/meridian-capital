@@ -98,6 +98,6 @@ report = {
     'main_verification': results['verification'],
     'untouched_holdout': False,
 }
-(site / 'research/round-1-verification.json').write_text(json.dumps(report, indent=2)+'\n')
+(run / 'website-verification.json').write_text(json.dumps(report, indent=2)+'\n')
 summary.loc[names].rename(index={'Existing weights on Bloomberg data':'Agreed MVO'}).to_csv(site / 'research/round-1-results.csv')
 print('PASS: agreed allocation constraints, 24 allocation/chart values, 12 backtest metrics, volatility, bond weight, both VaR figures and sample periods.')
