@@ -1,3 +1,5 @@
+The canonical Desktop checkout is meridian-capital. Start with [research/round-1](research/round-1/README.md) for the current Bloomberg code, data and results. Earlier packs are archived there.
+
 # Meridian Capital
 
 Website for Meridian Capital's participation in the Asset Management Challenge 2026 at USI.

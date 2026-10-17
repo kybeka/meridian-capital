@@ -1,0 +1,15 @@
+{
+  "source_hashes": {
+    "current_60_month_returns.csv": "c9b6143862c8a8681752e9f344e4c4f03ea56730112fde1dba444cd1c25b8df8",
+    "monthly_returns.csv": "65cfef5c5f51dfaca143f3954bec82bf5dc7c39bed4eb30707537a0d80d73637",
+    "risk_free_monthly.csv": "eb37ca54461642725f33c76ca965cbe12365cb0a06e6607df8a449ab83c5cda8"
+  },
+  "scenarios": 108,
+  "starts_per_scenario": 48,
+  "fixed_target_volatility": 0.08,
+  "fit": "October 2021\u2013September 2026",
+  "source_files_unchanged": true,
+  "shared_excel_and_report_untouched": true,
+  "formal_global_optimum_proven": false,
+  "retrospective_results_not_used_to_select_limits": true
+}

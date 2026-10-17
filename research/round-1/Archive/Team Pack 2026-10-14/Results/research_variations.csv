@@ -1,0 +1,11 @@
+Study,Documented variations,Evidence file,Counting caveat
+Earlier cross-method study,17 method labels,results/analysis-results.json,Some superseded; not 17 independent trials
+Equity sleeve comparison,6 variants,equity-comparison/results.json,Overlapping strategies and repeated sensitivity tests
+Peer ETF comparison,4 variants,peer-comparison/results.json,Includes baseline and fallback cases
+Initial team shortlist,255 subsets per screened method; 6 current comparator outputs,team-shortlist-2026-10-13/results.json,"Search combinations, not independent realized backtest trials"
+Team draft alternatives,8 variants,team-shortlist-2026-10-13/team_variants.json,Overlaps with other studies
+Diversification subset screen,18 subsets,team-shortlist-2026-10-13/diversified_results.json,Static optimization screen with extra policy sensitivities
+Walk-forward comparison,8 rules across 5 historical protocols; 255 current ERC subset screens,team-shortlist-2026-10-13/walk_forward_results.json,Overlapping evaluation periods
+No-XLE comparison,3 variants; 60/36-month and frozen-fit sensitivities,team-shortlist-2026-10-13/without_energy_results.json,One 36-month three-variant test failed
+Alternative risk-parity ETF screen,6 screened universes; 7 quarterly strategy records,proper-risk-parity-2026-10-13/results.json,Different ETF sets and cash-scaled alternatives
+This fixed-SAA correction,"3 rules in each of 3 protocols, 9 strategy/protocol evaluations",fixed-saa-backtest-2026-10-14/results.json,Also 0/10/25 bp cost scenarios and two retrospective subperiods

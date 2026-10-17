@@ -1,0 +1,12 @@
+{
+  "version": "2026-10-14",
+  "purpose": "Current fixed-SAA report release",
+  "weights_unchanged": true,
+  "main_excel_sheet": "Constrained MVO",
+  "main_backtest": "Fixed target weights; monthly rebalancing; 119 months Nov 2016-Sep 2026",
+  "prior_pack_correction": "Headline quarterly reoptimization replaced by fixed-SAA backtest. See Correction for the previously sent pack.txt.",
+  "release_change_policy": "Do not silently overwrite a released ZIP. Any subsequent correction must have an explicitly named new version and a change note.",
+  "excel_verified": true,
+  "source_data_checked": true,
+  "no_untouched_historical_holdout": true
+}

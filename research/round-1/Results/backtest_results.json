@@ -12,36 +12,36 @@
   },
   "current_risk": {
     "Proposed fixed MVO": {
-      "volatility": 0.07999022876031464,
+      "volatility": 0.07999623078623776,
       "risk_shares": {
-        "SPY": 0.3999976739627003,
-        "EEMV": 0.08591453047227134,
-        "DBC": 0.39995316090777716,
-        "VGSH": 0.003654315809310419,
-        "SCHD": 0.04809375268423763,
-        "STIP": 0.062386566163703125
+        "SPY": 0.3999987390964565,
+        "EEMV": 0.08619969817876517,
+        "DBC": 0.3998629141032685,
+        "VGSH": 0.0036534790932826683,
+        "SCHD": 0.04794259978443622,
+        "STIP": 0.06234256974379099
       }
     },
     "Fixed equal weight": {
-      "volatility": 0.07797874140200606,
+      "volatility": 0.07797777563998419,
       "risk_shares": {
-        "SPY": 0.2774251432365909,
-        "EEMV": 0.18216936179300616,
-        "DBC": 0.1998400077132225,
-        "VGSH": 0.01791419016723343,
-        "SCHD": 0.283197776813632,
-        "STIP": 0.03945352027631503
+        "SPY": 0.2774253984149743,
+        "EEMV": 0.1821474821815864,
+        "DBC": 0.19984949404937125,
+        "VGSH": 0.017909376850424708,
+        "SCHD": 0.28321369420307735,
+        "STIP": 0.039454554300565825
       }
     },
     "Fixed risk parity": {
-      "volatility": 0.03752717060920836,
+      "volatility": 0.03752479767740398,
       "risk_shares": {
-        "SPY": 0.16666666520951628,
-        "EEMV": 0.16666666573972225,
-        "DBC": 0.1666666671749736,
-        "VGSH": 0.16666666841483108,
-        "SCHD": 0.16666666398210667,
-        "STIP": 0.16666666947885017
+        "SPY": 0.16666666533802688,
+        "EEMV": 0.1666666660119015,
+        "DBC": 0.16666666697243804,
+        "VGSH": 0.16666666813150838,
+        "SCHD": 0.16666666449660691,
+        "STIP": 0.16666666904951835
       }
     }
   },
@@ -49,52 +49,52 @@
     "Proposed fixed MVO": {
       "weights": {
         "SPY": 0.2608,
-        "EEMV": 0.0963,
+        "EEMV": 0.0966,
         "DBC": 0.2695,
         "VGSH": 0.05,
-        "SCHD": 0.0329,
-        "STIP": 0.2905
+        "SCHD": 0.0328,
+        "STIP": 0.2903
       },
       "statistics": {
         "months": 119,
-        "cagr": 0.09040110260876744,
-        "annualized_mean_return": 0.09055947588545173,
-        "volatility": 0.08600170107791079,
-        "sharpe": 0.7681362100351841,
-        "max_month_end_drawdown": -0.16189427723116934,
-        "historical_one_month_95pct_var": 0.03683441930286435,
-        "historical_var_usd": 3683441.9302864354,
-        "normal_zero_mean_one_month_95pct_var": 0.040836045144816736,
-        "worst_month": -0.09871284859225649,
-        "terminal_value_usd": 235901460.49778214
+        "cagr": 0.09040030871303961,
+        "annualized_mean_return": 0.09055970397810324,
+        "volatility": 0.08601274666483558,
+        "sharpe": 0.7680402193483772,
+        "max_month_end_drawdown": -0.1619311047639146,
+        "historical_one_month_95pct_var": 0.036836641278964986,
+        "historical_var_usd": 3683664.1278964984,
+        "normal_zero_mean_one_month_95pct_var": 0.04084128990254429,
+        "worst_month": -0.09873603572195577,
+        "terminal_value_usd": 235899757.27240914
       },
       "no_cost_statistics": {
         "months": 119,
-        "cagr": 0.09078263384671859,
-        "annualized_mean_return": 0.09091245615437438,
-        "volatility": 0.0860098655617751,
-        "sharpe": 0.7721672456723833,
-        "max_month_end_drawdown": -0.16181833188227734,
-        "historical_one_month_95pct_var": 0.0367940759816349,
-        "historical_var_usd": 3679407.59816349,
-        "normal_zero_mean_one_month_95pct_var": 0.04083992187315453,
-        "worst_month": -0.09868090230011362,
-        "terminal_value_usd": 236721279.06191564
+        "cagr": 0.09078184625615449,
+        "annualized_mean_return": 0.09091268865926097,
+        "volatility": 0.0860208908385904,
+        "sharpe": 0.7720709800715053,
+        "max_month_end_drawdown": -0.16185518128585752,
+        "historical_one_month_95pct_var": 0.036796294041644785,
+        "historical_var_usd": 3679629.4041644786,
+        "normal_zero_mean_one_month_95pct_var": 0.04084515698706647,
+        "worst_month": -0.09870410276997055,
+        "terminal_value_usd": 236719584.08454117
       },
       "higher_cost_statistics": {
         "months": 119,
-        "cagr": 0.08982883522820195,
-        "annualized_mean_return": 0.09003000548206784,
-        "volatility": 0.0859916376524004,
-        "sharpe": 0.7620688721393601,
-        "max_month_end_drawdown": -0.1620081870481972,
-        "historical_one_month_95pct_var": 0.036894934284708594,
-        "historical_var_usd": 3689493.4284708593,
-        "normal_zero_mean_one_month_95pct_var": 0.040831266745165296,
-        "worst_month": -0.09876076803047074,
-        "terminal_value_usd": 234676581.7600712
+        "cagr": 0.08982803188368504,
+        "annualized_mean_return": 0.0900302269563667,
+        "volatility": 0.0860027133489988,
+        "sharpe": 0.761973305743883,
+        "max_month_end_drawdown": -0.16204498177975046,
+        "historical_one_month_95pct_var": 0.03689716213494515,
+        "historical_var_usd": 3689716.213494515,
+        "normal_zero_mean_one_month_95pct_var": 0.04083652579981926,
+        "worst_month": -0.09878393514993355,
+        "terminal_value_usd": 234674866.31197906
       },
-      "annual_traded_fraction": 0.349784775213951
+      "annual_traded_fraction": 0.34979081037076365
     },
     "Fixed equal weight": {
       "weights": {
@@ -107,177 +107,177 @@
       },
       "statistics": {
         "months": 119,
-        "cagr": 0.08490590628287364,
-        "annualized_mean_return": 0.08520870095162164,
-        "volatility": 0.08300263666938769,
-        "sharpe": 0.7314255091745263,
-        "max_month_end_drawdown": -0.15166918256595385,
-        "historical_one_month_95pct_var": 0.035516477489650464,
-        "historical_var_usd": 3551647.7489650464,
-        "normal_zero_mean_one_month_95pct_var": 0.039412004363719694,
-        "worst_month": -0.0900199909043482,
-        "terminal_value_usd": 224373413.85127306
+        "cagr": 0.08490131198534145,
+        "annualized_mean_return": 0.0852043820545257,
+        "volatility": 0.08300203599011044,
+        "sharpe": 0.731378768815649,
+        "max_month_end_drawdown": -0.15166995484710322,
+        "historical_one_month_95pct_var": 0.035517743684114984,
+        "historical_var_usd": 3551774.3684114986,
+        "normal_zero_mean_one_month_95pct_var": 0.03941171914417431,
+        "worst_month": -0.09002027935096313,
+        "terminal_value_usd": 224363991.5723696
       },
       "no_cost_statistics": {
         "months": 119,
-        "cagr": 0.08527566107488282,
-        "annualized_mean_return": 0.08555205361581172,
-        "volatility": 0.08300680066274747,
-        "sharpe": 0.7355252577554814,
-        "max_month_end_drawdown": -0.1515972644558632,
-        "historical_one_month_95pct_var": 0.03548669980150527,
-        "historical_var_usd": 3548669.980150527,
-        "normal_zero_mean_one_month_95pct_var": 0.03941398154578343,
-        "worst_month": -0.08998608215563231,
-        "terminal_value_usd": 225132898.22293156
+        "cagr": 0.08527107347023155,
+        "annualized_mean_return": 0.08554774247671111,
+        "volatility": 0.08300620270072562,
+        "sharpe": 0.7354786187959289,
+        "max_month_end_drawdown": -0.15159804664010557,
+        "historical_one_month_95pct_var": 0.0354879655193799,
+        "historical_var_usd": 3548796.5519379904,
+        "normal_zero_mean_one_month_95pct_var": 0.03941369761646794,
+        "worst_month": -0.08998637139447263,
+        "terminal_value_usd": 225123461.03912425
       },
       "higher_cost_statistics": {
         "months": 119,
-        "cagr": 0.08435129226451177,
-        "annualized_mean_return": 0.0846936719553364,
-        "volatility": 0.08299862874230375,
-        "sharpe": 0.7252555578881371,
-        "max_month_end_drawdown": -0.15177705247967377,
-        "historical_one_month_95pct_var": 0.03556114402186811,
-        "historical_var_usd": 3556114.402186811,
-        "normal_zero_mean_one_month_95pct_var": 0.03941010128634698,
-        "worst_month": -0.09007085402742221,
-        "terminal_value_usd": 223238543.4505799
+        "cagr": 0.08434668793773015,
+        "annualized_mean_return": 0.08468934142124734,
+        "volatility": 0.08299802400417641,
+        "sharpe": 0.7252086658753715,
+        "max_month_end_drawdown": -0.15177780990867795,
+        "historical_one_month_95pct_var": 0.035562410931217404,
+        "historical_var_usd": 3556241.0931217405,
+        "normal_zero_mean_one_month_95pct_var": 0.03940981413954454,
+        "worst_month": -0.09007114128569882,
+        "terminal_value_usd": 223229143.5597054
       },
-      "annual_traded_fraction": 0.3407057860596925
+      "annual_traded_fraction": 0.3407133957621306
     },
     "Fixed risk parity": {
       "weights": {
-        "SPY": 0.05179874948419724,
-        "EEMV": 0.07141396781427885,
-        "DBC": 0.07853918663184718,
-        "VGSH": 0.47648993945202855,
-        "SCHD": 0.05078860688727711,
-        "STIP": 0.270969549730371
+        "SPY": 0.051796754586212676,
+        "EEMV": 0.07141856170439377,
+        "DBC": 0.07853545120427989,
+        "VGSH": 0.4765273171676097,
+        "SCHD": 0.050782819405159094,
+        "STIP": 0.27093909593234494
       },
       "statistics": {
         "months": 119,
-        "cagr": 0.044593221108695014,
-        "annualized_mean_return": 0.04432684162598736,
-        "volatility": 0.03531893362050137,
-        "sharpe": 0.5614095452641628,
-        "max_month_end_drawdown": -0.05807027196679837,
-        "historical_one_month_95pct_var": 0.012128600978587645,
-        "historical_var_usd": 1212860.0978587645,
-        "normal_zero_mean_one_month_95pct_var": 0.016770430697492622,
-        "worst_month": -0.03320351296985946,
-        "terminal_value_usd": 154132100.84393913
+        "cagr": 0.0445846072358278,
+        "annualized_mean_return": 0.044318476733595964,
+        "volatility": 0.03531645168919402,
+        "sharpe": 0.5612121439927635,
+        "max_month_end_drawdown": -0.058066193063722404,
+        "historical_one_month_95pct_var": 0.012126723558161056,
+        "historical_var_usd": 1212672.3558161056,
+        "normal_zero_mean_one_month_95pct_var": 0.016769252206164625,
+        "worst_month": -0.03320030738915947,
+        "terminal_value_usd": 154119497.2587423
       },
       "no_cost_statistics": {
         "months": 119,
-        "cagr": 0.04485143984537743,
-        "annualized_mean_return": 0.04457441102670211,
-        "volatility": 0.03530492963848013,
-        "sharpe": 0.568644551041225,
-        "max_month_end_drawdown": -0.058021497429795454,
-        "historical_one_month_95pct_var": 0.012124217746867859,
-        "historical_var_usd": 1212421.7746867859,
-        "normal_zero_mean_one_month_95pct_var": 0.01676378120992599,
-        "worst_month": -0.03319742927628999,
-        "terminal_value_usd": 154510350.0610968
+        "cagr": 0.04484282792396321,
+        "annualized_mean_return": 0.04456605008353081,
+        "volatility": 0.03530245234007714,
+        "sharpe": 0.5684476173872636,
+        "max_month_end_drawdown": -0.058017423143401414,
+        "historical_one_month_95pct_var": 0.012122339498806322,
+        "historical_var_usd": 1212233.949880632,
+        "normal_zero_mean_one_month_95pct_var": 0.016762604918432292,
+        "worst_month": -0.03319423261889076,
+        "terminal_value_usd": 154497721.5297789
       },
       "higher_cost_statistics": {
         "months": 119,
-        "cagr": 0.04420580981944733,
-        "annualized_mean_return": 0.043955487524915175,
-        "volatility": 0.03534516372529949,
-        "sharpe": 0.5504864120377978,
-        "max_month_end_drawdown": -0.058143430506863436,
-        "historical_one_month_95pct_var": 0.012135175826167088,
-        "historical_var_usd": 1213517.5826167087,
-        "normal_zero_mean_one_month_95pct_var": 0.016782885494668307,
-        "worst_month": -0.03321263851021372,
-        "terminal_value_usd": 153566166.70037326
+        "cagr": 0.04419719302403857,
+        "annualized_mean_return": 0.04394711670869342,
+        "volatility": 0.03534267520911957,
+        "sharpe": 0.5502883251120869,
+        "max_month_end_drawdown": -0.05813934467963966,
+        "historical_one_month_95pct_var": 0.012133299647192917,
+        "historical_var_usd": 1213329.9647192918,
+        "normal_zero_mean_one_month_95pct_var": 0.016781703876656187,
+        "worst_month": -0.03320941954456247,
+        "terminal_value_usd": 153553600.47173026
       },
-      "annual_traded_fraction": 0.24711323121813744
+      "annual_traded_fraction": 0.24711713688581272
     }
   },
   "fixed_proposal_subperiods": {
     "Older_history_diagnostic": {
       "Proposed fixed MVO": {
         "months": 59,
-        "cagr": 0.08764120736236669,
-        "annualized_mean_return": 0.08856259287861738,
-        "volatility": 0.0924136481157265,
-        "sharpe": 0.8423950176203555,
-        "max_month_end_drawdown": -0.16189427723116934,
-        "historical_one_month_95pct_var": 0.03835929277162298,
-        "historical_var_usd": 3835929.2771622976,
-        "normal_zero_mean_one_month_95pct_var": 0.04388061932672984,
-        "worst_month": -0.09871284859225649,
-        "terminal_value_usd": 151142915.51190585
+        "cagr": 0.08763560652102553,
+        "annualized_mean_return": 0.08855886687656973,
+        "volatility": 0.0924292595074168,
+        "sharpe": 0.8422124243515613,
+        "max_month_end_drawdown": -0.1619311047639146,
+        "historical_one_month_95pct_var": 0.03836056353862528,
+        "historical_var_usd": 3836056.3538625278,
+        "normal_zero_mean_one_month_95pct_var": 0.043888032057964786,
+        "worst_month": -0.09873603572195577,
+        "terminal_value_usd": 151139088.83497417
       },
       "Fixed equal weight": {
         "months": 59,
-        "cagr": 0.08790176034358721,
-        "annualized_mean_return": 0.08843648405310157,
-        "volatility": 0.08849135544931196,
-        "sharpe": 0.8783082540962169,
-        "max_month_end_drawdown": -0.15166918256595385,
-        "historical_one_month_95pct_var": 0.03935064367314399,
-        "historical_var_usd": 3935064.3673143988,
-        "normal_zero_mean_one_month_95pct_var": 0.04201820360251312,
-        "worst_month": -0.0900199909043482,
-        "terminal_value_usd": 151321019.11127692
+        "cagr": 0.08789647983657312,
+        "annualized_mean_return": 0.08843156058937013,
+        "volatility": 0.08849107654808294,
+        "sharpe": 0.8782553843305588,
+        "max_month_end_drawdown": -0.15166995484710322,
+        "historical_one_month_95pct_var": 0.039338896259127516,
+        "historical_var_usd": 3933889.6259127515,
+        "normal_zero_mean_one_month_95pct_var": 0.042018071172304924,
+        "worst_month": -0.09002027935096313,
+        "terminal_value_usd": 151317407.90880287
       },
       "Fixed risk parity": {
         "months": 59,
-        "cagr": 0.04459325354373189,
-        "annualized_mean_return": 0.04425115995706658,
-        "volatility": 0.03325066990463264,
-        "sharpe": 1.0086221994157587,
-        "max_month_end_drawdown": -0.05109794366058218,
-        "historical_one_month_95pct_var": 0.011007446206862991,
-        "historical_var_usd": 1100744.6206862992,
-        "normal_zero_mean_one_month_95pct_var": 0.01578836046615978,
-        "worst_month": -0.03258075607534716,
-        "terminal_value_usd": 123924492.33890879
+        "cagr": 0.044585756970288104,
+        "annualized_mean_return": 0.044243868193443725,
+        "volatility": 0.03324803181849164,
+        "sharpe": 1.0084829150393977,
+        "max_month_end_drawdown": -0.051096361740800234,
+        "historical_one_month_95pct_var": 0.010998361846619597,
+        "historical_var_usd": 1099836.1846619598,
+        "normal_zero_mean_one_month_95pct_var": 0.015787107828091004,
+        "worst_month": -0.032577494786556804,
+        "terminal_value_usd": 123920119.76263453
       }
     },
     "Current_fit_window": {
       "Proposed fixed MVO": {
         "months": 60,
-        "cagr": 0.09312182864491736,
-        "annualized_mean_return": 0.09252307750883884,
-        "volatility": 0.07997746129338505,
-        "sharpe": 0.6810632241252562,
-        "max_month_end_drawdown": -0.10913634797829319,
-        "historical_one_month_95pct_var": 0.02769523428330508,
-        "historical_var_usd": 2769523.428330508,
-        "normal_zero_mean_one_month_95pct_var": 0.03797556535522244,
-        "worst_month": -0.0620513930281128,
-        "terminal_value_usd": 156078410.75369465
+        "cagr": 0.09312578542334937,
+        "annualized_mean_return": 0.09252719379461122,
+        "volatility": 0.0799834667776653,
+        "sharpe": 0.6810635513339541,
+        "max_month_end_drawdown": -0.10915057519722782,
+        "historical_one_month_95pct_var": 0.027696342735693796,
+        "historical_var_usd": 2769634.2735693795,
+        "normal_zero_mean_one_month_95pct_var": 0.03797841692936703,
+        "worst_month": -0.062060213326113445,
+        "terminal_value_usd": 156081235.5630802
       },
       "Fixed equal weight": {
         "months": 60,
-        "cagr": 0.08196802809917103,
-        "annualized_mean_return": 0.08203471423516637,
-        "volatility": 0.0779689521933505,
-        "sharpe": 0.5640879239095913,
-        "max_month_end_drawdown": -0.10871652425662759,
-        "historical_one_month_95pct_var": 0.02346440621099722,
-        "historical_var_usd": 2346440.621099722,
-        "normal_zero_mean_one_month_95pct_var": 0.03702186830906188,
-        "worst_month": -0.05891475569941129,
-        "terminal_value_usd": 148276435.863993
+        "cagr": 0.08196410492826955,
+        "annualized_mean_return": 0.08203098982859534,
+        "volatility": 0.0779679885849414,
+        "sharpe": 0.5640471270805101,
+        "max_month_end_drawdown": -0.10871597641309094,
+        "historical_one_month_95pct_var": 0.023467405330633455,
+        "historical_var_usd": 2346740.5330633456,
+        "normal_zero_mean_one_month_95pct_var": 0.03702141076047851,
+        "worst_month": -0.05891445127859507,
+        "terminal_value_usd": 148273747.66265565
       },
       "Fixed risk parity": {
         "months": 60,
-        "cagr": 0.04459318921424282,
-        "annualized_mean_return": 0.044401261933759456,
-        "volatility": 0.03752312954612324,
-        "sharpe": 0.16917277816455956,
-        "max_month_end_drawdown": -0.05807027196679848,
-        "historical_one_month_95pct_var": 0.013927139992235004,
-        "historical_var_usd": 1392713.9992235005,
-        "normal_zero_mean_one_month_95pct_var": 0.017817045394627196,
-        "worst_month": -0.03320351296985946,
-        "terminal_value_usd": 124375817.83463629
+        "cagr": 0.044583476664842525,
+        "annualized_mean_return": 0.044391841798079,
+        "volatility": 0.037520755711582386,
+        "sharpe": 0.16893241660133293,
+        "max_month_end_drawdown": -0.05806619306372207,
+        "historical_one_month_95pct_var": 0.013928843418776432,
+        "historical_var_usd": 1392884.3418776433,
+        "normal_zero_mean_one_month_95pct_var": 0.017815918230707627,
+        "worst_month": -0.03320030738915947,
+        "terminal_value_usd": 124370035.7568682
       }
     }
   },
@@ -285,36 +285,36 @@
     "training": {
       "target": 0.08,
       "seed_objectives": [
-        -0.04031633385780747,
-        -0.04031633385780747
+        -0.04038993654355625,
+        -0.04038993654355618
       ],
       "attempts": [
         {
           "target": 0.08,
           "seed_objectives": [
-            -0.04031633385780747,
-            -0.04031633385780747
+            -0.04038993654355625,
+            -0.04038993654355618
           ]
         }
       ],
       "fit_first": "2011-11-30",
       "fit_last": "2016-10-31",
-      "estimated_volatility": 0.07999999999999985,
+      "estimated_volatility": 0.08,
       "weights": {
         "SPY": 0.35,
-        "EEMV": 0.1122546055985001,
-        "DBC": 0.22535194843616727,
-        "VGSH": 0.04999999999999109,
-        "SCHD": 0.11239344596533125,
-        "STIP": 0.1500000000000086
+        "EEMV": 0.11220338761240525,
+        "DBC": 0.2253268092819883,
+        "VGSH": 0.04999999999999947,
+        "SCHD": 0.11246980310560706,
+        "STIP": 0.14999999999999986
       },
       "risk_shares": {
-        "SPY": 0.3922514279093367,
-        "EEMV": 0.14789236329090047,
-        "DBC": 0.33465099966295864,
-        "VGSH": -0.00017336048296072044,
-        "SCHD": 0.10985620879976203,
-        "STIP": 0.01552236082000265
+        "SPY": 0.39223969554450877,
+        "EEMV": 0.1478141224279257,
+        "DBC": 0.3346251229409495,
+        "VGSH": -0.0001873615603939646,
+        "SCHD": 0.10994618202756526,
+        "STIP": 0.01556223861944475
       }
     },
     "evaluation_first": "2016-11-30",
@@ -323,52 +323,52 @@
       "Frozen trained MVO": {
         "weights": {
           "SPY": 0.35,
-          "EEMV": 0.1122546055985001,
-          "DBC": 0.22535194843616727,
-          "VGSH": 0.04999999999999109,
-          "SCHD": 0.11239344596533125,
-          "STIP": 0.1500000000000086
+          "EEMV": 0.11220338761240525,
+          "DBC": 0.2253268092819883,
+          "VGSH": 0.04999999999999947,
+          "SCHD": 0.11246980310560706,
+          "STIP": 0.14999999999999986
         },
         "statistics": {
           "months": 119,
-          "cagr": 0.1067967195330064,
-          "annualized_mean_return": 0.10714573903364352,
-          "volatility": 0.10241267859123106,
-          "sharpe": 0.8070024630508352,
-          "max_month_end_drawdown": -0.18391710960369656,
-          "historical_one_month_95pct_var": 0.04852153069878825,
-          "historical_var_usd": 4852153.069878825,
-          "normal_zero_mean_one_month_95pct_var": 0.048628442390510826,
-          "worst_month": -0.11137526158712507,
-          "terminal_value_usd": 273530847.18839884
+          "cagr": 0.10679827655777419,
+          "annualized_mean_return": 0.10714744986701444,
+          "volatility": 0.10241560568198423,
+          "sharpe": 0.806996103316182,
+          "max_month_end_drawdown": -0.1839169276117283,
+          "historical_one_month_95pct_var": 0.048516448873787546,
+          "historical_var_usd": 4851644.887378755,
+          "normal_zero_mean_one_month_95pct_var": 0.04862983225616047,
+          "worst_month": -0.11137528043215783,
+          "terminal_value_usd": 273534663.13604367
         },
         "no_cost_statistics": {
           "months": 119,
-          "cagr": 0.10717492593815314,
-          "annualized_mean_return": 0.1074913388245342,
-          "volatility": 0.1024241168226869,
-          "sharpe": 0.8102865441868744,
-          "max_month_end_drawdown": -0.18385290076782168,
-          "historical_one_month_95pct_var": 0.048505112751377276,
-          "historical_var_usd": 4850511.275137727,
-          "normal_zero_mean_one_month_95pct_var": 0.04863387358699012,
-          "worst_month": -0.11134822292111601,
-          "terminal_value_usd": 274459160.9079671
+          "cagr": 0.10717648208520236,
+          "annualized_mean_return": 0.10749304898263637,
+          "volatility": 0.10242704938518567,
+          "sharpe": 0.8102800414336019,
+          "max_month_end_drawdown": -0.18385272943371078,
+          "historical_one_month_95pct_var": 0.04850002272356777,
+          "historical_var_usd": 4850002.272356777,
+          "normal_zero_mean_one_month_95pct_var": 0.048635266050779655,
+          "worst_month": -0.11134824170507895,
+          "terminal_value_usd": 274462986.34061265
         },
         "higher_cost_statistics": {
           "months": 119,
-          "cagr": 0.10622942932823842,
-          "annualized_mean_return": 0.10662733934730766,
-          "volatility": 0.10239736985632994,
-          "sharpe": 0.8020604855344743,
-          "max_month_end_drawdown": -0.1840134168785581,
-          "historical_one_month_95pct_var": 0.04854615761990472,
-          "historical_var_usd": 4854615.761990472,
-          "normal_zero_mean_one_month_95pct_var": 0.048621173369297326,
-          "worst_month": -0.11141581958613889,
-          "terminal_value_usd": 272143716.9508241
+          "cagr": 0.1062309876682428,
+          "annualized_mean_return": 0.10662905119358157,
+          "volatility": 0.10240028870335773,
+          "sharpe": 0.8020543405753301,
+          "max_month_end_drawdown": -0.18401321890219124,
+          "historical_one_month_95pct_var": 0.04854108809911719,
+          "historical_var_usd": 4854108.809911719,
+          "normal_zero_mean_one_month_95pct_var": 0.048622559320592514,
+          "worst_month": -0.11141583852277626,
+          "terminal_value_usd": 272147518.7026809
         },
-        "annual_traded_fraction": 0.3416006192861112
+        "annual_traded_fraction": 0.3415993460863392
       },
       "Frozen equal weight": {
         "weights": {
@@ -381,136 +381,136 @@
         },
         "statistics": {
           "months": 119,
-          "cagr": 0.08490590628287364,
-          "annualized_mean_return": 0.08520870095162164,
-          "volatility": 0.08300263666938769,
-          "sharpe": 0.7314255091745263,
-          "max_month_end_drawdown": -0.15166918256595385,
-          "historical_one_month_95pct_var": 0.035516477489650464,
-          "historical_var_usd": 3551647.7489650464,
-          "normal_zero_mean_one_month_95pct_var": 0.039412004363719694,
-          "worst_month": -0.0900199909043482,
-          "terminal_value_usd": 224373413.85127306
+          "cagr": 0.08490131198534145,
+          "annualized_mean_return": 0.0852043820545257,
+          "volatility": 0.08300203599011044,
+          "sharpe": 0.731378768815649,
+          "max_month_end_drawdown": -0.15166995484710322,
+          "historical_one_month_95pct_var": 0.035517743684114984,
+          "historical_var_usd": 3551774.3684114986,
+          "normal_zero_mean_one_month_95pct_var": 0.03941171914417431,
+          "worst_month": -0.09002027935096313,
+          "terminal_value_usd": 224363991.5723696
         },
         "no_cost_statistics": {
           "months": 119,
-          "cagr": 0.08527566107488282,
-          "annualized_mean_return": 0.08555205361581172,
-          "volatility": 0.08300680066274747,
-          "sharpe": 0.7355252577554814,
-          "max_month_end_drawdown": -0.1515972644558632,
-          "historical_one_month_95pct_var": 0.03548669980150527,
-          "historical_var_usd": 3548669.980150527,
-          "normal_zero_mean_one_month_95pct_var": 0.03941398154578343,
-          "worst_month": -0.08998608215563231,
-          "terminal_value_usd": 225132898.22293156
+          "cagr": 0.08527107347023155,
+          "annualized_mean_return": 0.08554774247671111,
+          "volatility": 0.08300620270072562,
+          "sharpe": 0.7354786187959289,
+          "max_month_end_drawdown": -0.15159804664010557,
+          "historical_one_month_95pct_var": 0.0354879655193799,
+          "historical_var_usd": 3548796.5519379904,
+          "normal_zero_mean_one_month_95pct_var": 0.03941369761646794,
+          "worst_month": -0.08998637139447263,
+          "terminal_value_usd": 225123461.03912425
         },
         "higher_cost_statistics": {
           "months": 119,
-          "cagr": 0.08435129226451177,
-          "annualized_mean_return": 0.0846936719553364,
-          "volatility": 0.08299862874230375,
-          "sharpe": 0.7252555578881371,
-          "max_month_end_drawdown": -0.15177705247967377,
-          "historical_one_month_95pct_var": 0.03556114402186811,
-          "historical_var_usd": 3556114.402186811,
-          "normal_zero_mean_one_month_95pct_var": 0.03941010128634698,
-          "worst_month": -0.09007085402742221,
-          "terminal_value_usd": 223238543.4505799
+          "cagr": 0.08434668793773015,
+          "annualized_mean_return": 0.08468934142124734,
+          "volatility": 0.08299802400417641,
+          "sharpe": 0.7252086658753715,
+          "max_month_end_drawdown": -0.15177780990867795,
+          "historical_one_month_95pct_var": 0.035562410931217404,
+          "historical_var_usd": 3556241.0931217405,
+          "normal_zero_mean_one_month_95pct_var": 0.03940981413954454,
+          "worst_month": -0.09007114128569882,
+          "terminal_value_usd": 223229143.5597054
         },
-        "annual_traded_fraction": 0.3407057860596925
+        "annual_traded_fraction": 0.3407133957621306
       },
       "Frozen trained risk parity": {
         "weights": {
-          "SPY": 0.029238200605632036,
-          "EEMV": 0.019331861988097613,
-          "DBC": 0.020458318329553235,
-          "VGSH": 0.742967780289579,
-          "SCHD": 0.03071815480545289,
-          "STIP": 0.1572856839816853
+          "SPY": 0.029064678225680436,
+          "EEMV": 0.019224137730930086,
+          "DBC": 0.020353653855464917,
+          "VGSH": 0.7455111855225279,
+          "SCHD": 0.03051352366739236,
+          "STIP": 0.15533282099800427
         },
         "statistics": {
           "months": 119,
-          "cagr": 0.029731406813739536,
-          "annualized_mean_return": 0.02954466618964994,
-          "volatility": 0.020620957602934097,
-          "sharpe": 0.2447127395308451,
-          "max_month_end_drawdown": -0.05314649069547128,
-          "historical_one_month_95pct_var": 0.007458142751252994,
-          "historical_var_usd": 745814.2751252993,
-          "normal_zero_mean_one_month_95pct_var": 0.009791415112125652,
-          "worst_month": -0.0213757238790111,
-          "terminal_value_usd": 133714732.35197173
+          "cagr": 0.02963195999469037,
+          "annualized_mean_return": 0.029446526978753183,
+          "volatility": 0.020556251186087327,
+          "sharpe": 0.24070886131297914,
+          "max_month_end_drawdown": -0.05310301645933124,
+          "historical_one_month_95pct_var": 0.007454066756911748,
+          "historical_var_usd": 745406.6756911748,
+          "normal_zero_mean_one_month_95pct_var": 0.009760690671487899,
+          "worst_month": -0.02129608133854488,
+          "terminal_value_usd": 133586727.94350131
         },
         "no_cost_statistics": {
           "months": 119,
-          "cagr": 0.029909403925433287,
-          "annualized_mean_return": 0.029717398612804483,
-          "volatility": 0.0205948982625702,
-          "sharpe": 0.2534095280967241,
-          "max_month_end_drawdown": -0.05308215857767751,
-          "historical_one_month_95pct_var": 0.007448434839649054,
-          "historical_var_usd": 744843.4839649054,
-          "normal_zero_mean_one_month_95pct_var": 0.009779041398743166,
-          "worst_month": -0.02137089367090872,
-          "terminal_value_usd": 133944119.29149066
+          "cagr": 0.02980956896279663,
+          "annualized_mean_return": 0.029618896263768138,
+          "volatility": 0.020530077741492965,
+          "sharpe": 0.24941167614444934,
+          "max_month_end_drawdown": -0.05303899970972781,
+          "historical_one_month_95pct_var": 0.0074443940524915545,
+          "historical_var_usd": 744439.4052491555,
+          "normal_zero_mean_one_month_95pct_var": 0.00974826277818283,
+          "worst_month": -0.02129128077928455,
+          "terminal_value_usd": 133815417.28425838
         },
         "higher_cost_statistics": {
           "months": 119,
-          "cagr": 0.02946427249616268,
-          "annualized_mean_return": 0.029285567554918516,
-          "volatility": 0.020668992795252854,
-          "sharpe": 0.23160840198906377,
-          "max_month_end_drawdown": -0.053242981712651516,
-          "historical_one_month_95pct_var": 0.007472704618658965,
-          "historical_var_usd": 747270.4618658966,
-          "normal_zero_mean_one_month_95pct_var": 0.009814223582859175,
-          "worst_month": -0.021382969191164558,
-          "terminal_value_usd": 133371136.07182364
+          "cagr": 0.02936540767749274,
+          "annualized_mean_return": 0.029187973051230498,
+          "volatility": 0.020604485211054967,
+          "sharpe": 0.2275969450490271,
+          "max_month_end_drawdown": -0.05319903449516927,
+          "historical_one_month_95pct_var": 0.007468575813542111,
+          "historical_var_usd": 746857.5813542111,
+          "normal_zero_mean_one_month_95pct_var": 0.009783593553598455,
+          "worst_month": -0.02130328217743538,
+          "terminal_value_usd": 133244174.54922163
         },
-        "annual_traded_fraction": 0.17279209611692783
+        "annual_traded_fraction": 0.17243188369393214
       }
     },
     "inception_risk": {
-      "Frozen trained MVO": 0.07999999999999985,
-      "Frozen equal weight": 0.06714859315447705,
-      "Frozen trained risk parity": 0.012321758166969484
+      "Frozen trained MVO": 0.08,
+      "Frozen equal weight": 0.06714897879916494,
+      "Frozen trained risk parity": 0.012236256930353302
     }
   },
   "historical_fit_2021": {
     "training": {
       "target": 0.08,
       "seed_objectives": [
-        -0.09155253276145459,
-        -0.0915525327614859
+        -0.09155007446899047,
+        -0.0915500744688044
       ],
       "attempts": [
         {
           "target": 0.08,
           "seed_objectives": [
-            -0.09155253276145459,
-            -0.0915525327614859
+            -0.09155007446899047,
+            -0.0915500744688044
           ]
         }
       ],
       "fit_first": "2016-11-30",
       "fit_last": "2021-10-31",
-      "estimated_volatility": 0.08000000000012361,
+      "estimated_volatility": 0.08000000000023734,
       "weights": {
-        "SPY": 0.222547107286234,
-        "EEMV": 0.04999999999999986,
-        "DBC": 0.17752010926827086,
-        "VGSH": 0.09225222112358102,
-        "SCHD": 0.10768056232191456,
-        "STIP": 0.34999999999999964
+        "SPY": 0.2225469576750875,
+        "EEMV": 0.05000000000000021,
+        "DBC": 0.1775072621640471,
+        "VGSH": 0.09226235095301315,
+        "SCHD": 0.10768342920785215,
+        "STIP": 0.3499999999999999
       },
       "risk_shares": {
-        "SPY": 0.40000000000082014,
-        "EEMV": 0.05973417267699178,
-        "DBC": 0.31287784091923243,
-        "VGSH": -0.007127374034821281,
-        "SCHD": 0.1902658273235309,
-        "STIP": 0.044249533114246
+        "SPY": 0.4000000000015182,
+        "EEMV": 0.05972978748869913,
+        "DBC": 0.3128670846778933,
+        "VGSH": -0.007129527330791843,
+        "SCHD": 0.19027021251224005,
+        "STIP": 0.04426244265044122
       }
     },
     "evaluation_first": "2021-11-30",
@@ -518,53 +518,53 @@
     "strategies": {
       "Frozen trained MVO": {
         "weights": {
-          "SPY": 0.222547107286234,
-          "EEMV": 0.04999999999999986,
-          "DBC": 0.17752010926827086,
-          "VGSH": 0.09225222112358102,
-          "SCHD": 0.10768056232191456,
-          "STIP": 0.34999999999999964
+          "SPY": 0.2225469576750875,
+          "EEMV": 0.05000000000000021,
+          "DBC": 0.1775072621640471,
+          "VGSH": 0.09226235095301315,
+          "SCHD": 0.10768342920785215,
+          "STIP": 0.3499999999999999
         },
         "statistics": {
           "months": 59,
-          "cagr": 0.07601808505862917,
-          "annualized_mean_return": 0.07603375241599551,
-          "volatility": 0.07180125319384903,
-          "sharpe": 0.5201511180444175,
-          "max_month_end_drawdown": -0.0987020089745515,
-          "historical_one_month_95pct_var": 0.022133332108794444,
-          "historical_var_usd": 2213333.2108794446,
-          "normal_zero_mean_one_month_95pct_var": 0.034093270018254664,
-          "worst_month": -0.056430626864503286,
-          "terminal_value_usd": 143366018.00019738
+          "cagr": 0.0760151965469329,
+          "annualized_mean_return": 0.0760310214387644,
+          "volatility": 0.07180082745679726,
+          "sharpe": 0.5201161667810891,
+          "max_month_end_drawdown": -0.09870156139927777,
+          "historical_one_month_95pct_var": 0.02213531916799988,
+          "historical_var_usd": 2213531.9167999877,
+          "normal_zero_mean_one_month_95pct_var": 0.03409306786623618,
+          "worst_month": -0.056430466639068255,
+          "terminal_value_usd": 143364125.790495
         },
         "no_cost_statistics": {
           "months": 59,
-          "cagr": 0.07649822953624574,
-          "annualized_mean_return": 0.07647797352752272,
-          "volatility": 0.07173726774963515,
-          "sharpe": 0.5268073962503305,
-          "max_month_end_drawdown": -0.09855734168268804,
-          "historical_one_month_95pct_var": 0.022107017761133507,
-          "historical_var_usd": 2210701.776113351,
-          "normal_zero_mean_one_month_95pct_var": 0.034062887915856925,
-          "worst_month": -0.0564214127606657,
-          "terminal_value_usd": 143680828.2505749
+          "cagr": 0.07649534133586533,
+          "annualized_mean_return": 0.07647524435076312,
+          "volatility": 0.07173684708501385,
+          "sharpe": 0.5267724411661908,
+          "max_month_end_drawdown": -0.09855688863918444,
+          "historical_one_month_95pct_var": 0.022109005701737027,
+          "historical_var_usd": 2210900.5701737027,
+          "normal_zero_mean_one_month_95pct_var": 0.03406268817237219,
+          "worst_month": -0.05642124953592953,
+          "terminal_value_usd": 143678932.93597722
         },
         "higher_cost_statistics": {
           "months": 59,
-          "cagr": 0.07529784640667558,
-          "annualized_mean_return": 0.07536742074870471,
-          "volatility": 0.0719020379224832,
-          "sharpe": 0.5101548094926829,
-          "max_month_end_drawdown": -0.0989189747245981,
-          "historical_one_month_95pct_var": 0.022519494202163915,
-          "historical_var_usd": 2251949.4202163913,
-          "normal_zero_mean_one_month_95pct_var": 0.03414112546386596,
-          "worst_month": -0.05644444802025972,
-          "terminal_value_usd": 142894818.78662732
+          "cagr": 0.07529495743088743,
+          "annualized_mean_return": 0.07536468707076632,
+          "volatility": 0.07190160464165604,
+          "sharpe": 0.5101198639910759,
+          "max_month_end_drawdown": -0.0989185353487948,
+          "historical_one_month_95pct_var": 0.022517554341824363,
+          "historical_var_usd": 2251755.434182436,
+          "normal_zero_mean_one_month_95pct_var": 0.03414091972984912,
+          "worst_month": -0.056444292293776455,
+          "terminal_value_usd": 142892931.2295685
         },
-        "annual_traded_fraction": 0.44601905683210735
+        "annual_traded_fraction": 0.4460205433931446
       },
       "Frozen equal weight": {
         "weights": {
@@ -577,108 +577,108 @@
         },
         "statistics": {
           "months": 59,
-          "cagr": 0.07667939022783932,
-          "annualized_mean_return": 0.07710382373044992,
-          "volatility": 0.07798189293542197,
-          "sharpe": 0.49264735689398415,
-          "max_month_end_drawdown": -0.1087165242566277,
-          "historical_one_month_95pct_var": 0.023562015572546346,
-          "historical_var_usd": 2356201.557254635,
-          "normal_zero_mean_one_month_95pct_var": 0.037028012940165854,
-          "worst_month": -0.05891475569941129,
-          "terminal_value_usd": 143799750.56845555
+          "cagr": 0.07667546122267521,
+          "annualized_mean_return": 0.0771000753946607,
+          "volatility": 0.07798090248095127,
+          "sharpe": 0.4926055467724237,
+          "max_month_end_drawdown": -0.10871597641309128,
+          "historical_one_month_95pct_var": 0.023564881932916604,
+          "historical_var_usd": 2356488.1932916604,
+          "normal_zero_mean_one_month_95pct_var": 0.037027542644311566,
+          "worst_month": -0.05891445127859507,
+          "terminal_value_usd": 143797170.55486035
         },
         "no_cost_statistics": {
           "months": 59,
-          "cagr": 0.07716452765807413,
-          "annualized_mean_return": 0.07755210890580334,
-          "volatility": 0.07791875417601561,
-          "sharpe": 0.4987997950760628,
-          "max_month_end_drawdown": -0.10857880054025049,
-          "historical_one_month_95pct_var": 0.023533564749287493,
-          "historical_var_usd": 2353356.4749287493,
-          "normal_zero_mean_one_month_95pct_var": 0.03699803286771159,
-          "worst_month": -0.058906557404444726,
-          "terminal_value_usd": 144118603.56417492
+          "cagr": 0.07716060265197422,
+          "annualized_mean_return": 0.07754836587676135,
+          "volatility": 0.07791776356306628,
+          "sharpe": 0.4987580984030926,
+          "max_month_end_drawdown": -0.10857823584775073,
+          "historical_one_month_95pct_var": 0.023536430670894115,
+          "historical_var_usd": 2353643.0670894114,
+          "normal_zero_mean_one_month_95pct_var": 0.03699756249660715,
+          "worst_month": -0.05890624820269441,
+          "terminal_value_usd": 144116021.62501293
         },
         "higher_cost_statistics": {
           "months": 59,
-          "cagr": 0.07595166980394552,
-          "annualized_mean_return": 0.07643139596741957,
-          "volatility": 0.07808100724889244,
-          "sharpe": 0.48341007636950456,
-          "max_month_end_drawdown": -0.10892307749353947,
-          "historical_one_month_95pct_var": 0.024405826732974766,
-          "historical_var_usd": 2440582.6732974765,
-          "normal_zero_mean_one_month_95pct_var": 0.03707507522531427,
-          "worst_month": -0.058927053141861085,
-          "terminal_value_usd": 143322515.6455199
+          "cagr": 0.07594773480947659,
+          "annualized_mean_return": 0.07642763967150965,
+          "volatility": 0.07808001709232651,
+          "sharpe": 0.48336809835296674,
+          "max_month_end_drawdown": -0.1089225549151519,
+          "historical_one_month_95pct_var": 0.02440507479228281,
+          "historical_var_usd": 2440507.479228281,
+          "normal_zero_mean_one_month_95pct_var": 0.037074605070913605,
+          "worst_month": -0.05892675589244589,
+          "terminal_value_usd": 143319938.53264895
         },
-        "annual_traded_fraction": 0.4503803337264348
+        "annual_traded_fraction": 0.4503856897398533
       },
       "Frozen trained risk parity": {
         "weights": {
-          "SPY": 0.019077333862088663,
-          "EEMV": 0.02278031561850266,
-          "DBC": 0.02263296253579932,
-          "VGSH": 0.7678574233018827,
-          "SCHD": 0.019644235869450872,
-          "STIP": 0.14800772881227583
+          "SPY": 0.019045724269759347,
+          "EEMV": 0.022732758010666532,
+          "DBC": 0.02261289882744641,
+          "VGSH": 0.768195632377631,
+          "SCHD": 0.01960486939476314,
+          "STIP": 0.1478081171197335
         },
         "statistics": {
           "months": 59,
-          "cagr": 0.02743320761181911,
-          "annualized_mean_return": 0.027394334512860895,
-          "volatility": 0.024701028005869156,
-          "sharpe": -0.45714355591519046,
-          "max_month_end_drawdown": -0.05033560825290884,
-          "historical_one_month_95pct_var": 0.009483387466670457,
-          "historical_var_usd": 948338.7466670456,
-          "normal_zero_mean_one_month_95pct_var": 0.011728748177402437,
-          "worst_month": -0.020038325631553056,
-          "terminal_value_usd": 114232195.95453158
+          "cagr": 0.027407272236675162,
+          "annualized_mean_return": 0.02736874820948969,
+          "volatility": 0.024689286153165225,
+          "sharpe": -0.458397298752358,
+          "max_month_end_drawdown": -0.050337953222576504,
+          "historical_one_month_95pct_var": 0.009483660759564071,
+          "historical_var_usd": 948366.0759564071,
+          "normal_zero_mean_one_month_95pct_var": 0.01172317281294927,
+          "worst_month": -0.02002115914227698,
+          "terminal_value_usd": 114218019.20201014
         },
         "no_cost_statistics": {
           "months": 59,
-          "cagr": 0.027701957902111163,
-          "annualized_mean_return": 0.02765527170284921,
-          "volatility": 0.024651742187957137,
-          "sharpe": -0.447472576310013,
-          "max_month_end_drawdown": -0.049931782923747114,
-          "historical_one_month_95pct_var": 0.00947950958808389,
-          "historical_var_usd": 947950.9588083889,
-          "normal_zero_mean_one_month_95pct_var": 0.011705345874191815,
-          "worst_month": -0.0200341953075841,
-          "terminal_value_usd": 114379182.33708628
+          "cagr": 0.027675935467347923,
+          "annualized_mean_return": 0.027629607354174045,
+          "volatility": 0.024640009590053354,
+          "sharpe": -0.4487272172375254,
+          "max_month_end_drawdown": -0.04992401358302212,
+          "historical_one_month_95pct_var": 0.009479789396961357,
+          "historical_var_usd": 947978.9396961357,
+          "normal_zero_mean_one_month_95pct_var": 0.011699774904180062,
+          "worst_month": -0.020017038891206096,
+          "terminal_value_usd": 114364943.41995873
         },
         "higher_cost_statistics": {
           "months": 59,
-          "cagr": 0.027029820645205538,
-          "annualized_mean_return": 0.027002928727878524,
-          "volatility": 0.02478991975613489,
-          "sharpe": -0.4712932384323176,
-          "max_month_end_drawdown": -0.051852224958419235,
-          "historical_one_month_95pct_var": 0.009489204284550178,
-          "historical_var_usd": 948920.4284550177,
-          "normal_zero_mean_one_month_95pct_var": 0.011770956499811837,
-          "worst_month": -0.02004452111750643,
-          "terminal_value_usd": 114011855.80671784
+          "cagr": 0.02700401578920042,
+          "annualized_mean_return": 0.0269774594924629,
+          "volatility": 0.024778171438410775,
+          "sharpe": -0.4725445873544536,
+          "max_month_end_drawdown": -0.05185445667795885,
+          "historical_one_month_95pct_var": 0.009489467803468243,
+          "historical_var_usd": 948946.7803468243,
+          "normal_zero_mean_one_month_95pct_var": 0.011765378065583854,
+          "worst_month": -0.02002733951888347,
+          "terminal_value_usd": 113997772.07325654
         },
-        "annual_traded_fraction": 0.2614383092949527
+        "annual_traded_fraction": 0.26136019606139854
       }
     },
     "inception_risk": {
-      "Frozen trained MVO": 0.08000000000012361,
-      "Frozen equal weight": 0.0883246962355447,
-      "Frozen trained risk parity": 0.011117074628988179
+      "Frozen trained MVO": 0.08000000000023734,
+      "Frozen equal weight": 0.0883244399110475,
+      "Frozen trained risk parity": 0.011092628591036937
     }
   },
   "uncertainty": {
     "bootstrap_block_months": 6,
     "replications": 3000,
     "retrospective_sharpe_95pct_interval": [
-      0.1891402555508637,
-      1.5665816290379637
+      0.18909951796679614,
+      1.5664572475210667
     ],
     "does_not_correct_selection_bias": true
   }

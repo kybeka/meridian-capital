@@ -1,0 +1,29 @@
+{
+  "all_passed": true,
+  "checks": {
+    "capital_total": true,
+    "long_only": true,
+    "single_capital_cap": true,
+    "US_floor": true,
+    "EM_floor": true,
+    "commodity_floor": true,
+    "VGSH_floor": true,
+    "STIP_floor": true,
+    "bond_floor": true,
+    "single_risk_cap": true,
+    "stock_risk_cap": true,
+    "volatility_target_ceiling": true
+  },
+  "Bloomberg_current_risk": {
+    "estimated_volatility": 0.0799899495963097,
+    "normal_monthly_95pct_var": 0.0379814951553964,
+    "risk_shares": {
+      "SPY": 0.39999783902465763,
+      "EEMV": 0.08590011944675413,
+      "DBC": 0.3999632934461049,
+      "VGSH": 0.003652563509786707,
+      "SCHD": 0.04809609764111759,
+      "STIP": 0.06239008693157911
+    }
+  }
+}

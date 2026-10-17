@@ -5,3 +5,7 @@ node_modules/
 *.tar.gz
 __pycache__/
 *.py[cod]
+
+# Original working snapshot retained locally during consolidation.
+/local-archive/
+/research/round-1/Source/
