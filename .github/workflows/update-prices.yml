@@ -1,0 +1,45 @@
+name: Update challenge portfolio prices
+on:
+  schedule:
+    - cron: '37 23 * * 1-5'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: challenge-price-update-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify accounting
+        run: python -m unittest discover -s tests -p 'test_challenge_prices.py'
+      - name: Fetch completed daily prices
+        run: python scripts/update_challenge_prices.py
+      - name: Save validated valuations
+        run: |
+          git add dist/data/challenge-valuations.csv
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'chore(tracking): update daily portfolio valuations'
+            git push origin HEAD:${{ github.ref_name }}
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: challenge-valuations
+          path: dist/data/challenge-valuations.csv
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: update
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml

@@ -23,8 +23,8 @@
         `<circle cx="${x(rows.length-1)}" cy="${y(values.at(-1))}" r="5" fill="#173242"/><text x="70" y="300">${first.date}</text>` + (rows.length > 1 ? `<text x="930" y="300" text-anchor="end">${last.date}</text>` : '');
       document.querySelector('#challenge-return').textContent = `${values.at(-1)-100 >= 0 ? '+':''}${(values.at(-1)-100).toFixed(2)}%`;
       document.querySelector('#challenge-asof').textContent = `Since ${first.date} · Valued ${last.date}`;
-      document.querySelector('#challenge-nav').textContent = `${new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(last.nav)} portfolio value, including cash`;
-      document.querySelector('#tracking-status').textContent = rows.length > 1 ? 'Recorded challenge performance' : 'Opening valuation recorded';
+      document.querySelector('#challenge-nav').textContent = `${new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(last.nav)} portfolio value, including cash and dividend receivables`;
+      document.querySelector('#tracking-status').textContent = rows.length > 1 ? 'Public-price estimate' : 'Opening valuation recorded';
       document.querySelector('#tracking-empty').hidden = true;
       panel.hidden = false;
     }).catch(() => { document.querySelector('#tracking-status').textContent = 'Valuations unavailable'; });
