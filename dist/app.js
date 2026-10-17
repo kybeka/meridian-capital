@@ -57,3 +57,17 @@ document.addEventListener('keydown', event => {
     menuButton.focus();
   }
 });
+
+const measureButtons = [...document.querySelectorAll('[data-measure]')];
+measureButtons.forEach(button => button.addEventListener('click', () => {
+  const measure = button.dataset.measure;
+  measureButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+  document.querySelectorAll('.allocation-row').forEach(row => {
+    const value = row.dataset[measure];
+    row.querySelector('.allocation-track span').style.width = value + '%';
+    row.querySelector('strong').textContent = value + '%';
+  });
+  document.querySelector('#allocation-description').textContent = measure === 'capital'
+    ? 'Share of total capital allocated to each ETF.'
+    : 'Share of estimated portfolio variance contributed by each ETF.';
+}));
