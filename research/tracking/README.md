@@ -1,6 +1,6 @@
 # Challenge performance
 
-The homepage reads `dist/data/challenge-valuations.csv`. It is intentionally empty until the actual inception date and opening portfolio valuation are confirmed. The reference prices in Round 1 positions.json alone do not establish inception.
+The homepage reads `dist/data/challenge-valuations.csv`. The user confirmed inception at the 16 October 2026 close using the share quantities and prices in Round 1 positions.json. Holdings plus USD 12.12 cash reconcile to USD 100,000,000. The opening observation is recorded; subsequent valuations are not yet available. No additional fee deduction has been assumed.
 
 Record verified end-of-day total USD portfolio values, including cash, in chronological order, one per date:
 
