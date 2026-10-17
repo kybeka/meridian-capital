@@ -97,7 +97,7 @@ if (globe) {
   });
   const routeBursts = routes.map((route, i) => ({
     start: i === 0 ? -2200 : 2000 + i * 2400 + Math.random() * 5000,
-    duration: 8000 + Math.random() * 6000,
+    duration: 12000 + Math.random() * 6000,
     reverse: Math.random() < .5
   }));
   const smooth = value => { const t = Math.max(0, Math.min(1, value)); return t*t*(3-2*t); };
@@ -110,7 +110,7 @@ if (globe) {
   function drawSurface(time) {
     if (time - lastSurfaceTime < 40 && time >= lastSurfaceTime) return;
     lastSurfaceTime = time;
-    const rotation = 15 * radians + time / 240000 * Math.PI * 2;
+    const rotation = 15 * radians + time / 160000 * Math.PI * 2;
     const project = (longitude, sine, cosine) => {
       const relative = longitude - rotation;
       return {x: 270 + 167 * cosine * Math.sin(relative), y: 220 - 167 * sine, z: cosine * Math.cos(relative)};
@@ -152,7 +152,7 @@ if (globe) {
       const burst = routeBursts[i];
       if (time > burst.start + burst.duration) {
         burst.start = time + 9000 + Math.random()*22000;
-        burst.duration = 8000 + Math.random()*6000;
+        burst.duration = 12000 + Math.random()*6000;
         burst.reverse = Math.random() < .5;
       }
       const progress = (time-burst.start)/burst.duration;
