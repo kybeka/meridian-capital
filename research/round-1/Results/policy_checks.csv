@@ -1,0 +1,11 @@
+,margin,passes
+long_only,0.0,True
+capital_cap,0.059699999999999975,True
+risk_cap,1.2609035435207083e-06,True
+equity_risk_cap,0.11585896294034204,True
+bond_floor,0.14029999999999998,True
+US_floor,0.24359999999999998,True
+EM_floor,0.0466,True
+commodities_floor,0.21950000000000003,True
+VGSH_floor,0.0,True
+STIP_floor,0.2403,True

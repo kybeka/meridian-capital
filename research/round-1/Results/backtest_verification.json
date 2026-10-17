@@ -1,9 +1,0 @@
-{
-  "passed": true,
-  "source_price_returns_rebuilt": true,
-  "monthly_returns_checked": 891,
-  "dollar_accounting_reconciliation_max_error": 5.065392549852277e-16,
-  "training_inputs_precede_frozen_tests": true,
-  "current_proposal_test_is_retrospective": true,
-  "untouched_historical_holdout": false
-}
