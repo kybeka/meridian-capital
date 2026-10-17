@@ -80,7 +80,21 @@ if (globe) {
   const land = globe.querySelector('.globe-land');
   const limb = globe.querySelector('.globe-land-limb');
   const grid = globe.querySelector('.globe-grid');
+  const routePath = globe.querySelector('.globe-routes');
+  const signals = globe.querySelector('.globe-signals');
+  const orbitPlanes = [...globe.querySelectorAll('.orbit-plane')];
   const radians = Math.PI / 180;
+  const cities = [[8.95,46],[-74,40.7],[-.12,51.5],[103.8,1.35],[139.7,35.7],[151.2,-33.9],[-46.6,-23.5]];
+  const connections = [[0,1],[0,3],[1,6],[3,4],[4,5],[1,2]];
+  const vector = ([lon,lat]) => [Math.cos(lat*radians)*Math.cos(lon*radians),Math.cos(lat*radians)*Math.sin(lon*radians),Math.sin(lat*radians)];
+  const routes = connections.map(([a,b]) => {
+    const from = vector(cities[a]), to = vector(cities[b]);
+    const angle = Math.acos(Math.max(-1,Math.min(1,from.reduce((sum,v,i)=>sum+v*to[i],0))));
+    return fraction => {
+      const v = from.map((value,i)=>(Math.sin((1-fraction)*angle)*value+Math.sin(fraction*angle)*to[i])/Math.sin(angle));
+      return [Math.atan2(v[1],v[0])/radians,Math.asin(v[2])/radians];
+    };
+  });
   const geography = globeLandPoints.map(([longitude, latitude]) => ({
     longitude: longitude * radians,
     sine: Math.sin(latitude * radians),
@@ -119,6 +133,20 @@ if (globe) {
     for (let lon = -180; lon < 180; lon += 30) line(Array.from({length: 91}, (_, i) => [lon, -90 + 2 * i]));
     for (let lat = -60; lat <= 60; lat += 30) line(Array.from({length: 181}, (_, i) => [-180 + 2 * i, lat]));
     grid.setAttribute('d', lines);
+    lines = '';
+    routes.forEach(route => line(Array.from({length:65},(_,i)=>route(i/64))));
+    routePath.setAttribute('d',lines);
+    let dots = '';
+    function signal(coordinates, moving) {
+      const [lon,lat] = coordinates;
+      const p = project(lon*radians,Math.sin(lat*radians),Math.cos(lat*radians));
+      if(p.z < .08) return;
+      const opacity = Math.min(1,p.z*2).toFixed(2);
+      dots += '<g opacity="'+opacity+'"><circle cx="'+p.x+'" cy="'+p.y+'" r="'+(moving?5:3.5)+'" fill="#d6c4a2" fill-opacity=".15"/><circle cx="'+p.x+'" cy="'+p.y+'" r="'+(moving?1.8:1.3)+'" fill="#eadfc9"/></g>';
+    }
+    cities.forEach(city=>signal(city,false));
+    routes.forEach((route,i)=>signal(route((time/12000+i/routes.length)%1),true));
+    signals.innerHTML = dots;
   }
   let elapsed = 0;
   let lastTime = null;
@@ -127,7 +155,8 @@ if (globe) {
   let paused = false;
   function draw() {
     drawSurface(elapsed);
-    const angle = Math.PI / 6 + elapsed / 120000 * Math.PI * 2;
+    const angle = Math.PI / 6 + elapsed / 60000 * Math.PI * 2;
+    orbitPlanes.forEach(plane => plane.setAttribute('transform', 'rotate(' + (-32 + elapsed / 240000 * 360) + ' 270 220)'));
     const depth = Math.sin(angle);
     const x = 270 + 224 * Math.cos(angle);
     const y = 220 + 83 * depth;
