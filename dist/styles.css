@@ -159,3 +159,9 @@ html:has(.research-page){scroll-padding-top:0}
 .research-code-link{margin:-16px 0 32px}
 .footer-links{flex-wrap:wrap}
 .var-comparison h3 span{line-height:1.7}
+
+.hero-map{cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.hero-map.is-dragging{cursor:grabbing}
+.hero-map:focus-visible{outline:2px solid var(--gold);outline-offset:8px;border-radius:50%}
+#globe-hint{font-size:.7rem;color:var(--muted);margin-right:20px}
+@media(prefers-reduced-motion:reduce){.globe-controls{display:block}.globe-pause{display:none}}

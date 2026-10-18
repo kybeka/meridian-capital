@@ -88,10 +88,12 @@ if (globe) {
     cosine: Math.cos(latitude * radians)
   }));
   let lastSurfaceTime = -Infinity;
-  function drawSurface(time) {
-    if (time - lastSurfaceTime < 40 && time >= lastSurfaceTime) return;
+  let rotation = 15 * radians;
+  let drag = null;
+  let resumeTime = 2200;
+  function drawSurface(time, force = false) {
+    if (!force && time - lastSurfaceTime < 40 && time >= lastSurfaceTime) return;
     lastSurfaceTime = time;
-    const rotation = 15 * radians + time / 160000 * Math.PI * 2;
     const project = (longitude, sine, cosine) => {
       const relative = longitude - rotation;
       return {x: 270 + 167 * cosine * Math.sin(relative), y: 220 - 167 * sine, z: cosine * Math.cos(relative)};
@@ -139,7 +141,16 @@ if (globe) {
     });
   }
   function tick(time) {
-    if (lastTime !== null) elapsed += time - lastTime;
+    if (lastTime !== null) {
+      const delta = Math.min(time - lastTime, 64);
+      elapsed += delta;
+      if (!drag) {
+        resumeTime = Math.min(resumeTime + delta, 2200);
+        const progress = resumeTime / 2200;
+        const speed = progress * progress * (3 - 2 * progress);
+        rotation += delta / 160000 * Math.PI * 2 * speed;
+      }
+    }
     lastTime = time;
     draw();
     frame = requestAnimationFrame(tick);
@@ -150,6 +161,35 @@ if (globe) {
     lastTime = null;
     if (visible && !document.hidden && !paused && !reducedMotion.matches) frame = requestAnimationFrame(tick);
   }
+  function finishDrag(event) {
+    if (!drag || event.pointerId !== drag.id) return;
+    drag = null;
+    resumeTime = 0;
+    globe.classList.remove('is-dragging');
+    if (globe.hasPointerCapture(event.pointerId)) globe.releasePointerCapture(event.pointerId);
+  }
+  globe.addEventListener('pointerdown', event => {
+    if (!event.isPrimary || event.button !== 0 || drag) return;
+    drag = { id: event.pointerId, x: event.clientX, rotation };
+    globe.setPointerCapture(event.pointerId);
+    globe.classList.add('is-dragging');
+  });
+  globe.addEventListener('pointermove', event => {
+    if (!drag || event.pointerId !== drag.id) return;
+    const width = globe.getBoundingClientRect().width;
+    rotation = drag.rotation - (event.clientX - drag.x) / width * Math.PI;
+    drawSurface(elapsed, true);
+  });
+  globe.addEventListener('pointerup', finishDrag);
+  globe.addEventListener('pointercancel', finishDrag);
+  globe.addEventListener('lostpointercapture', finishDrag);
+  globe.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+    event.preventDefault();
+    rotation += (event.key === 'ArrowLeft' ? 1 : -1) * 10 * radians;
+    resumeTime = 0;
+    drawSurface(elapsed, true);
+  });
   new IntersectionObserver(entries => {
     visible = entries[0].isIntersecting;
     sync();
