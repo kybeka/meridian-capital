@@ -80,6 +80,7 @@ if (globe) {
   const land = globe.querySelector('.globe-land');
   const limb = globe.querySelector('.globe-land-limb');
   const grid = globe.querySelector('.globe-grid');
+  const orbitPlanes = [...globe.querySelectorAll('.orbit-plane')];
   const radians = Math.PI / 180;
   const geography = globeLandPoints.map(([longitude, latitude]) => ({
     longitude: longitude * radians,
@@ -90,7 +91,7 @@ if (globe) {
   function drawSurface(time) {
     if (time - lastSurfaceTime < 40 && time >= lastSurfaceTime) return;
     lastSurfaceTime = time;
-    const rotation = 15 * radians + time / 240000 * Math.PI * 2;
+    const rotation = 15 * radians + time / 160000 * Math.PI * 2;
     const project = (longitude, sine, cosine) => {
       const relative = longitude - rotation;
       return {x: 270 + 167 * cosine * Math.sin(relative), y: 220 - 167 * sine, z: cosine * Math.cos(relative)};
@@ -127,7 +128,8 @@ if (globe) {
   let paused = false;
   function draw() {
     drawSurface(elapsed);
-    const angle = Math.PI / 6 + elapsed / 120000 * Math.PI * 2;
+    const angle = Math.PI / 6 + elapsed / 60000 * Math.PI * 2;
+    orbitPlanes.forEach(plane => plane.setAttribute('transform', 'rotate(' + (-32 + elapsed / 240000 * 360) + ' 270 220)'));
     const depth = Math.sin(angle);
     const x = 270 + 224 * Math.cos(angle);
     const y = 220 + 83 * depth;
@@ -137,7 +139,7 @@ if (globe) {
     });
   }
   function tick(time) {
-    if (lastTime !== null) elapsed = (elapsed + time - lastTime) % 240000;
+    if (lastTime !== null) elapsed += time - lastTime;
     lastTime = time;
     draw();
     frame = requestAnimationFrame(tick);
@@ -161,4 +163,38 @@ if (globe) {
   reducedMotion.addEventListener('change', sync);
   document.addEventListener('visibilitychange', sync);
   draw();
+}
+
+const researchNav = document.querySelector('.research-sections');
+if (researchNav) {
+  const header = document.querySelector('.site-header');
+  const links = [...researchNav.querySelectorAll('a')];
+  const sections = links.map(link => document.querySelector(link.hash));
+  const syncResearchOffsets = () => {
+    document.body.style.setProperty('--research-header-height', `${header.offsetHeight}px`);
+    document.body.style.setProperty('--research-nav-height', `${researchNav.offsetHeight}px`);
+  };
+  new ResizeObserver(syncResearchOffsets).observe(header);
+  new ResizeObserver(syncResearchOffsets).observe(researchNav);
+  syncResearchOffsets();
+  let pending = false;
+  const updateResearchSection = () => {
+    const threshold = header.offsetHeight + researchNav.offsetHeight + 48;
+    let active = 0;
+    sections.forEach((section, index) => {
+      if (section.getBoundingClientRect().top <= threshold) active = index;
+    });
+    links.forEach((link, index) => {
+      if (index === active) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+    pending = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!pending) {
+      pending = true;
+      requestAnimationFrame(updateResearchSection);
+    }
+  }, { passive: true });
+  updateResearchSection();
 }

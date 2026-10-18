@@ -1,0 +1,33 @@
+{
+  "reference_date": "2026-10-16",
+  "capital_usd": 100000000,
+  "cash_usd": 12.12,
+  "prices_supplied_by_user": true,
+  "actual_trading_fees_included": false,
+  "positions": {
+    "SPY": {
+      "price": 763.25,
+      "shares": 34169
+    },
+    "EEMV": {
+      "price": 72.3,
+      "shares": 133610
+    },
+    "DBC": {
+      "price": 33.74,
+      "shares": 798756
+    },
+    "VGSH": {
+      "price": 57.69,
+      "shares": 86671
+    },
+    "SCHD": {
+      "price": 34.35,
+      "shares": 95488
+    },
+    "STIP": {
+      "price": 100.58,
+      "shares": 288630
+    }
+  }
+}
