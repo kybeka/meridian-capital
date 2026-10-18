@@ -1,0 +1,19 @@
+scenario,type,portfolio,months,scenario_return,pnl_usd,max_month_end_drawdown
+2018 Q4,historical,Constrained MVO,3.0,-0.0934553966972742,-9345539.66972742,-0.0934553966972742
+2020 February–March,historical,Constrained MVO,2.0,-0.13824589554977385,-13824589.554977385,-0.13824589554977385
+2022 calendar year,historical,Constrained MVO,12.0,-0.023505323837208825,-2350532.3837208822,-0.10906794676600073
+Growth shock,hypothetical,Constrained MVO,,-0.118936,-11893600.0,
+Commodity reversal,hypothetical,Constrained MVO,,-0.12052500000000001,-12052500.0,
+Inflation and rates shock,hypothetical,Constrained MVO,,-0.024902999999999995,-2490299.9999999995,
+2018 Q4,historical,Equal weight,3.0,-0.0768657855524677,-7686578.55524677,-0.0768657855524677
+2020 February–March,historical,Equal weight,2.0,-0.13013037906305502,-13013037.906305503,-0.13013037906305502
+2022 calendar year,historical,Equal weight,12.0,-0.0389529756863245,-3895297.56863245,-0.10857823584775084
+Growth shock,hypothetical,Equal weight,,-0.12166666666666665,-12166666.666666664,
+Commodity reversal,hypothetical,Equal weight,,-0.09416666666666666,-9416666.666666666,
+Inflation and rates shock,hypothetical,Equal weight,,-0.04666666666666667,-4666666.666666667,
+2018 Q4,historical,Risk parity,3.0,-0.02511830257552672,-2511830.2575526717,-0.02511830257552672
+2020 February–March,historical,Risk parity,2.0,-0.04380761624554741,-4380761.624554741,-0.04380761624554741
+2022 calendar year,historical,Risk parity,12.0,-0.031990404687233576,-3199040.4687233577,-0.05801742314340175
+Growth shock,hypothetical,Risk parity,,-0.043095691373354776,-4309569.137335477,
+Commodity reversal,hypothetical,Risk parity,,-0.0432260225090777,-4322602.25090777,
+Inflation and rates shock,hypothetical,Risk parity,,-0.029593100186994393,-2959310.0186994392,
