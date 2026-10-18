@@ -87,3 +87,72 @@
  .research-page .performance-legend{flex-wrap:wrap}
 }
 html:has(.research-page){scroll-padding-top:0}
+
+/* Visible risk analysis and a shared editorial rhythm on the homepage. */
+.research-page #value-at-risk{scroll-margin-top:calc(var(--research-header-height) + var(--research-nav-height) + 24px)}
+.var-comparison{display:grid;grid-template-columns:1fr 1fr;gap:48px;border-block:1px solid var(--line);padding:32px 0}
+.var-comparison article{min-width:0}
+.var-comparison .eyebrow{margin-bottom:16px}
+.var-comparison h3{font:2.8rem Georgia,serif;font-variant-numeric:tabular-nums;margin-bottom:24px}
+.var-comparison h3 span{display:block;font: .8rem 'DM Sans',sans-serif;color:var(--muted);margin-top:8px}
+.var-comparison p:not(.eyebrow){font-size:.95rem;max-width:52ch;color:var(--muted)}
+.var-basis{display:block;font-size:.75rem;color:var(--muted);line-height:1.6}
+.var-section>.chart-takeaway{margin-block:32px 16px}
+.home-page .section{max-width:1280px;padding-block:clamp(56px,7vw,96px)}
+.home-page .hero{max-width:1280px;padding-top:64px;padding-bottom:32px;gap:48px}
+.home-page .hero h1{font-size:clamp(3rem,5.2vw,4.8rem)}
+.home-page .hero-lead{font-size:clamp(1.5rem,2.2vw,2rem);line-height:1.4;max-width:27ch}
+.home-page .hero-description{max-width:46ch}
+.home-page .eyebrow{color:var(--muted);margin-bottom:16px}
+.home-page h2{font-size:clamp(2.2rem,3.4vw,3rem);max-width:24ch}
+.home-page .approach,.home-page .name-story{grid-template-columns:.85fr 1.3fr;gap:8%}
+.home-page .rounds article{padding-block:28px}
+.home-page .rounds article:first-child{padding-top:0}
+.home-page .rounds p{max-width:56ch}
+.home-page .round-number{color:var(--muted)}
+.home-page .rounds .text-link{margin-top:16px}
+.home-page .name-story{padding-block:48px 64px}
+.home-page .name-story p:not(.eyebrow){max-width:62ch}
+.home-page .research .eyebrow{color:#b9c6ce}
+.home-page .research .section-top{align-items:start;margin-bottom:40px}
+.home-page .research .section-top>p{max-width:32ch}
+.home-page .library-status{align-items:start;padding-block:28px}
+.home-page .library-status p{max-width:64ch}
+.home-page .document-list li{padding-block:28px}
+.home-page .document-list p{max-width:56ch;line-height:1.65}
+.home-page .document-list .text-link{font-size:.85rem;letter-spacing:0;color:var(--paper)}
+.home-page .document-status{font-size:.75rem;text-transform:none}
+.home-page .performance-intro{max-width:58ch;margin-block:24px 32px}
+.portfolio-context{display:flex;flex-wrap:wrap;gap:24px 64px;border-block:1px solid var(--line);padding-block:24px;margin-bottom:32px}
+.portfolio-context>div{display:flex;flex-direction:column;align-items:start;gap:8px}
+.portfolio-context span{font-size:.75rem;color:var(--muted)}
+.portfolio-context strong{font-size:.95rem;font-weight:500;font-variant-numeric:tabular-nums}
+.portfolio-context .text-link{padding:0 0 4px;font-size:.95rem}
+.home-page #challenge-results>.performance-reading{padding-top:8px;flex-wrap:wrap}
+.home-page #challenge-nav{font-size:.85rem;color:var(--muted);margin-top:12px;font-variant-numeric:tabular-nums}
+.home-page .team-heading{margin-bottom:48px;align-items:start}
+.home-page .team-heading>p{max-width:30ch}
+.home-page .team-member figcaption{padding-top:24px}
+.home-page .member-name{line-height:1.45}
+.home-page .member-degree{line-height:1.65}
+.home-page .member-links{margin-top:16px}
+@media(max-width:700px){
+ .var-comparison{grid-template-columns:1fr;gap:32px;padding-block:24px}
+ .var-comparison article+article{border-top:1px solid var(--line);padding-top:24px}
+ .research-page .research-sections{gap:20px}
+ .home-page .hero{padding-top:40px;gap:24px}
+ .home-page .approach,.home-page .name-story{grid-template-columns:1fr;gap:32px}
+ .home-page .name-story{padding-block:40px 48px}
+ .home-page .section{padding-block:48px}
+ .home-page .document-list li{flex-wrap:wrap;gap:12px;align-items:start}
+ .home-page .document-list li>div{flex:1;min-width:0}
+ .home-page .document-list .file-type{display:block;margin-left:32px;width:calc(100% - 32px)}
+ .home-page .document-list a.file-type{width:fit-content}
+ .home-page .team-heading{margin-bottom:32px}
+ .portfolio-context{gap:24px 32px}
+ .home-page .performance-heading .stage{white-space:normal;line-height:1.6}
+}
+@media(max-width:700px){
+ .home-page .document-list li{display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px}
+ .home-page .document-list .file-type{grid-column:2;justify-self:start;margin-left:0;width:auto}
+}
