@@ -164,3 +164,37 @@ if (globe) {
   document.addEventListener('visibilitychange', sync);
   draw();
 }
+
+const researchNav = document.querySelector('.research-sections');
+if (researchNav) {
+  const header = document.querySelector('.site-header');
+  const links = [...researchNav.querySelectorAll('a')];
+  const sections = links.map(link => document.querySelector(link.hash));
+  const syncResearchOffsets = () => {
+    document.body.style.setProperty('--research-header-height', `${header.offsetHeight}px`);
+    document.body.style.setProperty('--research-nav-height', `${researchNav.offsetHeight}px`);
+  };
+  new ResizeObserver(syncResearchOffsets).observe(header);
+  new ResizeObserver(syncResearchOffsets).observe(researchNav);
+  syncResearchOffsets();
+  let pending = false;
+  const updateResearchSection = () => {
+    const threshold = header.offsetHeight + researchNav.offsetHeight + 48;
+    let active = 0;
+    sections.forEach((section, index) => {
+      if (section.getBoundingClientRect().top <= threshold) active = index;
+    });
+    links.forEach((link, index) => {
+      if (index === active) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+    pending = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!pending) {
+      pending = true;
+      requestAnimationFrame(updateResearchSection);
+    }
+  }, { passive: true });
+  updateResearchSection();
+}
