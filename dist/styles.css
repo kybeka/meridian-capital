@@ -156,3 +156,6 @@ html:has(.research-page){scroll-padding-top:0}
  .home-page .document-list li{display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px}
  .home-page .document-list .file-type{grid-column:2;justify-self:start;margin-left:0;width:auto}
 }
+.research-code-link{margin:-16px 0 32px}
+.footer-links{flex-wrap:wrap}
+.var-comparison h3 span{line-height:1.7}
