@@ -1,9 +1,0 @@
-CORRECTION TO THE PACK SENT ON 13 OCTOBER
-
-Portfolio weights are unchanged. The previous shared pack’s headline backtest recalculated target weights quarterly. That was a test of a changing MVO rule. The Round 1 main backtest instead keeps the final SAA targets fixed and restores them monthly.
-
-For the fixed SAA report use 9.04% annual return, 8.60% realized volatility, 0.768 Sharpe, -16.19% month-end drawdown and 3.68% historical monthly VaR. Earlier 0.708 Sharpe / -17.63% drawdown / 4.76% VaR describe the rolling rule and must not be labelled results of the fixed final SAA.
-
-Final weights use October 2021-September 2026 returns. The fixed test is retrospective, not an untouched holdout. A 50% haircut was only an earlier proposal; it has not been chosen by the team.
-
-This correction changes the report’s backtest method and results, not the allocation. The Excel main comparison now calculates the fixed test directly.
