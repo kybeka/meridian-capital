@@ -6,6 +6,6 @@ Open `round1_analysis.ipynb` for the allocation method, formulas, input charts, 
 
 - `data/`: Bloomberg prices, the original export, FRED yields, earlier Yahoo prices and position quantities.
 - `results/`: main calculation tables and charts. Charts are saved as PNG and PDF for use in the report.
-- `studies/`: supporting results and the record of earlier research trials.
+- `studies/`: supporting calculation tables and charts.
 
 Open Jupyter from this folder so the relative paths resolve. Package requirements are in `requirements.txt`.
