@@ -86,3 +86,4 @@
  .research-page .performance-reading{flex-wrap:wrap;gap:4px 16px}
  .research-page .performance-legend{flex-wrap:wrap}
 }
+html:has(.research-page){scroll-padding-top:0}
