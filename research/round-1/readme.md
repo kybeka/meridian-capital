@@ -9,3 +9,7 @@ Open `round1_analysis.ipynb` for the allocation method, formulas, input charts, 
 - `studies/`: supporting results and the record of earlier research trials.
 
 Open Jupyter from this folder so the relative paths resolve. Package requirements are in `requirements.txt`.
+
+## Final submission materials
+
+The [submission folder](submission/) contains the final report and presentation PDFs, plus the report’s LaTeX project, figures and fonts.

@@ -165,3 +165,5 @@ html:has(.research-page){scroll-padding-top:0}
 .hero-map:focus-visible{outline:2px solid var(--gold);outline-offset:8px;border-radius:50%}
 #globe-hint{font-size:.7rem;color:var(--muted);margin-right:20px}
 @media(prefers-reduced-motion:reduce){.globe-controls{display:block}.globe-pause{display:none}}
+.submission-links{display:flex;flex-wrap:wrap;gap:12px 28px;margin:0 0 32px}
+.submission-links+.research-code-link{margin-top:0}
