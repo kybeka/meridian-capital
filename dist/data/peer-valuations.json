@@ -1,0 +1,106 @@
+{
+  "dates": [
+    "2026-10-16",
+    "2026-10-19",
+    "2026-10-20",
+    "2026-10-21",
+    "2026-10-22",
+    "2026-10-23",
+    "2026-10-26",
+    "2026-10-27",
+    "2026-10-28"
+  ],
+  "series": [
+    {
+      "id": "meridian",
+      "name": "Meridian Capital",
+      "source_url": "https://github.com/kybeka/meridian-capital/blob/main/research/tracking/opening-positions.json",
+      "holdings_verified_on": "2026-10-16",
+      "opening_reconciliation_usd": 0.0,
+      "values": [
+        100.0,
+        100.0790784,
+        100.14000984,
+        100.25266909,
+        99.98978094,
+        100.26995974,
+        100.17733875,
+        100.23493588,
+        100.57312524
+      ]
+    },
+    {
+      "id": "sixfold",
+      "name": "Sixfold Capital",
+      "source_url": "https://sixfold-capital.github.io/performance.html?lang=en",
+      "holdings_verified_on": "2026-10-29",
+      "opening_reconciliation_usd": 0.0,
+      "values": [
+        100.0,
+        100.08103617,
+        100.20146122,
+        100.41636942,
+        99.63108309,
+        99.71641908,
+        99.89760613,
+        100.10943327,
+        100.48461703
+      ]
+    },
+    {
+      "id": "swissstreet",
+      "name": "SwissStreet",
+      "source_url": "https://assetmanagement-theta.vercel.app/#/portfolio",
+      "holdings_verified_on": "2026-10-29",
+      "opening_reconciliation_usd": 0.0,
+      "values": [
+        100.0,
+        100.03943086,
+        100.21456717,
+        100.4833424,
+        99.59248835,
+        99.3473032,
+        99.61716973,
+        100.06531031,
+        100.30070798
+      ]
+    },
+    {
+      "id": "matterhorn",
+      "name": "Matterhorn Capital",
+      "source_url": "https://matterhorncapitalmanagement.com/data/holdings.json",
+      "holdings_verified_on": "2026-10-29",
+      "opening_reconciliation_usd": 0.0,
+      "values": [
+        100.0,
+        99.87491421,
+        99.97695381,
+        100.10379771,
+        99.4856825,
+        99.47574094,
+        99.49177198,
+        99.86222935,
+        100.13642593
+      ]
+    },
+    {
+      "id": "rivemont",
+      "name": "Rivemont Capital",
+      "source_url": "https://rivemontcap.netlify.app/performance.html",
+      "holdings_verified_on": "2026-10-29",
+      "opening_reconciliation_usd": 0.08,
+      "values": [
+        100.0,
+        99.9146529,
+        99.95808491,
+        100.07888281,
+        99.51488411,
+        99.44641328,
+        99.5346961,
+        99.81791245,
+        99.99060754
+      ]
+    }
+  ],
+  "basis": "Published Round 1 shares held unchanged; daily USD closes, cash and ex-date dividend receivables."
+}

@@ -19,12 +19,15 @@ jobs:
         with:
           python-version: '3.12'
       - name: Verify accounting
-        run: python -m unittest discover -s tests -p 'test_challenge_prices.py'
+        run: python -m unittest discover -s tests -p 'test_*prices.py'
       - name: Fetch completed daily prices
         run: python scripts/update_challenge_prices.py
+      - name: Refresh peer comparison
+        continue-on-error: true
+        run: python scripts/update_peer_prices.py
       - name: Save validated valuations
         run: |
-          git add dist/data/challenge-valuations.csv
+          git add dist/data/challenge-valuations.csv dist/data/peer-valuations.json
           if ! git diff --cached --quiet; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
