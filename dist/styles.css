@@ -179,11 +179,6 @@ html:has(.research-page){scroll-padding-top:0}
 .peer-legend label{display:flex;align-items:center;gap:.5rem;cursor:pointer;min-height:32px}
 .peer-legend input{accent-color:#173242;width:16px;height:16px}
 .peer-swatch{display:inline-block;width:19px;height:3px}
-.peer-date-control{margin-top:.5rem;max-width:38rem}
-.peer-date-control label{display:flex;justify-content:space-between;gap:1rem}
-.peer-date-control input{width:100%;accent-color:#173242;margin:.8rem 0;cursor:pointer}
-.peer-date-control .source-note{margin:0}
-.peer-readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.2rem;margin:1.5rem 0 2rem;font-variant-numeric:tabular-nums}
 .peer-reading{border-top:2px solid;padding-top:.8rem;display:flex;flex-direction:column;gap:.3rem}
 .peer-reading strong{font-size:1.5rem;font-weight:500;color:#173242}
 .peer-reading small{color:#58676d}
@@ -195,3 +190,15 @@ html:has(.research-page){scroll-padding-top:0}
 .peer-legend[hidden],.peer-method[hidden]{display:none}
 #challenge-chart{touch-action:pan-y;cursor:crosshair}
 @media(max-width:600px){.peer-readout{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.peer-reading strong{font-size:1.3rem}.peer-chart-basis{width:100%}.peer-modes{gap:1.3rem}.peer-date-control label{flex-wrap:wrap}}
+
+.peer-plot{position:relative}
+.peer-tooltip{position:absolute;z-index:2;width:245px;max-width:calc(100% - 8px);padding:1rem;background:#fffdf8;border:1px solid #d7d9d1;box-shadow:0 8px 28px #17324218;pointer-events:none;font-size:.8rem;color:#173242}
+.peer-tooltip[hidden]{display:none}
+.peer-tooltip>strong{display:block;padding-bottom:.7rem;border-bottom:1px solid #e1e2db;font-weight:500}
+.peer-tooltip .peer-reading{display:grid;grid-template-columns:1fr auto;border:0;margin-top:.45rem;padding:0 0 0 .65rem;border-left:3px solid var(--series-colour);gap:.15rem .6rem;font-size:.8rem}
+.peer-tooltip .peer-reading strong{font-size:.95rem}
+.peer-tooltip .peer-reading small{grid-column:1 / -1;font-size:.7rem}
+.peer-hint{margin:.5rem 0 1.5rem}
+#challenge-chart:focus-visible{outline:2px solid #a59577;outline-offset:4px}
+.peer-modes button{transition:color 160ms ease,border-color 160ms ease}
+@media(prefers-reduced-motion:reduce){.peer-modes button{transition:none}}
