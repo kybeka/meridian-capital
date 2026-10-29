@@ -1,0 +1,154 @@
+[
+  {
+    "id": "sixfold",
+    "name": "Sixfold Capital",
+    "source_url": "https://sixfold-capital.github.io/performance.html?lang=en",
+    "holdings_verified_on": "2026-10-29",
+    "reference_date": "2026-10-16",
+    "capital_usd": 100000000,
+    "cash_usd": 673.18,
+    "positions": {
+      "SPY": {
+        "shares": 33638,
+        "price": 763.25
+      },
+      "XLE": {
+        "shares": 108525,
+        "price": 68.24
+      },
+      "HEEM": {
+        "shares": 405221,
+        "price": 39.59
+      },
+      "STIP": {
+        "shares": 265829,
+        "price": 100.58
+      },
+      "IEI": {
+        "shares": 152269,
+        "price": 114.24
+      },
+      "GLD": {
+        "shares": 17655,
+        "price": 382.01
+      }
+    },
+    "opening_price_source": "Published opening prices, cross-checked against Yahoo daily closes on 16 October 2026.",
+    "opening_reconciliation_usd": 0.0
+  },
+  {
+    "id": "swissstreet",
+    "name": "SwissStreet",
+    "source_url": "https://assetmanagement-theta.vercel.app/#/portfolio",
+    "holdings_verified_on": "2026-10-29",
+    "reference_date": "2026-10-16",
+    "capital_usd": 100000000,
+    "cash_usd": 90.04,
+    "positions": {
+      "BIL": {
+        "shares": 448618,
+        "price": 91.57
+      },
+      "VTI": {
+        "shares": 83701,
+        "price": 374.07
+      },
+      "VEA": {
+        "shares": 175997,
+        "price": 69.49
+      },
+      "GLD": {
+        "shares": 26177,
+        "price": 382.01
+      },
+      "VWO": {
+        "shares": 92711,
+        "price": 58.03
+      }
+    },
+    "opening_price_source": "Published opening prices, cross-checked against Yahoo daily closes on 16 October 2026.",
+    "opening_reconciliation_usd": 0.0
+  },
+  {
+    "id": "matterhorn",
+    "name": "Matterhorn Capital",
+    "source_url": "https://matterhorncapitalmanagement.com/data/holdings.json",
+    "holdings_verified_on": "2026-10-29",
+    "reference_date": "2026-10-16",
+    "capital_usd": 100000000,
+    "cash_usd": 5.22,
+    "positions": {
+      "VTI": {
+        "shares": 29149,
+        "price": 374.07
+      },
+      "VEA": {
+        "shares": 147369,
+        "price": 69.49
+      },
+      "IEMG": {
+        "shares": 133320,
+        "price": 76.79
+      },
+      "BND": {
+        "shares": 188225,
+        "price": 70.82
+      },
+      "BNDX": {
+        "shares": 349731,
+        "price": 47.13
+      },
+      "TIP": {
+        "shares": 144602,
+        "price": 105.54
+      },
+      "GLD": {
+        "shares": 29177,
+        "price": 382.01
+      },
+      "BCI": {
+        "shares": 469258,
+        "price": 26.42
+      }
+    },
+    "opening_price_source": "Yahoo daily close on 16 October 2026, rounded to cents; quantities and cash reconcile to the source capital.",
+    "opening_reconciliation_usd": 0.0
+  },
+  {
+    "id": "rivemont",
+    "name": "Rivemont Capital",
+    "source_url": "https://rivemontcap.netlify.app/performance.html",
+    "holdings_verified_on": "2026-10-29",
+    "reference_date": "2026-10-16",
+    "capital_usd": 100000000,
+    "cash_usd": 667,
+    "positions": {
+      "IVV": {
+        "shares": 32608,
+        "price": 766.67
+      },
+      "VXUS": {
+        "shares": 119860,
+        "price": 83.43
+      },
+      "VGIT": {
+        "shares": 384860,
+        "price": 57.13
+      },
+      "VTIP": {
+        "shares": 354427,
+        "price": 48.68
+      },
+      "BCI": {
+        "shares": 567751,
+        "price": 26.42
+      },
+      "GLDM": {
+        "shares": 130479,
+        "price": 82.46
+      }
+    },
+    "opening_price_source": "Published opening prices, cross-checked against Yahoo daily closes on 16 October 2026.",
+    "opening_reconciliation_usd": 0.08
+  }
+]
