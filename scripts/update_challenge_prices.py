@@ -41,6 +41,35 @@ def calculate(positions, histories):
     return rows
 
 
+def contributions(positions, histories, rows):
+    """Attribute fixed-share Round 1 P&L, including ex-date receivables."""
+    tickers = list(positions['positions'])
+    if set(tickers) != {'SPY', 'EEMV', 'DBC', 'VGSH', 'SCHD', 'STIP'}:
+        raise ValueError('Contribution export is restricted to the published Round 1 ETFs')
+    opening = positions['reference_date']
+    initial = positions['capital_usd']
+    previous = {t: p['shares'] * p['price'] for t, p in positions['positions'].items()}
+    original = previous.copy()
+    previous_nav = initial
+    output = []
+    for day, nav, _ in rows:
+        if day > '2026-11-06':
+            break
+        values = original.copy() if day == opening else {
+            t: positions['positions'][t]['shares'] * (histories[t]['closes'][day] + sum(
+                amount for ex, amount in histories[t]['dividends'].items() if opening < ex <= day
+            )) for t in tickers
+        }
+        total = positions['cash_usd'] + sum(values.values())
+        if abs(total - float(nav)) > .011:
+            raise ValueError('Contribution values do not reconcile to portfolio NAV')
+        output.append({'date': day, 'nav_usd': float(nav),
+            'since': {t: (values[t] - original[t]) / initial * 100 for t in tickers},
+            'daily': {t: (values[t] - previous[t]) / previous_nav * 100 for t in tickers}})
+        previous, previous_nav = values, total
+    return {'tickers': tickers, 'reference_date': opening, 'rows': output}
+
+
 def fetch_history(ticker, opening, now):
     start = int(datetime.fromisoformat(opening).replace(tzinfo=NY).timestamp())
     url = f'https://query1.finance.yahoo.com/v8/finance/chart/{ticker}?period1={start}&period2={int(now.timestamp())}&interval=1d&events=div%2Csplits&includeAdjustedClose=false'
@@ -90,9 +119,14 @@ def main():
     writer = csv.writer(buffer, lineterminator='\n')
     writer.writerow(['date', 'nav_usd', 'source'])
     writer.writerows(rows)
+    attribution = contributions(positions, histories, rows)
+    attribution_path = ROOT / 'dist/data/round1-contributions.json'
+    attribution_temp = attribution_path.with_suffix('.tmp')
+    attribution_temp.write_text(json.dumps(attribution, indent=2) + '\n')
     temporary = output.with_suffix('.tmp')
     temporary.write_text(buffer.getvalue())
     temporary.replace(output)
+    attribution_temp.replace(attribution_path)
     print(f'Validated {len(rows)} valuations through {rows[-1][0]}')
 
 

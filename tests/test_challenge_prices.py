@@ -27,3 +27,26 @@ class AccountingTests(unittest.TestCase):
         self.history['OTHER'] = {'closes': {'2026-10-16': 100}, 'dividends': {}, 'splits': []}
         with self.assertRaises(ValueError):
             prices.calculate(self.positions, self.history)
+
+
+class ContributionTests(unittest.TestCase):
+    def test_dividends_and_daily_denominator(self):
+        tickers = ['SPY','EEMV','DBC','VGSH','SCHD','STIP']
+        positions = {'reference_date':'2026-10-16','cash_usd':10,'capital_usd':610,
+                     'positions':{t:{'shares':1,'price':100} for t in tickers}}
+        histories = {t:{'closes':{'2026-10-16':100,'2026-10-19':110,'2026-10-20':108,'2026-10-21':109},
+                        'dividends':{'2026-10-20':2},'splits':[]} for t in tickers}
+        rows = prices.calculate(positions,histories)
+        result = prices.contributions(positions,histories,rows)['rows']
+        self.assertEqual(sum(result[0]['since'].values()),0)
+        self.assertAlmostEqual(sum(result[1]['since'].values()),60/610*100)
+        self.assertEqual(sum(result[2]['daily'].values()),0)
+        self.assertAlmostEqual(sum(result[3]['daily'].values()),6/670*100)
+        for i, row in enumerate(result):
+            self.assertAlmostEqual(sum(row['since'].values()),(row['nav_usd']/610-1)*100)
+            previous=result[max(0,i-1)]['nav_usd']
+            self.assertAlmostEqual(sum(row['daily'].values()),(row['nav_usd']/previous-1)*100)
+
+    def test_private_or_unexpected_holdings_are_rejected(self):
+        with self.assertRaises(ValueError):
+            prices.contributions({'positions':{'OTHER':{}}},{},[])

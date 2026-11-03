@@ -11,7 +11,7 @@
   const colours = ['#173242', '#927d56', '#527b70', '#82708c', '#a6644e'];
   const patterns = ['', '8 4', '3 4', '12 4 3 4', '2 5'];
   try {
-    const [ownResult, peerResult] = await Promise.allSettled([get('data/challenge-valuations.csv'), get('data/peer-valuations.json', true)]);
+    const [ownResult, peerResult, contributionResult] = await Promise.allSettled([get('data/challenge-valuations.csv'), get('data/peer-valuations.json', true), get('data/round1-contributions.json', true)]);
     if (ownResult.status !== 'fulfilled') throw Error('Valuations unavailable');
     const rows = ownResult.value.trim().split(/\r?\n/).slice(1).filter(Boolean).map(line => {
       const [date, nav, source] = line.split(',');
@@ -21,6 +21,20 @@
       if (!/^\d{4}-\d{2}-\d{2}$/.test(row.date) || !Number.isFinite(row.nav) || row.nav <= 0 || !row.source || (i && row.date <= rows[i-1].date)) throw Error('Invalid valuation record');
     });
     if (!rows.length) throw Error('Empty valuations');
+    const contributionData = contributionResult.status === 'fulfilled' ? contributionResult.value : null;
+    const contributionRows = new Map();
+    const round1Tickers = ['SPY','EEMV','DBC','VGSH','SCHD','STIP'];
+    if (contributionData?.reference_date === rows[0].date && Array.isArray(contributionData.rows)) {
+      for (const entry of contributionData.rows) {
+        const matching = rows.find(r => r.date === entry.date);
+        if (!matching || Math.abs(matching.nav-entry.nav_usd) > .01) continue;
+        if (!['since','daily'].every(mode => entry[mode] && Object.keys(entry[mode]).length === 6 && round1Tickers.every(t => Number.isFinite(entry[mode][t])))) continue;
+        const i = rows.indexOf(matching), previousNav = rows[Math.max(0,i-1)].nav;
+        const sum = mode => round1Tickers.reduce((total,t) => total+entry[mode][t],0);
+        if (Math.abs(sum('since')-(matching.nav/rows[0].nav-1)*100) > .000001 || Math.abs(sum('daily')-(matching.nav/previousNav-1)*100) > .000001) continue;
+        contributionRows.set(entry.date,entry);
+      }
+    }
     const first = rows[0], last = rows.at(-1);
     const own = {dates: rows.map(r => r.date), series: [{id:'meridian', name:'Meridian Capital', values:rows.map(r => r.nav / first.nav * 100)}]};
     let peers = peerResult.status === 'fulfilled' ? peerResult.value : null;
@@ -36,6 +50,10 @@
     chart.insertAdjacentHTML('beforebegin', `<div class="peer-toolbar"><div class="peer-modes" role="group" aria-label="Portfolio chart view"><button type="button" aria-pressed="true" data-view="own">Meridian</button><button type="button" aria-pressed="false" data-view="peers" ${peers ? '' : 'disabled'}>Compare teams</button></div><span class="peer-chart-basis">Value of 100 · USD</span></div><p id="peer-availability" class="source-note" ${peers ? 'hidden' : ''}>Peer comparison is temporarily unavailable. Meridian’s tracker is shown below.</p><div id="peer-legend" class="peer-legend" role="group" aria-label="Portfolios shown" hidden></div>`);
     chart.insertAdjacentHTML('afterend', `<p class="source-note peer-hint">Hover or tap for values. Use the arrow keys when the chart is focused.</p><div id="peer-method" class="peer-method" hidden><p>We use each team’s published Round 1 shares and cash, with the same daily USD closing-price source and dividend treatment as our tracker. Each portfolio starts at 100 on 16 October.</p><details><summary>Comparison method</summary><p>These estimates hold the published opening shares unchanged and include dividends as receivables from the ex-date, without reinvesting them. Cash earns no interest; trading fees and taxes are excluded. Each line is divided by its own opening basket value. One portfolio’s published cash is rounded to whole dollars, leaving an $0.08 opening difference.</p><p>Peer holdings checked on 29 October 2026. This comparison stops at the 6 November Round 1 close until we verify the teams’ later trades. These are our reconstructions of published holdings; official results come from Bloomberg and the course team.</p><p>The other teams are labelled A–D throughout this chart.</p></details><p id="peer-through" class="source-note"></p></div>`);
     const legend = document.querySelector('#peer-legend');
+    let contributionMode = 'since';
+    const contributionControls = document.createElement('div'); contributionControls.className = 'contribution-controls';
+    contributionControls.innerHTML = '<span>ETF contributions</span><div role="group" aria-label="Contribution period"><button type="button" data-period="since" aria-pressed="true">Since inception</button><button type="button" data-period="daily" aria-pressed="false">That day</button></div>';
+    legend.after(contributionControls);
     const plot = document.createElement('div'); plot.className = 'peer-plot';
     chart.before(plot); plot.append(chart);
     const tooltip = document.createElement('div'); tooltip.className = 'peer-tooltip'; tooltip.id = 'peer-tooltip'; tooltip.hidden = true; tooltip.setAttribute('role', 'tooltip');
@@ -69,6 +87,29 @@
         const indexValue = document.createElement('small'); indexValue.textContent = `${s.values[selected].toFixed(2)} indexed value`;
         item.append(name,value,indexValue); readout.append(item);
       });
+      tooltip.classList.toggle('has-contributions', !comparing);
+      if (!comparing) {
+        const entry = contributionRows.get(data.dates[selected]);
+        const section = document.createElement('div'); section.className = 'contribution-detail';
+        if (entry) {
+          const values = entry[contributionMode];
+          const magnitude = Math.max(...Object.values(values).map(Math.abs), .000001);
+          const title = document.createElement('p'); title.textContent = contributionMode === 'since' ? 'Return drivers since inception' : 'Return drivers for this close'; section.append(title);
+          [...round1Tickers].sort((a,b) => values[b]-values[a]).forEach(t => {
+            const row = document.createElement('div'); row.className = 'contribution-row';
+            const label = document.createElement('span'); label.textContent = t;
+            const track = document.createElement('span'); track.className = 'contribution-track';
+            const bar = document.createElement('span'); bar.className = values[t] < 0 ? 'negative' : 'positive';
+            bar.style.width = Math.abs(values[t])/magnitude*50+'%'; bar.style.left = (values[t]<0 ? 50-Math.abs(values[t])/magnitude*50 : 50)+'%'; track.append(bar);
+            const value = document.createElement('span'); value.textContent = pct(values[t]).replace('%',' pp');
+            row.append(label,track,value); section.append(row);
+          });
+          const total = document.createElement('p'); total.className = 'contribution-total'; total.textContent = (contributionMode === 'since' ? 'Return since inception: ' : 'Return for this close: ')+pct(Object.values(values).reduce((a,b)=>a+b,0));
+          const note = document.createElement('small'); note.textContent = 'Percentage points · Includes dividends receivable. Cash contributes 0; displayed values are rounded.';
+          section.append(total,note);
+        } else { section.textContent = 'ETF breakdown unavailable for this close.'; }
+        readout.append(section);
+      }
       tooltip.hidden = false;
       const px = cx / chart.viewBox.baseVal.width * plot.clientWidth;
       const left = px + tooltip.offsetWidth + 24 > plot.clientWidth ? px - tooltip.offsetWidth - 16 : px + 16;
@@ -94,12 +135,19 @@
       if (comparing === (button.dataset.view === 'peers')) return;
       comparing = button.dataset.view === 'peers';
       document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+      contributionControls.hidden = comparing;
+      plot.classList.toggle('with-contributions', !comparing);
       legend.hidden = !comparing; document.querySelector('#peer-method').hidden = !comparing;
       selected = (comparing ? peers : own).dates.length-1; render();
       transition?.cancel();
       if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
         transition = plot.animate([{opacity: .2, transform: 'translateY(5px)'}, {opacity: 1, transform: 'translateY(0)'}], {duration: 240, easing: 'cubic-bezier(.22,1,.36,1)'});
       }
+    }));
+    contributionControls.querySelectorAll('button').forEach(button => button.addEventListener('click', () => {
+      contributionMode = button.dataset.period;
+      contributionControls.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+      inspect(selected);
     }));
     const pointAt = event => {
       const point = chart.createSVGPoint(); point.x=event.clientX; point.y=event.clientY;

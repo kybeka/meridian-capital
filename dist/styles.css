@@ -202,3 +202,20 @@ html:has(.research-page){scroll-padding-top:0}
 #challenge-chart:focus-visible{outline:2px solid #a59577;outline-offset:4px}
 .peer-modes button{transition:color 160ms ease,border-color 160ms ease}
 @media(prefers-reduced-motion:reduce){.peer-modes button{transition:none}}
+
+.contribution-controls{display:flex;align-items:center;gap:.7rem 1.2rem;flex-wrap:wrap;font-size:.8rem;margin:.5rem 0 1rem;color:#58676d}
+.contribution-controls[hidden]{display:none}
+.contribution-controls button{font:inherit;border:0;background:transparent;color:inherit;padding:.5rem .7rem;cursor:pointer;border-bottom:2px solid transparent}
+.contribution-controls button[aria-pressed=true]{color:#173242;border-color:#a59577}
+.peer-tooltip.has-contributions{width:300px;box-sizing:border-box}
+.contribution-detail{border-top:1px solid #d7d9d1;margin-top:.8rem;padding-top:.5rem;font-variant-numeric:tabular-nums}
+.contribution-detail p{font-size:.75rem;margin:.3rem 0 .6rem}
+.contribution-row{display:grid;grid-template-columns:40px 1fr 65px;gap:.6rem;align-items:center;margin:.45rem 0;font-size:.75rem}
+.contribution-row>span:last-child{text-align:right}
+.contribution-track{height:14px;position:relative;background:linear-gradient(to right,transparent calc(50% - .5px),#acb4b1 calc(50% - .5px),#acb4b1 calc(50% + .5px),transparent calc(50% + .5px))}
+.contribution-track>span{position:absolute;top:3px;height:8px}
+.contribution-track .positive{background:#527b70}.contribution-track .negative{background:#a6644e}
+.contribution-detail .contribution-total{border-top:1px solid #e1e2db;padding-top:.55rem;margin-top:.7rem}
+.contribution-detail small{display:block;font-size:.65rem;line-height:1.5;color:#58676d}
+
+@media(max-width:600px){.peer-plot.with-contributions{min-height:410px}}
