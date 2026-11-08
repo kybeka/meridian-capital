@@ -1,0 +1,18 @@
+{
+  "status": "Local review copy; unpublished",
+  "price_date": "2026-11-06",
+  "entry_date": "2026-11-07",
+  "nav_usd": 97115068.57561,
+  "report": "materials/round-2-report.pdf",
+  "report_sha256": "efaf0f12f446292733d8fda910f307b11c4fcdfc0ffa9ef6b59be37425bc43a4",
+  "report_revision": "2026-11-08",
+  "stock_tickers": [
+    "ADBE",
+    "KR",
+    "HRL",
+    "BMY",
+    "XOM",
+    "HPQ"
+  ],
+  "source": "https://github.com/kybeka/meridian-capital/tree/main/research/round-2"
+}

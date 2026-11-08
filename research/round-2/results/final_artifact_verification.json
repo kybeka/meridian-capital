@@ -25,11 +25,15 @@
   "report": {
     "url": "https://www.overleaf.com/project/6ae9ddb29f60dfa97d0803c2",
     "verified_on": "2026-11-08",
-    "compiled_pages_including_cover": 10,
+    "compiled_pages_including_cover": 12,
     "live_compile_errors": 0,
     "live_compile_warnings": 0,
     "font": "DM Sans",
-    "generated_research_pdf_removed": true
+    "generated_research_pdf_removed": true,
+    "content_pages": 10,
+    "front_matter_pages": 2,
+    "report_pdf_sha256": "efaf0f12f446292733d8fda910f307b11c4fcdfc0ffa9ef6b59be37425bc43a4",
+    "portfolio_description_pdf": "submission/AMC2_Portfolio_Description.pdf"
   },
   "entry_date": "2026-11-07"
 }

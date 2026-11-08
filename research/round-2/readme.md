@@ -6,7 +6,7 @@ The layout follows [Round 1](../round-1/readme.md): one main notebook, frozen in
 
 - [data/](data/readme.md): archived prices, statements, rate observations, source corrections, valuation assumptions, company notes and source register. An input manifest records SHA-256 hashes.
 - [results/](results/readme.md): calculation tables, charts, frozen comparison results and execution checks. Percentages in CSV files are decimal fractions unless the column says otherwise.
-- [submission/](submission/readme.md): the Excel model, links to the team's authoritative Overleaf documents, and a matching presentation draft awaiting edit access.
+- [submission/](submission/readme.md): the report, portfolio description, Excel model, editable LaTeX and a presentation draft for team review.
 - [code/](code/readme.md): shared cash-flow and validation calculations used by the companion notebook.
 
 ## The decision
@@ -15,9 +15,9 @@ The original six-ETF SAA remains the benchmark. Our funding choice scales each E
 
 The frozen price cutoff is **6 November 2026**. Calibration uses **60 complete monthly USD returns, November 2021–October 2026**. The one-third requirement is a class instruction reported by the team. The written tracking-error convention is distinguished from additional daily-risk and concentration preferences in the notebook.
 
-Implementation uses **zero fees and no reserve**. The verified closing-price NAV is **$97,115,068.58**, including the VGSH and STIP distributions paid before 6 November; the one-third stock budget is **$32,371,689.53**. The final share counts include the additional SPY and Adobe purchases reported by the team: **22,964 SPY**, **18,865 ADBE**, and **$116.05 residual cash**. Bloomberg entry date is **7 November 2026**, as confirmed by the team; the price date is **6 November close**. The notebook reconciles all twelve quantities with the saved Excel model and verifies its file hash. The [cross-artifact reconciliation](../tracking/nav-reconciliation-2026-11-06.json) checks these figures against the website; [issuer evidence](../tracking/dividend-evidence/verification.json) records the distribution amounts and dates.
+Implementation uses **zero fees and no reserve**. The verified closing-price NAV is **$97,115,068.58**, including the VGSH and STIP distributions paid before 6 November; the one-third stock budget is **$32,371,689.53**. The final share counts include the additional SPY and Adobe purchases reported by the team: **22,964 SPY**, **18,865 ADBE**, and **$116.05 residual cash**. Bloomberg entry date is **7 November 2026**, as confirmed by the team; the price date is **6 November close**. The notebook calculates all twelve quantities. The separate reconciliation record compares them with the Excel model and website. The [cross-artifact reconciliation](../tracking/nav-reconciliation-2026-11-06.json) checks these figures against the website; [issuer evidence](../tracking/dividend-evidence/verification.json) records the distribution amounts and dates.
 
-The earlier generated research PDF has been removed. The submission report is maintained in [Overleaf](https://www.overleaf.com/project/6ae9ddb29f60dfa97d0803c2), where the completed DM Sans version compiled to ten pages including its cover, with no errors or warnings, on 8 November. This repository does not imply that a submission email has been sent.
+The final [team report](submission/AMC2_Report.pdf) contains ten content pages plus the cover and contents page. The [portfolio description](submission/AMC2_Portfolio_Description.pdf) contains the full holdings, trades and the team's security profiles. Editable LaTeX is in [submission/latex](submission/latex). Overleaf remains the shared editing project. These files are ready for the team to submit; no email has been sent.
 
 ## What the evidence supports
 

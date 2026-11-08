@@ -1,0 +1,201 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage{fontspec}
+\setmainfont{DMSans-Regular.ttf}[BoldFont=DMSans-Bold.ttf,ItalicFont=DMSans-Italic.ttf]
+\setsansfont{DMSans-Regular.ttf}[BoldFont=DMSans-Bold.ttf,ItalicFont=DMSans-Italic.ttf]
+\usepackage{microtype}
+\usepackage[a4paper,top=1.7cm,bottom=1.7cm,left=1.6cm,right=1.6cm,headheight=22pt,headsep=8pt]{geometry}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{xcolor}
+\usepackage{booktabs,array,tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{todonotes}
+\usepackage{float}
+\usepackage{needspace,etoolbox}
+\pretocmd{\section}{\Needspace{5\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{5\baselineskip}}{}{}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{navy}{HTML}{0A2233}
+\definecolor{ink}{HTML}{173242}
+\definecolor{gold}{HTML}{A59577}
+\definecolor{paper}{HTML}{F7F5EF}
+\definecolor{muted}{HTML}{59666B}
+\definecolor{line}{HTML}{D9DCD7}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=gold}
+
+\color{ink}
+\linespread{1.03}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.34em}
+
+\newcommand{\tracked}[2][100]{{\addfontfeatures{LetterSpace=8}#2}}
+
+
+\titleformat{\section}
+  {\rmfamily\Large\color{navy}}
+  {\textcolor{gold}{\thesection}\hspace{0.6em}}{0pt}{}
+  [\vspace{-0.2em}{\color{gold}\titlerule[0.8pt]}]
+\titleformat{\subsection}
+  {\rmfamily\large\color{navy}}{\textcolor{gold}{\thesubsection}\hspace{0.5em}}{0pt}{}
+\titleformat{\subsubsection}
+  {\sffamily\bfseries\small\color{ink}\MakeUppercase}{}{0pt}{}
+\titlespacing*{\section}{0pt}{2.2em}{1.2em}
+\titlespacing*{\subsection}{0pt}{1.6em}{0.5em}
+\titlespacing*{\subsubsection}{0pt}{.6em}{.15em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\fancyhead[L]{\small\textcolor{muted}{\tracked[120]{MERIDIAN CAPITAL}}}
+\fancyhead[R]{\small\textcolor{muted}{\leftmark}}
+\fancyfoot[L]{\footnotesize\textcolor{muted}{Asset Management Challenge 2026 \,$\cdot$\, Round 2}}
+\fancyfoot[R]{\footnotesize\textcolor{navy}{\thepage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{gold}\leaders\hrule height \headrulewidth\hfill}}
+
+\renewcommand{\arraystretch}{1.12}
+\arrayrulecolor{line}
+\newcommand{\hd}[1]{\textcolor{navy}{\textbf{#1}}}
+\captionsetup{font={small,color=muted},labelfont={bf,color=navy},labelsep=period,skip=8pt}
+
+\newtcolorbox{callout}[1][]{
+  enhanced, breakable, colback=paper, colframe=paper,
+  borderline west={2.5pt}{0pt}{gold},
+  boxrule=0pt, arc=0pt, left=12pt, right=10pt, top=8pt, bottom=8pt,
+  fonttitle=\bfseries\small, coltitle=navy, #1}
+
+\lstdefinestyle{meridian}{
+  language=Python, basicstyle=\ttfamily\footnotesize\color{ink},
+  keywordstyle=\color{navy}\bfseries, commentstyle=\color{muted}\itshape,
+  stringstyle=\color{gold}, numbers=left, numberstyle=\tiny\color{muted},
+  numbersep=8pt, backgroundcolor=\color{paper}, frame=l, rulecolor=\color{gold},
+  framesep=8pt, xleftmargin=14pt, breaklines=true, showstringspaces=false,
+  columns=fullflexible, keepspaces=true}
+\lstset{style=meridian}
+
+\usepackage{tocloft}
+\renewcommand{\cftsecfont}{\rmfamily\large\color{navy}}
+\renewcommand{\cftsecpagefont}{\rmfamily\large\color{navy}}
+\renewcommand{\cftsubsecfont}{\color{ink}}
+\renewcommand{\cftsecleader}{\color{line}\cftdotfill{\cftdotsep}}
+\setlength{\cftbeforesecskip}{0.9em}
+\setcounter{tocdepth}{2}
+
+
+\definecolor{editblue}{HTML}{D9EFFF}
+\titlespacing*{\section}{0pt}{.8em}{.4em}
+\titlespacing*{\subsection}{0pt}{.6em}{.2em}
+\newcommand{\file}[1]{\texttt{\detokenize{#1}}}
+\emergencystretch=3em
+
+\begin{document}
+\section*{Portfolio Description and Trade List}\markboth{Portfolio Description}{}
+\label{sec:implementation}
+\subsection*{Implementation}
+We entered the rebalance in Bloomberg on \textbf{7 November 2026}, using \textbf{6 November 2026 closing prices}. All positions are in \textbf{USD}. With NAV of \$97,115,068.58, the one-third stock budget is \$32,371,689.53. We calculate $q_i^*=w_iC/P_i$ and convert this to whole shares, with no fees or reserve. The final entries include one additional SPY share and one additional Adobe share to reduce unused cash.
+
+\begin{center}\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\linewidth}{@{}X l r r r@{}}\toprule
+\hd{Security}&\hd{Bloomberg ID}&\hd{Shares}&\hd{Weight \%}&\hd{Trade shares}\\\midrule
+SPDR S\&P 500 ETF & SPY US & 22,964 & 17.39 & -11,205 \\
+iShares EM Min Vol ETF & EEMV US & 89,717 & 6.44 & -43,893 \\
+Invesco DB Commodity ETF & DBC US & 553,213 & 17.97 & -245,543 \\
+Schwab US Dividend ETF & SCHD US & 60,380 & 2.19 & -35,108 \\
+Vanguard Short-Term Treasury ETF & VGSH US & 55,948 & 3.33 & -30,723 \\
+iShares 0--5 Year TIPS ETF & STIP US & 186,996 & 19.35 & -101,634 \\
+Adobe Inc. & ADBE US & 18,865 & 4.65 & +18,865 \\
+The Kroger Co. & KR US & 116,215 & 8.10 & +116,215 \\
+Hormel Foods Corp. & HRL US & 305,167 & 6.90 & +305,167 \\
+Bristol Myers Squibb & BMY US & 99,004 & 6.33 & +99,004 \\
+ExxonMobil Holdings Corp. & XOM US & 21,201 & 3.62 & +21,201 \\
+HP Inc. & HPQ US & 127,276 & 3.73 & +127,276 \\
+\midrule Cash & USD & & 0.00 & \\
+\hd{Total} & & & \hd{100.00} & \\\bottomrule
+\end{tabularx}\end{center}
+All Bloomberg identifiers use the Equity market sector, for example SPY US Equity. Positive trade quantities are purchases and negative quantities are sales; every trade uses the 7 November entry date and 6 November 2026 price date. We retain full precision in the calculations and round weights only for display. Securities total \$97,114,952.53 and remaining cash is \$116.05. The stocks total \$32,371,559.04, or 33.33320\% of NAV. Whole-share rounding explains the \$130.49 difference from the exact one-third budget.
+
+Closing prices (USD): SPY 735.29; EEMV 69.71; DBC 31.54; SCHD 35.17; VGSH 57.86; STIP 100.51; ADBE 239.30; KR 67.70; HRL 21.95; BMY 62.14; XOM 165.87; HPQ 28.46.
+
+
+Annual ex-ante tracking error against the original SAA is 3.92\%, estimated from 60 monthly USD returns, November 2021--October 2026.
+\clearpage
+\begingroup
+\section*{Security Profiles: ETFs}
+\subsubsection*{SPY \,$\cdot$\, State Street SPDR S\&P 500 ETF Trust}
+The first ETF ever listed in the US, structured as a unit investment trust. It matches the price and yield of the
+S\&P 500, a float-adjusted, market-cap-weighted index of large US companies across all eleven GICS sectors.
+It is tilted towards Information Technology (38.38\% on 15 Oct 2026), with NVIDIA, Apple and Microsoft as the largest
+positions. It pays dividends quarterly, with a yield of about 1\%.
+\href{https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy}{\textcolor{gold}{Source}}
+
+\subsubsection*{EEMV \,$\cdot$\, iShares MSCI Emerging Markets Min Vol Factor ETF}
+It holds emerging-market stocks with lower volatility than the broader MSCI Emerging Markets Index, keeping
+equity exposure at lower risk (3-year beta of 0.62). The portfolio is concentrated in Taiwan (23.49\%),
+China (19.58\%), India (16.50\%) and South Korea (13.98\%), and in Information Technology
+(34.80\% on 15 Oct 2026) and Financials (21.25\%). It pays income semi-annually.
+\href{https://www.ishares.com/us/products/239641/ishares-msci-emerging-markets-minimum-volatility-etf}{\textcolor{gold}{Source}}
+
+\subsubsection*{DBC \,$\cdot$\, Invesco DB Commodity Index Tracking Fund}
+A commodity pool providing diversified exposure to energy, precious metals, industrial metals and agriculture,
+accessed through futures contracts. The index is designed to maximise roll benefits in
+backwardated markets and limit roll losses in contango. Its return comes from price changes, roll yield and
+the interest on its Treasury collateral. Invesco updated the index methodology in November 2025, including broader eligibility and concentration limits. The listed total and net expense ratios are 0.89\% and 0.84\%.
+\href{https://www.invesco.com/content/dam/invesco/us/en/product-documents/etf/fact-sheet/dbc-invesco-db-commodity-index-tracking-fund-fact-sheet.pdf}{\textcolor{gold}{Source}}
+
+\subsubsection*{VGSH \,$\cdot$\, Vanguard Short-Term Treasury ETF}
+It holds US Treasury notes with 1 to 3 years to maturity, excluding TIPS, almost entirely in government
+bonds (about 99.7\%). It uses a representative sample of the index's bonds. Its short duration makes it
+less sensitive to interest rates, and it pays income monthly.
+\href{https://investor.vanguard.com/investment-products/etfs/profile/vgsh}{\textcolor{gold}{Source}}
+
+\subsubsection*{SCHD \,$\cdot$\, Schwab U.S. Dividend Equity ETF}
+It selects about 100 US large-cap stocks for the quality and sustainability of their dividends, judged on
+financial ratios relative to peers. It is tilted towards Health Care, Consumer Staples and Energy; top holdings
+include Texas Instruments, Procter \& Gamble, Chevron and Coca-Cola. It pays dividends quarterly, with a
+yield of about 3.2\%.
+\href{https://www.schwabassetmanagement.com/products/schd}{\textcolor{gold}{Source}}
+
+\subsubsection*{STIP \,$\cdot$\, iShares 0--5 Year TIPS Bond ETF}
+It held 24 positions on 15 October 2026, with 94.75\% in Treasuries (reported in the AA category) and 5.25\% in cash and/or derivatives. Its Treasury Inflation-Protected Securities have less than five years to maturity. The principal adjusts with inflation, so it hedges rising prices while keeping interest-rate risk low
+(effective duration 2.25 years on 15 October 2026). It pays income monthly.
+\href{https://www.blackrock.com/us/individual/products/239450/ishares-0-5-year-tips-bond-etf}{\textcolor{gold}{Source}}
+
+\clearpage
+\section*{Security Profiles: Stocks}
+\subsubsection*{ADBE \,$\cdot$\, Adobe Inc.}
+A software company that sells creative, document and customer experience tools, mostly through subscriptions. Digital Media, which covers Creative Cloud, Acrobat, Express and the Firefly AI models, brought in USD 17.65 billion of its USD 23.77 billion revenue in fiscal 2025. Digital Experience added USD 5.86 billion. Adobe has about 31,000 employees and pays no dividend.
+Source: \href{https://www.sec.gov/Archives/edgar/data/796343/000079634326000003/adbe-20251128.htm}{\textcolor{gold}{Form 10-K FY2025}}, \href{https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/01215202/cjy35yjtgawfe.pdf}{\textcolor{gold}{Q4 FY2025 results}}
+
+\subsubsection*{KR \,$\cdot$\, The Kroger Co.}
+One of the largest US grocery retailers, with 2,688 supermarkets and multi-department stores in 35 states, plus 2,248 pharmacies and 1,740 fuel centers. It employs about 400,000 people and reaches 63 million households. Kroger reports a single retail segment, pays a regular dividend and buys back shares.
+Source: \href{https://ir.kroger.com/overview/default.aspx}{\textcolor{gold}{Kroger Investor Relations}}, \href{https://www.sec.gov/Archives/edgar/data/56873/000110465926078236/kr-20260523x10q.htm}{\textcolor{gold}{Form 10-Q, May 2026}}
+
+\subsubsection*{HRL \,$\cdot$\, Hormel Foods Corporation}
+A US packaged food and protein company with Retail, Foodservice and International segments. Its brands include SPAM, Planters, Jennie-O, Skippy and Applegate. Net sales were USD 12.1 billion in fiscal 2025, and Walmart alone accounts for 15.6\% of gross sales. Hormel has raised its dividend for 60 consecutive years.
+\href{https://www.sec.gov/Archives/edgar/data/48465/000004846525000059/hrl-20251026.htm}{\textcolor{gold}{Source}}
+
+\subsubsection*{BMY \,$\cdot$\, Bristol-Myers Squibb Co.}
+A global biopharmaceutical company with one segment and USD 48.2 billion of revenue in 2025. Its Growth portfolio includes Opdivo, Reblozyl, Breyanzi, Camzyos and Cobenfy, and now makes up nearly 60\% of sales. The Legacy portfolio, led by Eliquis, faces patent expiry, with US exclusivity expected to end in April 2028.
+Source: \href{https://www.sec.gov/Archives/edgar/data/14272/000001427226000004/bmy-20251231.htm}{\textcolor{gold}{Form 10-K FY2025}}, \href{https://www.gurufocus.com/news/8992331/bristolmyers-squibb-co-bmy-q2-2026-earnings-call-highlights-growth-portfolio-surges-14-guidance-raised-amid-pipeline-progress}{\textcolor{gold}{Q2 2026 earnings call summary}}
+
+\subsubsection*{XOM \,$\cdot$\, ExxonMobil Holdings Corporation}
+An integrated energy and chemicals company with Upstream, Energy Products, Chemical Products and Specialty Products segments. It became the listed parent company on 1 July 2026, and shares were exchanged one for one. In 2025 it earned USD 28.8 billion and produced 4.74 million oil-equivalent barrels per day, with the Permian and Guyana as the main growth areas. It has raised its dividend for 43 consecutive years.
+Source: \href{https://corporate.exxonmobil.com/news/news-releases/2026/0130-exxonmobil-announces-2025-results}{\textcolor{gold}{2025 results}}, \href{https://www.sec.gov/Archives/edgar/data/0000034088/000003408826000093/xom-20260630.htm}{\textcolor{gold}{Form 10-Q, June 2026}}
+
+\subsubsection*{HPQ \,$\cdot$\, HP Inc.}
+A maker of personal computers, printers and print supplies, with revenue of USD 55.3 billion in fiscal 2025. Personal Systems is the larger business but earns a thin margin of about 6\%. Printing is smaller but earns about 19\%, so it drives most of the profit. HP returned about two thirds of its USD 2.9 billion free cash flow through dividends and buybacks.
+\href{https://www.hp.com/us-en/newsroom/press-releases/2025/hp-inc-reports-fiscal-2025-full-year-and-fourth-quarter-results.html}{\textcolor{gold}{Source}}
+
+\endgroup
+\end{document}

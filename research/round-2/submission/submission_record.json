@@ -6,7 +6,7 @@
   "cash_usd": 116.04561,
   "fees_bps": 0,
   "report_url": "https://www.overleaf.com/project/6ae9ddb29f60dfa97d0803c2",
-  "report_pages_including_cover": 10,
+  "report_pages_including_cover": 12,
   "holdings": [
     {
       "ticker": "SPY",
@@ -140,5 +140,9 @@
       "target_shares": 127276,
       "trade_shares": 127276
     }
-  ]
+  ],
+  "report_content_pages": 10,
+  "report_front_matter_pages": 2,
+  "report_pdf": "AMC2_Report.pdf",
+  "portfolio_description_pdf": "AMC2_Portfolio_Description.pdf"
 }
