@@ -1,0 +1,53 @@
+{
+  "price_date": "2026-11-06",
+  "verified_on": "2026-11-08",
+  "basis": "Submitted opening holdings at raw USD closes rounded to cents plus opening cash and issuer-confirmed entitled distributions; no reinvestment or extra fees.",
+  "closing_security_market_value_usd": "97014139.67",
+  "opening_cash_usd": "12.12",
+  "entitled_distributions_usd": "100916.785610",
+  "nav_usd_unrounded": "97115068.575610",
+  "nav_usd": "97115068.58",
+  "one_third_stock_target_usd": "32371689.53",
+  "return_since_inception": -0.0288493142439,
+  "old_website_nav_usd": "97014152.14",
+  "old_website_difference_usd": "100916.435610",
+  "distributions": [
+    {
+      "ticker": "VGSH",
+      "ex_date": "2026-11-02",
+      "pay_date": "2026-11-04",
+      "amount": 0.1889,
+      "source": "https://www.vanguardsouthamerica.com/en/product/etf/fixed-income/3142/vanguard-short-term-treasury-etf",
+      "reason": "Missing event and adjustment in archived Yahoo chart response; issuer distribution history verified 6 November 2026",
+      "verified_on": "2026-11-08",
+      "entitled_shares": 86671,
+      "entitlement_usd": "16372.1519",
+      "paid_by_cutoff": true
+    },
+    {
+      "ticker": "STIP",
+      "ex_date": "2026-11-02",
+      "pay_date": "2026-11-05",
+      "amount": 0.292917,
+      "source": "https://www.ishares.com/us/products/239450/ishares-05-year-tips-bond-etf",
+      "reason": "Missing event and adjustment in archived Yahoo chart response; issuer distribution history verified 6 November 2026",
+      "verified_on": "2026-11-08",
+      "entitled_shares": 288630,
+      "entitlement_usd": "84544.633710",
+      "paid_by_cutoff": true
+    }
+  ],
+  "artifacts_match": [
+    "website NAV and ETF contributions",
+    "executed notebook and CSV",
+    "Excel Portfolio!D4 and D24",
+    "final report NAV and budget"
+  ],
+  "artifact_sha256": {
+    "dist/data/challenge-valuations.csv": "f16db0e044bc30190de0c4c6c1ef58fff3912923f243ae0f3324e1c04663022b",
+    "research/round-2/round2_analysis.ipynb": "d5ae920391c7af0418ef8b9cd3bc5766c767ce67d4e18a26930e32fe330290bc",
+    "research/round-2/submission/Meridian_Final_Model.xlsx": "039c025bd66223f2df70b8c12ef7130afad6bb697d11990bb8e07c1b404d3758",
+    "research/round-2/submission/Meridian_Final_Selection.pdf": "783adb7ab0a56aa59e6c5fbf29a6ef49ea343fafaa9a27d4bb03220b671f156f"
+  },
+  "bloomberg_status": "Public closing-price reconstruction; actual Bloomberg booked cash and tax treatment were not accessed."
+}

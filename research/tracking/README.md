@@ -1,6 +1,6 @@
 # Challenge performance
 
-The homepage reads `dist/data/challenge-valuations.csv`. The user confirmed inception at the 16 October 2026 close using the share quantities and prices in Round 1 positions.json. Holdings plus USD 12.12 cash reconcile to USD 100,000,000. The opening observation is recorded; subsequent valuations are not yet available. No additional fee deduction has been assumed.
+The homepage reads `dist/data/challenge-valuations.csv`. The user confirmed inception at the 16 October 2026 close using the share quantities and prices in `opening-positions.json`. Holdings plus USD 12.12 cash reconcile to USD 100,000,000. Valuations through 6 November are reconstructed from this fixed opening book. No additional fee deduction has been assumed.
 
 Record verified end-of-day total USD portfolio values, including cash, in chronological order, one per date:
 
@@ -16,7 +16,9 @@ Historical comparison data remains separate in performance-preview.js on the Rou
 
 `update-prices.yml` runs at 23:37 UTC Monday–Friday (19:37 New York in summer; 18:37 in winter). GitHub schedules may be delayed. Scheduling activates only once the workflow is on the default branch. Manual runs on a preview branch update only that branch and never deploy Pages.
 
-The updater uses the separately frozen `opening-positions.json` so research optimizations cannot silently change live holdings. It downloads Yahoo daily closes with automatic dividend adjustment disabled, values the fixed share quantities and adds distributions since inception as ex-date receivables without reinvestment. This is an estimated total portfolio value, not an official Bloomberg feed or a paid-cash ledger. No cash interest, taxes or unrecorded fees are assumed.
+The updater uses the separately frozen `opening-positions.json` so research optimizations cannot silently change live holdings. It downloads Yahoo daily closes with automatic dividend adjustment disabled, rounds closing prices to cents consistently with the Checkpoint 2 reconstruction, values the fixed share quantities and adds distributions since inception as ex-date receivables without reinvestment. After payment those entitlements represent cash; they are not added a second time. This is an estimated total portfolio value, not an official Bloomberg feed or a paid-cash ledger. No cash interest, taxes or unrecorded fees are assumed.
+
+`verified-distributions.json` preserves issuer-confirmed events omitted from the vendor history. A matching vendor event is counted once; a conflicting amount stops publication. Vanguard confirms VGSH's 2 November ex-date payment of USD 0.1889 per share, paid 4 November; iShares confirms STIP's USD 0.292917 per share, paid 5 November. The original holdings were entitled to USD 100,916.78561 in total. The October VGSH distribution is outside this portfolio's entitlement window and is not credited. See `dividend-evidence/` for the verification record and `nav-reconciliation-2026-11-06.json` for the cross-artifact reconciliation. The closing-price NAV is USD 97,115,068.58; this is not an independent confirmation of Bloomberg's booked cash or tax treatment.
 
 Splits cause a safe failure requiring reconciliation because vendor historical prices may be split-adjusted. Missing prices, differing ETF date coverage, invalid currency, stale data or failed downloads preserve the existing published series. Weekends and exchange holidays add no synthetic observations. Subsequent rebalance trades must be incorporated into the tracking ledger before they can be valued correctly; this first version tracks the confirmed opening holdings only.
 

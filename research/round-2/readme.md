@@ -14,7 +14,7 @@ The original six-ETF SAA remains the benchmark. Our funding choice scales each E
 
 The frozen price cutoff is **6 November 2026**. Calibration uses **60 complete monthly USD returns, November 2021–October 2026**. The one-third requirement is a class instruction reported by the team. The written tracking-error convention is distinguished from additional daily-risk and concentration preferences in the notebook.
 
-Implementation uses **zero fees and no reserve**. The final share counts include the additional SPY and Adobe purchases reported by the team: **22,964 SPY**, **18,865 ADBE**, and **$116.05 residual cash**. The notebook reconciles all twelve quantities with the saved Excel model and verifies the report/model hashes.
+Implementation uses **zero fees and no reserve**. The verified closing-price NAV is **$97,115,068.58**, including the VGSH and STIP distributions paid before 6 November; the one-third stock budget is **$32,371,689.53**. The final share counts include the additional SPY and Adobe purchases reported by the team: **22,964 SPY**, **18,865 ADBE**, and **$116.05 residual cash**. The notebook reconciles all twelve quantities with the saved Excel model and verifies the report/model hashes. The [cross-artifact reconciliation](../tracking/nav-reconciliation-2026-11-06.json) checks these figures against the website; [issuer evidence](../tracking/dividend-evidence/verification.json) records the distribution amounts and dates.
 
 ## What the evidence supports
 

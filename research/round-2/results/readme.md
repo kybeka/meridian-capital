@@ -7,6 +7,7 @@ The CSV tables and PNG charts are snapshots from the complete execution of `../r
 - `staggered_summary.csv`, `nonoverlapping_offsets.csv`: holding-period summaries and the number of non-overlapping observations at each offset.
 - `forward_risk_tests.csv`, `forward_risk_summary.csv`, `matched_monthly_risk_tests.csv`: chronological training/test risk comparisons. These use fixed current portfolio weights, not a historical point-in-time stock-selection process.
 - `round1_attribution.csv`, `round1_nav.csv`, `final_positions.csv`: realised Round 1 reconstruction and the final zero-fee implementation.
+- `nav_dividends.csv`, `nav_reconciliation.csv`: the issuer-verified VGSH/STIP distributions and the components of the 6 November NAV. The website updater uses the same events and closing-price precision.
 - Five PNG charts: Round 1 performance, residual correlations, capital allocation, recent staggered replays and forward risk validation.
 - `notebook_verification.json`: execution outcome and file-integrity checks.
 

@@ -13,6 +13,22 @@ ROOT = Path(__file__).resolve().parents[1]
 NY = ZoneInfo('America/New_York')
 
 
+def apply_verified_distributions(ticker, history, ledger):
+    """Fill missing vendor events once; reject a conflicting reported amount."""
+    dividends = history['dividends'].copy()
+    for event in ledger:
+        if event['ticker'] != ticker:
+            continue
+        amount = event['amount']
+        day = event['ex_date']
+        if not math.isfinite(amount) or amount < 0:
+            raise ValueError(f'{ticker}: invalid verified distribution on {day}')
+        if day in dividends and not math.isclose(dividends[day], amount, rel_tol=0, abs_tol=1e-8):
+            raise ValueError(f'{ticker}: vendor and issuer distributions conflict on {day}')
+        dividends[day] = amount
+    return {**history, 'dividends': dividends}
+
+
 def calculate(positions, histories):
     opening = positions['reference_date']
     dates = None
@@ -36,8 +52,8 @@ def calculate(positions, histories):
             history = histories[ticker]
             # Ex-date entitlements remain in NAV as receivables, without reinvestment.
             distributions = sum(amount for ex_date, amount in history['dividends'].items() if opening < ex_date <= day)
-            nav += holding['shares'] * (history['closes'][day] + distributions)
-        rows.append((day, f'{nav:.2f}', 'Yahoo daily close plus cash and dividend receivables'))
+            nav += holding['shares'] * (round(history['closes'][day], 2) + distributions)
+        rows.append((day, f'{nav:.2f}', 'USD closes rounded to cents plus cash and issuer-verified distributions'))
     return rows
 
 
@@ -56,7 +72,7 @@ def contributions(positions, histories, rows):
         if day > '2026-11-06':
             break
         values = original.copy() if day == opening else {
-            t: positions['positions'][t]['shares'] * (histories[t]['closes'][day] + sum(
+            t: positions['positions'][t]['shares'] * (round(histories[t]['closes'][day], 2) + sum(
                 amount for ex, amount in histories[t]['dividends'].items() if opening < ex <= day
             )) for t in tickers
         }
@@ -106,8 +122,11 @@ def fetch_history(ticker, opening, now):
 
 def main():
     positions = json.loads((ROOT / 'research/tracking/opening-positions.json').read_text())
+    ledger = json.loads((ROOT / 'research/tracking/verified-distributions.json').read_text())
     now = datetime.now(NY)
-    histories = {ticker: fetch_history(ticker, positions['reference_date'], now) for ticker in positions['positions']}
+    histories = {ticker: apply_verified_distributions(
+        ticker, fetch_history(ticker, positions['reference_date'], now), ledger
+    ) for ticker in positions['positions']}
     rows = calculate(positions, histories)
     if (now.date() - datetime.fromisoformat(rows[-1][0]).date()).days > 4:
         raise ValueError('Latest complete valuation is stale; preserving published data')
