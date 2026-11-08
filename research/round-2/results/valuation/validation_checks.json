@@ -1,0 +1,14 @@
+{
+  "forward_origins_strictly_before_test": true,
+  "sixty_month_training": true,
+  "fees_in_baseline": 0,
+  "horizons": [
+    14,
+    20,
+    33,
+    63
+  ],
+  "dbc_change": "2025-11-10",
+  "replay_status": "Reused history with today-selected securities and weights, not point-in-time alpha validation.",
+  "cash_convention": "Adjusted-price total-return proxy reinvests distributions. Bloomberg holdings hold distribution cash. This is not an exact share-account replay."
+}

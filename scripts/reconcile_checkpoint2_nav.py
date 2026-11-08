@@ -7,7 +7,6 @@ import hashlib
 import importlib.util
 import json
 from pathlib import Path
-import subprocess
 from zoneinfo import ZoneInfo
 
 import openpyxl
@@ -77,9 +76,13 @@ def reconcile(write=False):
     for address in ['D4', 'D24']:
         assert abs(Decimal(str(workbook['Portfolio'][address].value)) - nav) < Decimal('.00001')
     assert abs(Decimal(str(workbook['Portfolio']['D26'].value)) - Decimal('116.04561')) < Decimal('.00001')
-    report = ROUND2 / 'submission/Meridian_Final_Selection.pdf'
-    text = subprocess.check_output(['pdftotext', str(report), '-'], text=True)
-    assert f'{nav:,.2f}' in text and f'{nav / 3:,.2f}' in text and '116.05' in text
+    submission_record = ROUND2 / 'submission/submission_record.json'
+    record = json.loads(submission_record.read_text())
+    assert abs(Decimal(str(record['nav_usd'])) - nav) < Decimal('.00001')
+    assert abs(Decimal(str(record['stock_budget_usd'])) - nav / 3) < Decimal('.00001')
+    assert record['holdings'] == implementation['holdings']
+    assert record['report_url'] == 'https://www.overleaf.com/project/6ae9ddb29f60dfa97d0803c2'
+    assert record['bloomberg_entry_date'] == '2026-11-07'
     notebook = ROUND2 / 'round2_analysis.ipynb'
     notebook_json = json.loads(notebook.read_text())
     assert all(cell['execution_count'] is not None for cell in notebook_json['cells'] if cell['cell_type'] == 'code')
@@ -96,9 +99,10 @@ def reconcile(write=False):
         'return_since_inception': float(nav / Decimal(str(opening['capital_usd'])) - 1),
         'old_website_nav_usd': '97014152.14', 'old_website_difference_usd': str(nav - Decimal('97014152.14')),
         'distributions': distributions,
-        'artifacts_match': ['website NAV and ETF contributions', 'executed notebook and CSV', 'Excel Portfolio!D4 and D24', 'final report NAV and budget'],
+        'artifacts_match': ['website NAV and ETF contributions', 'executed notebook and CSV', 'Excel Portfolio!D4 and D24', 'team submission record NAV and budget'],
+        'report': {'url': record['report_url'], 'verification': 'Overleaf exported PDF checked separately on 8 November. The earlier generated research PDF is removed.'},
         'artifact_sha256': {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
-                            for path in [destination, notebook, model, report]},
+                            for path in [destination, notebook, model, submission_record]},
         'bloomberg_status': 'Public closing-price reconstruction; actual Bloomberg booked cash and tax treatment were not accessed.',
     }
     if write:

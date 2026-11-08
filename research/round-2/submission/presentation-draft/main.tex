@@ -1,0 +1,357 @@
+% ============================================================
+%  Meridian Capital - Asset Management Challenge 2026
+%  Round 2 presentation (Beamer, 16:9).
+%  Compile with XeLaTeX, twice. DM Sans font files are included.
+%  Files needed: Meridian-Capital-Official-Logo.png (next to this file or in figures/)
+% ============================================================
+\documentclass[aspectratio=169,11pt,t]{beamer}
+\usepackage{colortbl}
+
+\usepackage{fontspec}
+\setmainfont{DMSans-Regular.ttf}[BoldFont=DMSans-Bold.ttf,ItalicFont=DMSans-Italic.ttf]
+\setsansfont{DMSans-Regular.ttf}[BoldFont=DMSans-Bold.ttf,ItalicFont=DMSans-Italic.ttf]
+\usefonttheme{professionalfonts}
+\usepackage{microtype}
+\usepackage{booktabs,array,tabularx}
+\usepackage{graphicx}
+\graphicspath{{./}{figures/}}
+\usepackage{tikz}
+
+% ---------- palette ----------
+\definecolor{navy}{HTML}{0A2233}
+\definecolor{ink}{HTML}{173242}
+\definecolor{gold}{HTML}{A59577}
+\definecolor{paper}{HTML}{F7F5EF}
+\definecolor{muted}{HTML}{59666B}
+\definecolor{line}{HTML}{D9DCD7}
+
+\newcommand{\hd}[1]{\textcolor{navy}{\textbf{#1}}}
+\newcommand{\smnote}[1]{{\footnotesize\color{muted}#1}}
+
+% ---------- beamer theme ----------
+\usetheme{default}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=ink,bg=white}
+\setbeamercolor{structure}{fg=navy}
+\setbeamercolor{frametitle}{fg=navy}
+\setbeamercolor{itemize item}{fg=gold}
+\setbeamercolor{itemize subitem}{fg=gold}
+\setbeamercolor{enumerate item}{fg=gold}
+\setbeamertemplate{itemize item}[square]
+\setbeamertemplate{itemize subitem}[square]
+\setbeamerfont{itemize/enumerate body}{size=\normalsize}
+\setbeamerfont{itemize/enumerate subbody}{size=\small}
+
+% body, title and footer share the same side margins
+\setbeamersize{text margin left=1.2cm,text margin right=1.2cm}
+
+% frame title: gold rule below
+\setbeamertemplate{frametitle}{%
+  \vspace{0.55em}
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.0ex,dp=0.3ex,leftskip=1.2cm,rightskip=1.2cm]{frametitle}
+    {\rmfamily\LARGE\color{navy}\insertframetitle}
+  \end{beamercolorbox}
+  \vspace{-1.0em}
+  {\hspace{1.2cm}\color{gold}\rule{\dimexpr\paperwidth-2.4cm\relax}{0.8pt}}
+}
+
+% footer: MERIDIAN CAPITAL · AMC 2026, page number right
+\setbeamertemplate{footline}{%
+  \leavevmode\hbox{\begin{beamercolorbox}[wd=\paperwidth,ht=3ex,dp=1ex,leftskip=1.2cm,rightskip=1.2cm]{normal text}
+    {\color{line}\hrule height 0.3pt}\vspace{2pt}
+    {\fontsize{5}{6}\selectfont\color{muted}{\addfontfeatures{LetterSpace=7}MERIDIAN CAPITAL}\ ·\ AMC 2026}%
+    \hfill{\fontsize{5}{6}\selectfont\color{navy}\insertframenumber\,/\,\inserttotalframenumber}
+  \end{beamercolorbox}}%
+}
+
+% highlighted box
+\usepackage[most]{tcolorbox}
+\newtcolorbox{calloutbox}[1]{enhanced, colback=paper, colframe=paper,
+  borderline west={2.5pt}{0pt}{gold}, boxrule=0pt, arc=0pt,
+  left=10pt, right=8pt, top=6pt, bottom=6pt,
+  title={#1}, fonttitle=\bfseries\small\raggedright, coltitle=navy, colbacktitle=paper,
+  attach title to upper=\par\vspace{2pt}, before upper={\color{ink}\raggedright}}
+\newenvironment{callout}[1]{\begin{calloutbox}{#1}}{\end{calloutbox}}
+
+% big number tile: value, label, width
+\newcommand{\kpi}[3]{%
+  \begin{minipage}[t]{#3}\centering
+  {\rmfamily\fontsize{22}{26}\selectfont\color{navy}#1}\\[3pt]
+  {\scriptsize\color{gold}{\addfontfeatures{LetterSpace=5}\MakeUppercase{#2}}}
+  \end{minipage}}
+
+% compact list inside columns
+\newcommand{\tight}{\setlength{\itemsep}{0.45em}\setlength{\parskip}{0pt}}
+
+% ============================================================
+\begin{document}
+
+% ---------------------------- TITLE ----------------------------
+{
+\setbeamertemplate{footline}{}
+\setbeamercolor{background canvas}{bg=paper}
+\begin{frame}[plain]
+\centering
+\vspace*{0.1cm}
+\includegraphics[width=5.2cm]{Meridian-Capital-Official-Logo.png}\par
+\vspace{0.25cm}
+{\color{gold}\rule{3cm}{0.8pt}}\par
+\vspace{0.35cm}
+{\rmfamily\fontsize{22}{26}\selectfont\color{navy}Tactical Deviation\par}
+\vspace{0.15cm}
+{\small\color{muted}Discretionary Equity Investing\par}
+\vspace{0.15cm}
+{\scriptsize\color{gold}{\addfontfeatures{LetterSpace=7}ROUND 2 \,·\, ASSET MANAGEMENT CHALLENGE 2026}\par}
+\vfill
+{\footnotesize\color{navy}Alessia Battistella \ · \ Tze Qing Ginnie Lee \ · \ Katherine Lerner-Teves\\[1pt] Kyla Kaplan \ · \ Lorenzo Comi\par}
+\vspace{0.15cm}
+{\scriptsize\color{muted}USI \,·\, November 2026\par}
+\vspace{0.2cm}
+\end{frame}
+}
+
+% ---------------------------- AGENDA ----------------------------
+\begin{frame}{Agenda}
+\vspace{1.2em}
+\begin{enumerate}\setlength{\itemsep}{0.8em}
+\item Performance of the first round
+\item Tactical deviation and risk
+\item Stock analysis and valuation
+\item Alphas, portfolio weights and credibility
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Performance of the First Round}
+\vspace{.1em}
+\begin{center}\small\begin{tabular}{lr}\toprule
+16 October--6 November 2026 & Result\\\midrule
+Return & $-2.885\%$\\
+Ending NAV & \$97,115,068.58\\
+Annualized realized volatility & 8.14\%\\
+SAA volatility target & 8.00\%\\
+Annualized realized Sharpe & $-6.50$\\\bottomrule
+\end{tabular}\end{center}
+\begin{itemize}\tight
+\item NAV includes both VGSH and STIP distributions (\$100,916.79 in total) and opening cash.
+\item Just 15 daily returns: annualized Sharpe is unstable and describes this short losing period.
+\end{itemize}
+\smnote{Public-close reconstruction of the opening book, not a Bloomberg-certified series. Volatility and Sharpe use daily returns and the archived Treasury proxy.}
+\end{frame}
+\begin{frame}{Performance Attribution}
+\vspace{.1em}
+\begin{center}\small\begin{tabular}{lrr}\toprule
+Position & P\&L, USD & Return contribution, pp\\\midrule
+SPY&-955,365&-0.955\\
+EEMV&-346,050&-0.346\\
+DBC&-1,757,263&-1.757\\
+SCHD&78,300&+0.078\\
+VGSH&31,106&+0.031\\
+STIP&64,341&+0.064\\
+\midrule Total & $-2,884,931$ & $-2.885$\\\bottomrule\end{tabular}\end{center}
+\textbf{DBC drove about 61\% of the net loss.} SPY was the second-largest detractor; the other three positive holdings partly offset the losses.
+\par\medskip\smnote{Round 2 reduces the commodity target from 26.95\% to 17.97\%, but DBC plus Exxon still leaves material energy exposure. Contributions include dividends and use initial \$100m NAV.}
+\end{frame}
+% ---------------------------- 1. TACTICAL DEVIATION ----------------------------
+\begin{frame}{Funding the Deviation}
+\vspace{.1em}
+\begin{columns}[T]
+\begin{column}{.50\textwidth}
+\textbf{Same benchmark, new stock sleeve}
+\begin{itemize}\tight
+\item Original six-ETF SAA stays the benchmark.
+\item One-third of post-loss NAV goes to six stocks, following the class instruction.
+\item We scale each ETF target by two-thirds. This funding choice preserves relative ETF proportions.
+\end{itemize}
+\end{column}
+\begin{column}{.44\textwidth}\small
+\begin{tabular}{lrr}\toprule
+ETF & SAA & New target\\\midrule
+SPY&26.08\%&17.39\%\\
+EEMV&9.66\%&6.44\%\\
+DBC&26.95\%&17.97\%\\
+SCHD&3.28\%&2.19\%\\
+VGSH&5.00\%&3.33\%\\
+STIP&29.03\%&19.35\%\\\bottomrule
+\end{tabular}
+\end{column}\end{columns}
+\vspace{.8em}\smnote{NAV: \$97,115,068.58. Stock budget: \$32,371,689.53. No fees or reserve. Entered 7 November at 6 November closing prices. Whole shares leave \$116.05 cash.}
+\end{frame}
+
+
+\begin{frame}{Tracking Error and Risk}
+\vspace{.1em}
+\begin{center}\small
+\begin{tabular}{lrr}\toprule
+& SAA & New portfolio\\\midrule
+Annual monthly tracking error&0.00\%&3.92\%\\
+Annual monthly volatility&7.89\%&9.47\%\\
+One-month 5\% VaR, loss / NAV&3.74\%&4.50\%\\\bottomrule
+\end{tabular}\end{center}
+\begin{itemize}\tight
+\item Official TE uses 60 complete monthly USD returns: November 2021--October 2026. It passes the 2--5\% band.
+\item Recent daily TE is higher: 6.53\% over 252 sessions and 7.74\% over 63. Our extra daily 5\% preference fails.
+\item 217 post-DBC-change 33-session replays average $-0.395\%$ active return. Overlap leaves only 6--7 non-overlapping windows per offset.
+\end{itemize}
+\smnote{Zero-mean normal VaR = 1.645 $\times$ annual volatility / $\sqrt{12}$. Replays reuse today's selected universe and do not establish a future return advantage.}
+\end{frame}
+
+
+% ---------------------------- 2. STOCK ANALYSIS ----------------------------
+% one frame per stock: copy the block 3 to 6 times
+\begin{frame}{ADBE -- Adobe Inc.}
+\vspace{.1em}
+\textbf{Value:} \$18.145 FY2026 GAAP EPS $\times$ 16 = \$290.32, versus \$239.30 entry. FCFF cross-check: \$271.14.
+\begin{itemize}\tight
+\item Subscription cash generation supports the case. SBC is already in GAAP EPS and is charged in the cash model.
+\item \textbf{Catalyst: 9 December}, confirmed Q4 results and FY2027 outlook. Watch renewals, paid AI revenue and pricing.
+\item \textbf{Main risk:} cheaper AI tools or copied features weaken retention. A 20\% cash reduction values the stock at \$216.54.
+\item \textbf{What would change our view:} guidance cuts or cash deterioration that confirms structural disruption.
+\end{itemize}
+\smnote{Fund target 4.65\%. Original annual alpha 12.07\%. Sources: Adobe Q3 FY2026 release and investor calendar.}
+\end{frame}
+
+
+\begin{frame}{KR -- The Kroger Co.}
+\vspace{.1em}
+\textbf{Value:} \$5.20 adjusted EPS $\times$ 15 = \$78.00, versus \$67.70 entry. FCFF cross-check: \$87.45.
+\begin{itemize}\tight
+\item Grocery demand and cash conversion support normalized earnings. The fair multiple discounts heterogeneous retail peers.
+\item \textbf{Catalyst: 3 December} results. Watch identical sales, fulfillment margins and guidance.
+\item \textbf{Main risk:} leverage and buybacks. Dividends are covered about 2.40 times, but buybacks exceed cash remaining after dividends.
+\item \textbf{What would change our view:} a guidance cut or EPS growth driven by debt-funded buybacks rather than operations.
+\end{itemize}
+\smnote{Fund target 8.10\%. Original annual alpha 8.14\%. Sources: Kroger Q2 FY2026 release and Q3 conference-call announcement.}
+\end{frame}
+
+
+\begin{frame}{HRL -- Hormel Foods}
+\vspace{.1em}
+\textbf{Value:} \$1.48 adjusted EPS $\times$ 17 = \$25.16, versus \$21.95 entry. FCFF cross-check: \$31.49.
+\begin{itemize}\tight
+\item We pay for a margin recovery. The 17x multiple is a judgmental premium to food peers, requiring delivery.
+\item \textbf{Catalyst: 3 December} results and FY2027 outlook. Watch Retail volumes, Foodservice and cash generation.
+\item \textbf{Main risk:} Brakebush funding and thin dividend cover. Coverage falls from 1.17x to about 1.00x in the combined debt/refinancing stress.
+\item \textbf{What would change our view:} weak FY2027 guidance or acquisition funding that strains the dividend.
+\end{itemize}
+\smnote{Fund target 6.90\%. Original annual alpha 7.79\%. Sources: Hormel Q3 release, earnings-call and Brakebush announcements.}
+\end{frame}
+
+
+\begin{frame}{BMY -- Bristol Myers Squibb}
+\vspace{.1em}
+\textbf{Value:} \$6.45 non-GAAP EPS $\times$ 11 = \$70.95, versus \$62.14 entry. Flat-cash FCFF value: \$65.50.
+\begin{itemize}\tight
+\item Current medicines generate cash, but patent losses justify a low multiple. Disclosed IPRD costs are retained.
+\item \textbf{Catalyst:} expected year-end milvexian/Sotyktu readouts and December scientific updates. Exact readout dates are unconfirmed.
+\item \textbf{Main risk:} the cash cushion is thin. A 2\% annual cash decline for five years gives \$58.59; this is a stress, not our flat base case.
+\item \textbf{What would change our view:} adverse trial data or growth medicines failing to replace legacy revenues.
+\end{itemize}
+\smnote{Fund target 6.33\%. Original annual alpha 7.52\%. Source: BMY Q3 FY2026 earnings release and results presentation.}
+\end{frame}
+\begin{frame}{XOM -- Exxon Mobil}
+\vspace{.1em}
+\textbf{Value:} our normalized \$10 EPS $\times$ 18 = \$180.00, versus \$165.87 entry. Same-scenario FCFF value: \$213.08.
+\begin{itemize}\tight
+\item Low-cost production growth supports the normalized case. \$10 EPS is our assumption, not issuer guidance.
+\item \textbf{Catalyst:} possible Q4 Uaru start-up and corporate-plan news. No fixed date; this is our weakest timing case.
+\item \textbf{Main risk:} the oil cycle and existing DBC exposure. A lower historical-CFO scenario gives \$166.61, near entry.
+\item \textbf{What would change our view:} weaker oil/refining margins or project delivery slipping beyond the round.
+\end{itemize}
+\smnote{Fund target 3.62\%. Original annual alpha 4.51\%. Sources: Exxon Q3 FY2026 release/call and 2023--25 cash-flow statements.}
+\end{frame}
+\begin{frame}{HPQ -- HP Inc.}
+\vspace{.1em}
+\textbf{Value:} \$2.38 normalized GAAP EPS $\times$ 13.5 = \$32.13, versus \$28.46 entry. FCFF cross-check: \$34.44.
+\begin{itemize}\tight
+\item We remove \$0.19 of full-year tariff-refund EPS. A temporary benefit is not recurring earning power.
+\item \textbf{Catalyst: 24 November}, confirmed Q4 results and FY2027 outlook. Watch PC margins, memory costs and printing.
+\item \textbf{Main risk:} printing decline and cash-funded payouts. Negative equity makes P/B, ROE and debt/equity poor valuation checks.
+\item \textbf{What would change our view:} FY2027 guidance below normalized expectations or weaker cash conversion.
+\end{itemize}
+\smnote{Fund target 3.73\%. Original annual alpha 7.23\%. Sources: HP Q3 FY2026 release and 3 November earnings-call announcement.}
+\end{frame}
+\begin{frame}{Cash-Flow and Timing Checks}
+\vspace{.1em}
+\small
+\begin{tabular}{lrrrrr}\toprule
+Stock & 5-year g & Terminal g & WACC & FCFF value & Review value\\\midrule
+ADBE&8.0\%&3.0\%&13.08\%&\$271.14&\$271.14\\
+KR&3.0\%&2.0\%&6.31\%&\$87.45&\$78.00\\
+HRL&2.0\%&2.0\%&6.20\%&\$31.49&\$25.16\\
+BMY&0.0\%&0.0\%&5.83\%&\$65.50&\$65.50\\
+XOM&2.0\%&2.0\%&5.83\%&\$213.08&\$180.00\\
+HPQ&4.0\%&3.0\%&10.94\%&\$34.44&\$32.13\\
+\bottomrule\end{tabular}
+\begin{itemize}\tight
+\item FCFF and FCFE reconcile under the same financing assumptions. Review value is the lower of cash and earnings values, with weights unchanged.
+\item Implied growth is below our base assumptions, but depends on rates, terminal growth and cash normalization.
+\item Slower/no rerating is tested with dividend-plus-sale IRRs. A 50\% alpha haircut is not a measured convergence probability.
+\end{itemize}
+\end{frame}
+\begin{frame}{Rejected Candidates}
+\vspace{.1em}
+\begin{itemize}\tight
+\item We researched nine positive-alpha cases and compared 420 subsets containing three to six stocks.
+\item FDS, INTU and GILD remain alternatives. They do not justify replacing the agreed six-stock basket.
+\item The five-stock full-residual IR maximum is 0.698; our six-stock IR is 0.696.
+\item Six stocks reduce recent TE from 8.68\% to 7.74\% and maximum stock weight from 9.09\% to 8.10\%.
+\end{itemize}
+\vspace{1em}\smnote{A risk/concentration tradeoff within our researched universe. We do not claim a global optimum. The largest position still slightly exceeds our discretionary 8\% preference.}
+\end{frame}
+
+
+% ---------------------------- 3. ALPHAS ----------------------------
+\begin{frame}{Alphas and Treynor-Black Weights}
+\vspace{.1em}
+\small $w_i=\frac{1}{3}\frac{\max(\alpha_i,0)/\sigma_{\varepsilon i}^2}{\sum_j\max(\alpha_j,0)/\sigma_{\varepsilon j}^2}$, with negative-alpha names receiving zero.\par\medskip
+\begin{tabular}{lrrrr}\toprule
+Stock & Base annual alpha & Residual vol. & SAA beta & Fund weight\\\midrule
+ADBE&12.07\%&34.81\%&2.086&4.65\%\\
+KR&8.14\%&21.66\%&1.255&8.10\%\\
+HRL&7.79\%&22.96\%&0.521&6.90\%\\
+BMY&7.52\%&23.55\%&0.989&6.33\%\\
+XOM&4.51\%&24.12\%&1.681&3.62\%\\
+HPQ&7.23\%&30.08\%&2.122&3.73\%\\
+\bottomrule\end{tabular}\par\medskip
+\smnote{Original annual alpha = $0.5(1+k)(V/P-1)$. CAPM k uses the market beta; residual risk uses the SAA regression. The 50\% haircut is a common judgment. Quantities use full-precision weights and whole-share rounding.}
+\end{frame}
+
+
+\begin{frame}{Fundamental Law and Credibility}
+\vspace{.1em}
+\begin{itemize}\tight
+\item Classroom diagonal residual IR: \textbf{0.756}. With residual correlations: \textbf{0.696}. Both are model forecasts.
+\item Fundamental Law: $IR=IC\sqrt{N}$. With six independent ideas and $IC=0.10$, IR is only 0.245. Our forecast implies much greater skill.
+\item The theoretical $S_P^2=S_B^2+IR_A^2$ requires optimal mixing and valid alphas. It does not certify our fixed one-third portfolio.
+\item Conservative cash valuations lower fixed-weight IR to \textbf{0.564}. Forward checks also reveal risk underestimation: 80\% of ten monthly-pass origins later breach 5\% daily TE.
+\end{itemize}
+\smnote{We retain the agreed holdings, with explicit valuation, timing and risk limitations. Historical tests have not established an outperformance advantage.}
+\end{frame}
+
+
+% ---------------------------- 4. PERFORMANCE ----------------------------
+
+
+
+
+
+
+% ---------------------------- CLOSING ----------------------------
+{
+\setbeamertemplate{footline}{}
+\setbeamercolor{background canvas}{bg=paper}
+\begin{frame}[plain]
+\centering
+\vfill
+\includegraphics[width=5cm]{Meridian-Capital-Official-Logo.png}\par
+\vspace{0.4cm}
+{\color{gold}\rule{3cm}{0.8pt}}\par
+\vspace{0.4cm}
+{\rmfamily\fontsize{22}{26}\selectfont\color{navy}Thank you\par}
+
+\vfill
+\end{frame}
+}
+
+\end{document}

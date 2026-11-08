@@ -7,11 +7,29 @@
   "all12_weights_and_share_trades_match": true,
   "course_and_preference_flags_distinguished": true,
   "monthly_periods": 60,
-  "pdf_pages": 18,
-  "pdf_current_numbers_and_adverse_evidence_checked": true,
   "sha256": {
-    "Meridian_Final_Model.xlsx": "039c025bd66223f2df70b8c12ef7130afad6bb697d11990bb8e07c1b404d3758",
-    "Meridian_Final_Selection.pdf": "783adb7ab0a56aa59e6c5fbf29a6ef49ea343fafaa9a27d4bb03220b671f156f"
+    "Meridian_Final_Model.xlsx": "c35ed4c4dbb7c899e15ee4b5895195315df3f0e72c08fb80e8755b442da2ea00"
   },
-  "limitation": "Native Microsoft Excel recalculation and actual Bloomberg holdings are not certified. Visual review is recorded separately."
+  "limitation": "Native Microsoft Excel recalculation and actual Bloomberg holdings are not certified. Visual review is recorded separately.",
+  "workbook_wording_review": {
+    "sheets": 12,
+    "unchanged_numeric_inputs": 3594,
+    "unchanged_formulas": 4439,
+    "native_two_input_data_tables": 9,
+    "cached_results_match": true,
+    "formula_errors": [],
+    "entry_date": "2026-11-07",
+    "nav_usd": 97115068.57561001,
+    "cash_usd": 116.04560999572277
+  },
+  "report": {
+    "url": "https://www.overleaf.com/project/6ae9ddb29f60dfa97d0803c2",
+    "verified_on": "2026-11-08",
+    "compiled_pages_including_cover": 10,
+    "live_compile_errors": 0,
+    "live_compile_warnings": 0,
+    "font": "DM Sans",
+    "generated_research_pdf_removed": true
+  },
+  "entry_date": "2026-11-07"
 }

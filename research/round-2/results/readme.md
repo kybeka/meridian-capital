@@ -10,5 +10,7 @@ The CSV tables and PNG charts are snapshots from the complete execution of `../r
 - `nav_dividends.csv`, `nav_reconciliation.csv`: the issuer-verified VGSH/STIP distributions and the components of the 6 November NAV. The website updater uses the same events and closing-price precision.
 - Five PNG charts: Round 1 performance, residual correlations, capital allocation, recent staggered replays and forward risk validation.
 - `notebook_verification.json`: execution outcome and file-integrity checks.
+- `valuation/`: completed cash-flow valuations, financing schedules, implied growth, convergence returns, sensitivities and repeated portfolio tests. The companion notebook recomputes the valuations and refreshes the test summaries. Its raw 18 MB replay file is generated locally and excluded from Git.
+- `workbook_style_verification.json`: checks that the Excel wording/style edits preserve numeric inputs, formulas, cached results and nine native two-input sensitivity tables.
 
 The JSON files preserve compact final-release reference results used for explicit reconciliation assertions and the earlier funding comparison. The notebook independently recomputes the central calculations; it does not use these saved outputs as a substitute for valuation, weighting, risk or replay calculations. The larger development archive and duplicate intermediate histories are omitted from this repository layout.
