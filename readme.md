@@ -35,6 +35,20 @@ The [Round 1 research folder](research/round-1/readme.md) contains an executed J
 
 The [Checkpoint 2 research folder](research/round-2/readme.md) follows the Round 1 layout. Its main notebook explains the post-loss budget, valuations, alphas, six-stock selection, information ratio, historical tests, risk and zero-fee share quantities. A companion notebook completes the FCFF/FCFE, implied-growth and return-timing checks at unchanged holdings. Saved inputs, results and the Excel model are included; the team maintains its report in Overleaf. The earlier generated report PDF has been removed. The analysis keeps the weak historical performance and daily risk findings visible.
 
+## Round 2 website
+
+The published Round 2 page is `round-2.html`, linked from the homepage research library. Preview it at `http://127.0.0.1:4173/round-2.html` when `node preview.mjs` is running.
+
+`dist/round-2.html` summarizes the recorded allocation, valuations, catalyst dates, risk, staggered historical tests, Round 1 attribution and complete holdings. `dist/round-2.js` controls the allocation, valuation and DBC-regime comparisons. The report in `dist/materials/round-2-report.pdf` is the team's latest export (ten content pages, plus cover and contents); `dist/data/round2-publication.json` records its hash and dates.
+
+Rebuild the page with an explicitly chosen report export:
+
+```sh
+python scripts/build_round2_page.py --report /absolute/path/to/AMC2_Team_Report.pdf
+```
+
+The team approved publication on 8 November 2026. The report PDF matches the final submission archive; Overleaf remains the editable report source. The presentation is being completed separately.
+
 ## Content status
 
 This is an academic simulation, not an investment offering. Team names and portraits are published. Approved investment policy, holdings and performance observations still need to be supplied. Unpublished materials are labelled accordingly. Keep live challenge results separate from historical backtests, and include dates and sources when adding results.

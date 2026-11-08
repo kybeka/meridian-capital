@@ -1,10 +1,12 @@
-# Checkpoint 2 submission materials
+# Checkpoint 2 deliverables
 
-- [Team report in Overleaf](https://www.overleaf.com/project/6ae9ddb29f60dfa97d0803c2): the authoritative report. The completed version uses DM Sans and compiled to ten pages including its cover, with zero errors and warnings on 8 November.
-- [Portfolio model (Excel)](Meridian_Final_Model.xlsx): agreed weights, valuations, risk and whole-share quantities. Wording and headers were simplified; all 4,439 formulas, 3,594 numeric inputs and nine native sensitivity tables were preserved.
-- [Team presentation in Overleaf](https://www.overleaf.com/project/6ae9e2672f6ea8c4f0fddc87): currently view-only. A matching [17-slide editable draft](presentation-draft/readme.md) is prepared for the team to review and upload once editing access is granted.
-- [Implementation record](submission_record.json): the agreed NAV, quantities and dates used for reconciliation.
+- [Report](AMC2_Report.pdf): ten content pages, plus cover and contents.
+- [Portfolio description and trade list](AMC2_Portfolio_Description.pdf): all twelve positions, identifiers, currency, quantities, weights, price date and the team's full security descriptions.
+- [Excel model](Meridian_Final_Model.xlsx): valuations, cash-flow checks, risk and share quantities.
+- [LaTeX source](latex): editable report and portfolio description, including fonts and logo.
+- [Implementation record](submission_record.json): NAV, dates and quantities used by the notebooks.
+- [Presentation draft](presentation-draft/readme.md): the completed seventeen-slide draft for team review. The live team presentation still contains placeholders.
 
-The earlier generated research report PDF and its extracted text have been removed. Use the team's Overleaf report for the submitted PDF. This folder's name follows Round 1; it does not assert that an email or course submission has been performed.
+The team edits the report in [Overleaf](https://www.overleaf.com/project/6ae9ddb29f60dfa97d0803c2). Bloomberg entry was on **7 November 2026**, using **6 November closing prices**. NAV is **$97,115,068.58**, with zero fees and **$116.05** cash after rounding. Shares include **22,964 SPY** and **18,865 Adobe**. The Excel model's calculations and quantities are unchanged.
 
-Bloomberg entry date: **7 November 2026**, confirmed by the team. Price date: **6 November close**. NAV is **$97,115,068.58**, one-third in stocks, zero fees and no reserve. The recorded quantities include the extra SPY and Adobe shares and leave **$116.05** cash. All twelve quantities reconcile to the notebook. Native Microsoft Excel recalculation has not been independently certified.
+The report and portfolio description must be sent to the TA and published on the fund website. Website publication was approved on 8 November 2026; this repository does not confirm an email submission.

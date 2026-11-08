@@ -1,0 +1,91 @@
+.round2-page .research-back{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.round2-page #main{scroll-margin-top:var(--research-header-height)}
+.r2-preview-label{font-size:.75rem;color:var(--muted);border-bottom:1px solid var(--gold);padding-bottom:4px}
+.round2-page .submission-links{margin-bottom:36px;flex-wrap:wrap}
+.round2-page :is(#allocation,#valuations,#catalysts,#risk,#backtests,#round1-review,#implementation,#methodology){scroll-margin-top:calc(var(--research-header-height) + var(--research-nav-height) + 24px)}
+.r2-section-title{font:clamp(1.8rem,3vw,2.5rem) Georgia,serif;margin-bottom:32px}
+.r2-funding{display:grid;grid-template-columns:2fr 1fr;margin:0 0 48px;min-height:112px;gap:3px}
+.r2-funding>div{background:var(--gold);color:var(--navy);padding:24px 28px;display:flex;flex-direction:column;justify-content:center}
+.r2-funding>div+div{background:var(--navy);color:var(--paper)}
+.r2-funding strong{font:2rem Georgia,serif;font-variant-numeric:tabular-nums}
+.r2-funding span{font-size:.8rem;line-height:1.5;margin-top:8px;max-width:28ch}
+.round2-page .allocation-layout{gap:6%;margin-bottom:48px}
+.r2-allocation-row{margin-block:18px}
+.r2-allocation-row.stock .allocation-track span{background:var(--navy)}
+.r2-allocation-row.stock:first-of-type{margin-top:32px}
+.round2-page .allocation-reasoning{margin-bottom:0}
+.r2-chart-heading{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:20px}
+.r2-chart-heading h3{font-size:1.1rem}
+.r2-controls{flex-shrink:0}
+.r2-controls button{min-height:44px}
+.r2-value-axis{display:flex;justify-content:space-between;margin:28px 128px 0 144px;font-size:.72rem;color:var(--muted)}
+.r2-value-row{display:grid;grid-template-columns:128px minmax(0,1fr) 112px;gap:16px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.r2-value-row>div:first-child span,.r2-value-reading span{display:block;font-size:.75rem;color:var(--muted);margin-top:5px}
+.r2-value-row strong{font-size:.95rem;font-weight:500}
+.r2-value-reading{text-align:right}
+.r2-value-track{height:22px;position:relative;background:linear-gradient(90deg,transparent calc(50% - .5px),var(--line) calc(50% - .5px),var(--line) calc(50% + .5px),transparent calc(50% + .5px));border-block:1px solid var(--line)}
+.r2-entry-line{position:absolute;left:0;top:-5px;height:30px;border-left:2px solid var(--gold)}
+.r2-value-line{position:absolute;left:0;top:8px;height:4px;background:var(--navy)}
+.r2-value-track i{position:absolute;top:4px;width:12px;height:12px;border-radius:50%;background:var(--navy);transform:translateX(-50%)}
+.round2-page .r2-stock-cases{margin-top:48px}
+.round2-page .r2-stock-cases dd h3{font-family:Georgia,serif;font-weight:400;font-size:1.35rem}
+.round2-page .r2-stock-cases strong{color:var(--ink);font-weight:500}
+.round2-page .r2-stock-cases details p{font-size:.9rem}
+.r2-timeline{list-style:none;margin:0;padding:0}
+.r2-timeline li{display:grid;grid-template-columns:180px 1fr;gap:40px;padding:28px 0 28px 24px;border-left:1px solid var(--gold);position:relative}
+.r2-timeline li::before{content:"";position:absolute;left:-5px;top:34px;width:9px;height:9px;background:var(--navy);border-radius:50%}
+.r2-timeline time{font-size:.9rem;font-weight:500}
+.r2-timeline h3{font-size:1rem;font-weight:500}
+.r2-timeline p{font-size:.9rem;color:var(--muted);margin:10px 0 0;max-width:66ch}
+.r2-timeline .r2-review-date{border-left-style:dashed}
+.r2-timeline .r2-review-date::before{background:var(--paper);border:1px solid var(--navy)}
+.r2-risk-axis{position:relative;height:25px;margin-left:216px;margin-right:90px;font-size:.75rem;color:var(--muted)}
+.r2-risk-axis span{position:absolute;transform:translateX(-50%)}
+.r2-risk-axis span:nth-child(1){left:0}.r2-risk-axis span:nth-child(2){left:20%}.r2-risk-axis span:nth-child(3){left:50%}.r2-risk-axis span:nth-child(4){left:100%}
+.r2-risk-row{display:grid;grid-template-columns:192px minmax(0,1fr) 66px;gap:24px;align-items:center;padding:18px 0;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.r2-risk-row strong{font-size:.95rem;font-weight:500}
+.r2-risk-row>strong{text-align:right}
+.r2-risk-row>div>span:first-of-type{display:block;font-size:.75rem;color:var(--muted);margin-top:5px}
+.r2-risk-track{position:relative;height:38px;border-bottom:1px solid var(--line)}
+.r2-risk-track .r2-budget{position:absolute;left:20%;top:0;width:30%;height:100%;background:#a595772b;border-inline:1px solid var(--gold);margin:0!important}
+.r2-risk-track i{position:absolute;top:12px;width:13px;height:13px;transform:translateX(-50%);border-radius:50%;background:var(--navy)}
+.r2-risk-table{margin-top:40px;min-width:0}
+.r2-interval{margin:28px 0 0}
+.r2-interval svg{display:block;width:100%;height:auto;max-height:180px;overflow:visible}
+.r2-interval svg text{font:14px 'DM Sans',sans-serif;fill:var(--muted)}
+.r2-interval figcaption{font-size:.8rem;line-height:1.6;color:var(--muted)}
+.r2-axis-line{stroke:var(--line);stroke-width:1}.r2-zero-line{stroke:var(--gold);stroke-dasharray:4 4;stroke-width:1}
+.r2-ci-line{stroke:var(--navy);stroke-width:3}.r2-ci-cap{stroke:var(--navy);stroke-width:2}.r2-mean-point{fill:var(--navy)}
+.r2-ir-note{border-top:1px solid var(--line);margin-top:36px;padding-top:28px;max-width:76ch}
+.r2-ir-note h3{font-size:1.1rem}.r2-ir-note p{font-size:.9rem;color:var(--muted)}
+.r2-round1-layout{display:grid;grid-template-columns:1.1fr 1fr;gap:7%}
+.r2-round1-layout h3{font-size:1.1rem;line-height:1.6}
+.r2-round1-layout p{font-size:.9rem;color:var(--muted)}
+.r2-attribution{margin-top:24px}
+.r2-attribution-row{display:grid;grid-template-columns:42px minmax(0,1fr) 88px;gap:16px;margin:22px 0;align-items:center;font-size:.85rem;font-variant-numeric:tabular-nums}
+.r2-attribution-row>span{text-align:right}.r2-attribution-row>strong{font-weight:500}
+.r2-attribution-track{height:10px;background:#e6e5dc}.r2-attribution-track span{display:block;height:100%;background:var(--navy)}
+.r2-attribution-row.gain .r2-attribution-track span{background:var(--gold)}
+.r2-holdings{min-width:640px}
+.r2-method{counter-reset:r2-step;list-style:none;padding:0;margin:0;max-width:80ch}
+.r2-method li{counter-increment:r2-step;position:relative;padding:24px 0 24px 48px;border-top:1px solid var(--line)}
+.r2-method li::before{content:counter(r2-step,decimal-leading-zero);position:absolute;left:0;top:24px;color:var(--muted);font:1.35rem Georgia,serif}
+.r2-method h3{font-size:1.1rem}.r2-method p{font-size:.9rem;color:var(--muted);margin-bottom:0}
+.round2-page .publication-note p{max-width:68ch}
+.round2-page :focus-visible{outline:2px solid var(--navy);outline-offset:5px}
+@media(max-width:900px){.r2-round1-layout{grid-template-columns:1fr;gap:28px}.r2-chart-heading{align-items:flex-start;flex-direction:column}.r2-value-axis{margin-right:112px}}
+@media(max-width:700px){
+ .round2-page .research-back{align-items:flex-start;flex-direction:column;padding-inline:6%}
+ .round2-page .snapshot-note{font-size:.85rem}
+ .r2-funding{min-height:108px;margin-bottom:32px}.r2-funding>div{padding:18px 16px}.r2-funding strong{font-size:1.65rem}.r2-funding span{font-size:.7rem}
+ .round2-page .allocation-layout{margin-bottom:32px}.round2-page .allocation-toggle button{padding:10px 12px}
+ .r2-value-row{grid-template-columns:84px minmax(0,1fr) 88px;gap:12px;padding-block:20px}
+ .r2-value-row>div:first-child span,.r2-value-reading span{font-size:.68rem}.r2-value-row strong{font-size:.85rem}
+ .r2-value-axis{margin-left:96px;margin-right:100px;gap:8px;font-size:.65rem}.r2-value-axis span:nth-child(2){display:none}
+ .r2-timeline li{grid-template-columns:1fr;gap:10px;padding:22px 0 22px 22px}.r2-timeline li::before{top:28px}
+ .r2-risk-row{grid-template-columns:116px minmax(0,1fr) 52px;gap:12px}.r2-risk-row strong{font-size:.8rem}.r2-risk-row>div>span:first-of-type{font-size:.65rem}
+ .r2-risk-axis{margin-left:128px;margin-right:64px;font-size:.65rem}.r2-risk-table{font-size:.8rem}
+ .r2-replay-stats>div{align-items:flex-start;flex-direction:column;gap:0}.r2-replay-stats strong{margin-top:8px}
+ .r2-attribution-row{grid-template-columns:40px minmax(0,1fr) 84px;gap:12px}
+ .r2-interval svg text{font-size:28px}.r2-ir-note p{font-size:.85rem}
+}
