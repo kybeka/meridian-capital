@@ -35,9 +35,9 @@ The [Round 1 research folder](research/round-1/readme.md) contains an executed J
 
 The [Checkpoint 2 research folder](research/round-2/readme.md) follows the Round 1 layout. Its main notebook explains the post-loss budget, valuations, alphas, six-stock selection, information ratio, historical tests, risk and zero-fee share quantities. A companion notebook completes the FCFF/FCFE, implied-growth and return-timing checks at unchanged holdings. Saved inputs, results and the Excel model are included; the team maintains its report in Overleaf. The earlier generated report PDF has been removed. The analysis keeps the weak historical performance and daily risk findings visible.
 
-## Round 2 website review
+## Round 2 website
 
-The unpublished local page is `http://127.0.0.1:4173/round-2.html` when `node preview.mjs` is running. The homepage's Round 2 library and current-round links are also prepared locally. Nothing has been pushed or deployed.
+The published Round 2 page is `round-2.html`, linked from the homepage research library. Preview it at `http://127.0.0.1:4173/round-2.html` when `node preview.mjs` is running.
 
 `dist/round-2.html` summarizes the recorded allocation, valuations, catalyst dates, risk, staggered historical tests, Round 1 attribution and complete holdings. `dist/round-2.js` controls the allocation, valuation and DBC-regime comparisons. The report in `dist/materials/round-2-report.pdf` is the team's latest export (ten content pages, plus cover and contents); `dist/data/round2-publication.json` records its hash and dates.
 
@@ -47,7 +47,7 @@ Rebuild the page with an explicitly chosen report export:
 python scripts/build_round2_page.py --report /absolute/path/to/AMC2_Team_Report.pdf
 ```
 
-Publication requires the team's review. Before a future approved publication, remove the local-review badge and `noindex` metadata from the page generator, update the publication status, and check the presentation and homepage tracking context. The report PDF is a website copy; Overleaf remains the editable report source.
+The team approved publication on 8 November 2026. The report PDF matches the final submission archive; Overleaf remains the editable report source. The presentation is being completed separately.
 
 ## Content status
 

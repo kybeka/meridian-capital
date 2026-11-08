@@ -118,9 +118,9 @@ def build(report_path):
     assets = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">'
     header = re.search(r'<header class="site-header">.*?</header>', (DIST / 'round-1.html').read_text()).group()
     page = f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Round 2 Research · Meridian Capital</title><meta name="description" content="Meridian Capital's Checkpoint 2: six stocks, valuation cases, catalysts, tracking error and historical tests."><link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">{assets}<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="round-2.css"><script src="app.js" defer></script><script src="round-2.js" defer></script></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Round 2 Research · Meridian Capital</title><meta name="description" content="Meridian Capital's Checkpoint 2: six stocks, valuation cases, catalysts, tracking error and historical tests."><link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">{assets}<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="round-2.css"><script src="app.js" defer></script><script src="round-2.js" defer></script></head>
 <body class="research-page round2-page"><a class="skip" href="#main">Skip to content</a>{header}
-<main id="main"><div class="research-back"><a class="text-link" href="index.html#research">← Back to research library</a><span class="r2-preview-label">Local review copy · Unpublished</span></div><section class="section allocation-section">
+<main id="main"><div class="research-back"><a class="text-link" href="index.html#research">← Back to research library</a></div><section class="section allocation-section">
 <div class="section-top"><div><p class="eyebrow">Round 2 / Discretionary equity investing</p><h1 class="research-title">Round 2 allocation</h1></div><p class="snapshot-note">Entered 7 November 2026<br>Prices: 6 November close</p></div>
 <p class="allocation-intro">We allocate one-third of our post-loss portfolio to six stocks. Their valuations and catalysts guide the selection; their residual risk determines the proportions. The original six-ETF SAA remains our benchmark.</p>
 <div class="submission-links" aria-label="Round 2 materials"><a class="text-link" href="{REPORT}">Read final report (PDF) →</a><a class="text-link" href="{MODEL}">Open Excel model ↗</a><a class="text-link" href="{CODE}">Notebooks and data ↗</a></div>
@@ -173,7 +173,7 @@ def build(report_path):
     shutil.copy2(RESEARCH / 'results/valuation/entered_holdings.csv', DIST / 'data/round2-holdings.csv')
     report_sha = hashlib.sha256(report_path.read_bytes()).hexdigest()
     (DIST / 'data/round2-publication.json').write_text(json.dumps({
-        'status': 'Local review copy; unpublished', 'price_date': record['price_date'],
+        'status': 'Published', 'price_date': record['price_date'],
         'entry_date': record['bloomberg_entry_date'], 'nav_usd': nav,
         'report': REPORT, 'report_sha256': report_sha, 'report_revision': '2026-11-08',
         'stock_tickers': analysis['stocks'], 'source': CODE}, indent=2) + '\n')

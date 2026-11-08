@@ -9,4 +9,4 @@
 
 The team edits the report in [Overleaf](https://www.overleaf.com/project/6ae9ddb29f60dfa97d0803c2). Bloomberg entry was on **7 November 2026**, using **6 November closing prices**. NAV is **$97,115,068.58**, with zero fees and **$116.05** cash after rounding. Shares include **22,964 SPY** and **18,865 Adobe**. The Excel model's calculations and quantities are unchanged.
 
-The report and portfolio description must be sent to the TA and published on the fund website. Publication is awaiting the team's review; this repository does not confirm an email submission.
+The report and portfolio description must be sent to the TA and published on the fund website. Website publication was approved on 8 November 2026; this repository does not confirm an email submission.
