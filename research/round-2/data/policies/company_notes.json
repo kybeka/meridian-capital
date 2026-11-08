@@ -1,0 +1,150 @@
+{
+  "ADBE": {
+    "name": "Adobe",
+    "business": "Creative and document subscriptions generate recurring cash. AI can expand usage, but cheaper competing tools, renewal pressure and pricing matter.",
+    "method": "Primary value is16x the FY26GAAP guidance midpoint18.145. This includes stock compensation. The multiple is a judgemental discount for AI and renewal uncertainty, not a mechanically observed fair multiple. A dividend model is unsuitable because Adobe pays no dividend.",
+    "capital": "Buybacks can lift EPS and ROE by shrinking the share count and equity. Check operating growth, cash conversion and borrowing together. Do not treat rising ROE after aggressive repurchases as independent proof of better management. The publicly announced CEO succession takes effect December1: Anil Chakravarthy becomes CEO and Shantanu Narayen executive chair. Watch execution and the first outlook under the new leadership; the already-known appointment adds no separate forecast alpha.",
+    "trap": "Qualified value case: cash supports a value above price, but the lower cash cross-check narrows the apparent earnings-based cushion. A software rerating is not assured.",
+    "event": "Issuer calendar: December9 FY26 results. The useful new information is recurring-revenue growth, paid AI monetisation, margins and the FY27 outlook. We need better evidence of earnings sustainability, not merely a known reporting date.",
+    "fail": "AI competition weakens renewals or pricing; cash generation deteriorates; FY27 guidance fails to support normalized earnings.",
+    "ids": [
+      2,
+      3,
+      4,
+      6,
+      7,
+      31
+    ]
+  },
+  "KR": {
+    "name": "Kroger",
+    "business": "Essential grocery demand supports cash generation, but thin margins, price competition and investment execution make this an equity risk rather than a cash substitute.",
+    "method": "Use15x FY26adjustedEPS5.20. The company guide is5.10-5.30. This basis removes exceptional fulfilment charges; those charges still represent real capital lost. A dividend-only model omits material buybacks and reinvestment. The Q2 release also lists tariff refunds among margin supports without quantifying their EPS contribution. USD5.20 is therefore an issuer-adjusted guidance case, not proof that all profits are recurring. A lower-earnings sensitivity is necessary.",
+    "capital": "The failed automated-fulfilment investment is a management warning. Buybacks and leverage must be judged against free cash generation, not just an adjusted EPS recovery. Normalized profit is not evidence that the earlier investment was harmless.",
+    "trap": "Qualified positive: cash value is close to earnings value, but the largest alpha/residual score creates the largest position. Its resulting weight slightly exceeds the8% research preference. No discretionary increase is justified.",
+    "event": "Issuer-announced December3 Q3 results. Watch same-store demand, margin, free cash and execution of the October strategy update. The October20 update was already public before entry and is not a new future event.",
+    "fail": "Sales or margins weaken, cash conversion disappoints, or buybacks rely on rising borrowing instead of sustainable cash.",
+    "ids": [
+      2,
+      3,
+      4,
+      8,
+      9
+    ]
+  },
+  "GILD": {
+    "name": "Gilead Sciences",
+    "business": "The HIV franchise produces recurring cash. Cell therapy and oncology add growth options and regulatory risk. The established franchise and the acquired pipeline must be assessed separately.",
+    "method": "FY26nonGAAP guidance midpoint-1.025 plus the issuer-quantified9.88IPRDimpact gives normalizedEPS8.855. At20x, value177.10 offers a thin valuation cushion. The acquired assets were paid for: the add-back is an accounting normalization, not organic growth.",
+    "capital": "Acquisition cash and IPRD are economically real. A cash proxy excluding acquisition spending can exaggerate sustainable distributable cash, so the roughly252 cash value is not used to raise alpha. A constant-growth dividend model misses patent/pipeline discontinuities.",
+    "trap": "Small, qualified position. A modest value gap and a binary catalyst make this less convincing than the larger-value-gap positions. It is not a high-confidence approval bet.",
+    "event": "December12-15 ASH data and the December23 FDA target action date for anito-cel. These are expected information events inside the horizon. Approval, favourable data and exact timing are not guaranteed; no probability is invented.",
+    "fail": "Adverse data, a delay or rejection, weaker HIV cash, or acquisition costs that reduce the franchise cash available to shareholders.",
+    "ids": [
+      2,
+      3,
+      4,
+      10,
+      11,
+      12
+    ]
+  },
+  "HRL": {
+    "name": "Hormel Foods",
+    "business": "Branded protein and Foodservice provide a cash-supported recovery case. Retail volumes, input costs and execution remain weak points. Recent stock volatility shows that a food label does not make a position low risk.",
+    "method": "Use17x the FY26adjusted guide midpoint1.48. The1.45-1.51adjusted range differs materially from GAAP1.06-1.12. The premium to several mixed food peers requires better execution; it is not justified solely by a long dividend record.",
+    "capital": "The1.055bn Brakebush acquisition is expected to close in fiscal2027Q1, with adjustedEPSaccretion only from2028. No immediate uplift is assumed. Funding, integration and leverage need scrutiny. Divestiture, impairment and legal costs are real even when excluded from adjusted EPS.",
+    "trap": "Moderate-conviction recovery case. The cash proxy supports value, but dividend coverage is only modest and the prior annual payout ratio is a warning. A dividend cut or acquisition-funded cash shortfall would undermine the thesis.",
+    "event": "Confirmed December3 FY26 results and FY27 outlook, including the new CEO's execution priorities. The useful catalyst is evidence of cash recovery and a credible outlook. Acquisition completion itself may occur after the challenge cutoff.",
+    "fail": "Weak FY27 guidance, further retail-volume losses, poor cash conversion, a dividend funding problem, or unexpectedly expensive acquisition financing.",
+    "ids": [
+      2,
+      3,
+      4,
+      13,
+      14,
+      15
+    ]
+  },
+  "BMY": {
+    "name": "Bristol Myers Squibb",
+    "business": "Established medicines generate cash while the newer portfolio must offset patent and generic erosion. A low multiple can reflect a real cash-flow decline rather than mispricing.",
+    "method": "Use11x the FY26nonGAAP guide midpoint6.45. This retains the0.60IPRD/licensing impact included in the updated6.35-6.55range. Do not add it back again. The multiple discounts patent and acquisition risk relative to pharmaceutical peers.",
+    "capital": "Evaluate acquired-product returns and debt against available cash. Our simplified owner-cash proxy with zero assumed growth supports a value close to the earnings valuation. A3%five-year cash decline at0%terminal growth reduces that value below today's price.",
+    "trap": "Qualified value case, with three annual quality warnings. No-growth cash support is useful, but it is not protection against a patent-driven decline. A constant-growth DDM would underrepresent that discontinuity.",
+    "event": "The October29 issuer presentation expects remaining2026 SotyktuSLE and milvexian secondary-stroke readouts. Exact days are unconfirmed and could slip beyond December27. Already-reported trials are not counted again. These are clinical results, not assumed regulatory approvals. Milvexian already failed in the separate ACS indication; a positive stroke result must not be presumed from its mechanism.",
+    "fail": "Disappointing clinical data, greater patent erosion, declining cash, or acquisition/debt demands that undermine shareholder distributions.",
+    "ids": [
+      2,
+      3,
+      4,
+      16,
+      17,
+      39
+    ]
+  },
+  "XOM": {
+    "name": "ExxonMobil",
+    "business": "Integrated energy supplies different operating drivers from software, food and healthcare. It also overlaps the existing DBC commodity risk, so it is not an independent defensive hedge.",
+    "method": "Use normalizedEPS10 at18x, giving180. This is an analyst scenario near trailing earnings and below next-year consensus, not company EPS guidance. Do not annualize a strong oil/refining quarter into permanent earnings.",
+    "capital": "Four annual quality metrics deteriorate against both history and peers. Recent cash is stronger but reflects the commodity cycle. Production projects and distributions must remain affordable without permanently high oil prices.",
+    "trap": "Moderate-low conviction. The valuation cushion is thin for a cyclical producer and the event timing is uncertain. Raw FCF is useful evidence, but Yahoo supplies no SBC series, so no after-SBC cash value is fabricated.",
+    "event": "The issuer's Q3 call expects Uaru startup and a release of2027planning metrics duringQ4. There is no formal December investor-day event. Timing is unconfirmed and may fall after December27; project execution and planning detail must provide new information.",
+    "fail": "Lower oil/refining margins, project delays, capital spending overruns, or payouts that depend on extrapolating peak-cycle cash.",
+    "ids": [
+      2,
+      3,
+      4,
+      18,
+      19
+    ]
+  },
+  "HPQ": {
+    "name": "HP Inc.",
+    "business": "Personal Systems and Printing produce cash but face memory costs, weak unit demand and structural printing decline. This is a small normalized-cash position, not a high-growth AI bet.",
+    "method": "FY26 GAAP EPS midpoint2.57 less0.19tariff refunds gives2.38. At13.5x, intrinsic value is32.13. Do not use the higher adjustedEPS3.24 or capitalize a one-time refund. A dividend-only model misses substantial buybacks.",
+    "capital": "Negative equity makes ROE and debt/equity unavailable. Review absolute debt and cash payout coverage instead. Normalize issuer FCF guidance3.1bn by subtracting a0.17613bn tariff-refund cash proxy and0.479bn TTM SBC. The resulting2.44487bn is an analyst cash-capacity proxy, not issuer FCFE guidance.",
+    "trap": "Qualified, modest-size cash case. Printing decline and weak unit volumes can erode profits. Normalized cash value supports the earnings value, but the cushion is not large. The modest position improves expected basketIR without making the portfolio depend heavily on the PC cycle.",
+    "event": "Confirmed November24FY26results and FY27outlook. The key new information is normalized cash, printing trends, pricing/memory costs and the outlook after the tariff-refund benefit expires. Later investor conferences are supplementary rather than the main catalyst.",
+    "fail": "FY27guidance or normalized cash weakens, printing decline accelerates, or shareholder distributions rely on borrowing.",
+    "ids": [
+      2,
+      3,
+      4,
+      29,
+      30
+    ]
+  },
+  "INTU": {
+    "name": "Intuit",
+    "business": "Tax, accounting and financial software generate recurring cash. Mailchimp execution and small-business demand remain risks.",
+    "method": "Unchanged original valuation: FY27GAAP EPS20.24at20x gives404.80. SBC is included. Do not compare the new SBC-inclusive adjusted EPS policy mechanically with earlier adjusted years.",
+    "capital": "Inspect cash after SBC, repurchases and acquired-business returns. The cash-capacity cross-check supports the earnings case.",
+    "trap": "Positive standalone value case, but adding another software exposure reduces the correlation-adjusted basketIR.",
+    "event": "Confirmed November19Q1FY27results, testing delivery against GAAP guidance and the new adjusted reporting basis.",
+    "fail": "Weak operating growth, guidance or after-SBCcash.",
+    "ids": [
+      2,
+      3,
+      4,
+      27,
+      28
+    ]
+  },
+  "FDS": {
+    "name": "FactSet",
+    "business": "Financial-data subscriptions and workflow products produce recurring revenue. Slower ASV growth and cost execution matter.",
+    "method": "FY27GAAP EPS17.25at21.5x gives370.875. Separate adjusted guidance19.25-19.65must not be called GAAP.",
+    "capital": "Cash after SBC supports only a modest cushion over price. Capital returns exceeding FCF should not be extrapolated.",
+    "trap": "A thin cash-value cushion limits conviction. Do not insert the name merely to improve diversification.",
+    "event": "Confirmed November10InvestorDay. Expected Decemberquarterly results are not yet a firm issuer date.",
+    "fail": "Weaker subscription growth, margins or cash conversion.",
+    "ids": [
+      2,
+      3,
+      4,
+      25,
+      26
+    ]
+  }
+}

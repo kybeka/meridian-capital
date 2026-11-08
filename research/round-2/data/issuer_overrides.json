@@ -1,0 +1,13 @@
+[
+  {
+    "ticker": "XOM",
+    "frequency": "annual",
+    "period": "2025-12-31",
+    "field": "TotalDebt",
+    "value": 43537000000,
+    "calculation": "December 2025 notes and loans payable 9,296m plus long-term debt 34,241m = 43,537m; Yahoo annual total debt stops at 2024.",
+    "source": "https://investor.exxonmobil.com/sec-filings/all-sec-filings/content/0002115436-26-000020/xom-20260930.htm",
+    "source_location": "Condensed Consolidated Balance Sheet, December 31 2025 comparative column; issuer defines total debt as these two components.",
+    "verified": "2026-11-06"
+  }
+]

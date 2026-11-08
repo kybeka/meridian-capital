@@ -1,0 +1,17 @@
+{
+  "status": "Passed",
+  "price_cutoff": "2026-11-06",
+  "round1_independently_reconstructed": true,
+  "attribution_reconciles": true,
+  "saved_model_errors": [],
+  "all12_weights_and_share_trades_match": true,
+  "course_and_preference_flags_distinguished": true,
+  "monthly_periods": 60,
+  "pdf_pages": 18,
+  "pdf_current_numbers_and_adverse_evidence_checked": true,
+  "sha256": {
+    "Meridian_Final_Model.xlsx": "039c025bd66223f2df70b8c12ef7130afad6bb697d11990bb8e07c1b404d3758",
+    "Meridian_Final_Selection.pdf": "783adb7ab0a56aa59e6c5fbf29a6ef49ea343fafaa9a27d4bb03220b671f156f"
+  },
+  "limitation": "Native Microsoft Excel recalculation and actual Bloomberg holdings are not certified. Visual review is recorded separately."
+}

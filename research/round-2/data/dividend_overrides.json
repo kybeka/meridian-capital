@@ -1,0 +1,5 @@
+[
+ {"ticker":"VGSH","ex_date":"2026-10-01","pay_date":"2026-10-05","amount":0.1825,"source":"https://www.vanguardsouthamerica.com/en/product/etf/fixed-income/3142/vanguard-short-term-treasury-etf","reason":"Missing event and adjustment in archived Yahoo chart response; issuer distribution history verified 6 November 2026"},
+ {"ticker":"VGSH","ex_date":"2026-11-02","pay_date":"2026-11-04","amount":0.1889,"source":"https://www.vanguardsouthamerica.com/en/product/etf/fixed-income/3142/vanguard-short-term-treasury-etf","reason":"Missing event and adjustment in archived Yahoo chart response; issuer distribution history verified 6 November 2026"},
+ {"ticker":"STIP","ex_date":"2026-11-02","pay_date":"2026-11-05","amount":0.292917,"source":"https://www.ishares.com/us/products/239450/ishares-05-year-tips-bond-etf","reason":"Missing event and adjustment in archived Yahoo chart response; issuer distribution history verified 6 November 2026"}
+]

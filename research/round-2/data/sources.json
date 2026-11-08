@@ -1,0 +1,197 @@
+[
+  [
+    "Course",
+    "Local Round2 guidelines, Class3 PartII and Class5 texts",
+    "Original SAA benchmark;3-6 long stocks;60 monthly USD returns; annual TE2-5%. One-third is the reported class instruction."
+  ],
+  [
+    "Prices",
+    "https://query1.finance.yahoo.com/v8/finance/chart/{TICKER}",
+    "Complete November6close. Raw and adjusted daily prices archived. Separate ledger corrects missing VGSH/STIP distributions."
+  ],
+  [
+    "Statements",
+    "https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/{TICKER}",
+    "Annual and quarterly statements available November6. Flow sums and balances remain distinct. Missing SBC is unavailable."
+  ],
+  [
+    "Estimates",
+    "https://query1.finance.yahoo.com/v10/finance/quoteSummary/{TICKER}",
+    "Analyst adjusted estimates remain separate from issuer GAAP guidance and normalized earnings."
+  ],
+  [
+    "Rates",
+    "https://fred.stlouisfed.org/series/DGS10",
+    "10-year input 4.84%, observation 2026-11-05. Latest1-month 4.03%, observation 2026-11-05. Historical monthly mean DGS1MO/1200."
+  ],
+  [
+    "ADBE guidance",
+    "https://www.sec.gov/Archives/edgar/data/796343/000079634326000147/adbeex991q326.htm",
+    "FY26GAAP EPS18.12-18.17; midpoint18.145."
+  ],
+  [
+    "ADBE event",
+    "https://www.adobe.com/investor-relations/calendar.html",
+    "December9results, issuer calendar."
+  ],
+  [
+    "KR guidance",
+    "https://ir.kroger.com/news/news-details/2026/Kroger-Reports-Second-Quarter-2026-Results-and-Updates-Guidance-for-2026/default.aspx",
+    "FY26adjusted EPS5.10-5.30; reaffirmed October20before entry."
+  ],
+  [
+    "KR event",
+    "https://ir.kroger.com/news/news-details/2026/Kroger-Announces-Third-Quarter-Conference-Call-with-Investors/default.aspx",
+    "December3results, issuer announcement dated November5."
+  ],
+  [
+    "GILD guidance",
+    "https://investors.gilead.com/news/news-details/2026/Gilead-Sciences-Announces-Third-Quarter-2026-Financial-Results/default.aspx",
+    "FY26non-GAAP midpoint-1.025 plus quantified9.88IPRD impact per share. Acquisition cash is a real cost."
+  ],
+  [
+    "GILD FDA",
+    "https://s29.q4cdn.com/585078350/files/doc_financials/2026/q1/GILD-Q126-Summary-of-Prepared-Remarks-7-May-2026.pdf",
+    "December23anito-cel FDA target action date. No approval probability assumed."
+  ],
+  [
+    "GILD ASH",
+    "https://www.gilead.com/news/news-details/2026/gilead-and-kite-advance-leadership-with-new-data-across-pipeline-and-portfolio-at-ash-2026",
+    "December12-15conference data, announced November5."
+  ],
+  [
+    "HRL guidance",
+    "https://www.hormelfoods.com/newsroom/press-releases/hormel-foods-reports-third-quarter-fiscal-2026-results/",
+    "FY26adjusted EPS1.45-1.51; GAAP1.06-1.12."
+  ],
+  [
+    "HRL event",
+    "https://investor.hormelfoods.com/news-and-events/news/news-details/2026/Hormel-Foods-Corporation-Announces-Fourth-Quarter-Earnings-Call/default.aspx",
+    "December3FY26results/FY27outlook, announced November3."
+  ],
+  [
+    "HRL acquisition",
+    "https://www.hormelfoods.com/newsroom/press-releases/hormel-foods-announces-definitive-agreement-to-acquire-brakebush-a-leading-value-added-chicken-company/",
+    "USD1.055bn Brakebush deal. Expected fiscal2027Q1close; adjusted EPS accretion only from FY2028."
+  ],
+  [
+    "BMY guidance",
+    "https://www.bms.com/assets/bms/us/en-us/pdf/investor-info/doc_financials/quarterly_reports/2026/BMY-Q3-2026-Earnings-Press-Release-0039.pdf",
+    "FY26non-GAAP EPS6.35-6.55; retains0.60IPRD impact."
+  ],
+  [
+    "BMY pipeline",
+    "https://www.bms.com/assets/bms/us/en-us/pdf/investor-info/doc_presentations/2026/BMY-2026-Q3-Results-Investor-Presentation.pdf",
+    "Slide5expects remaining2026Sotyktu SLE and milvexian stroke readouts. Exact days unconfirmed."
+  ],
+  [
+    "XOM earnings",
+    "https://investor.exxonmobil.com/company-information/press-releases/detail/1213/exxonmobil-announces-third-quarter-2026-results",
+    "Normalized10EPS is an analyst scenario. Do not annualize Q3commodity earnings."
+  ],
+  [
+    "XOM events",
+    "https://d1io3yog0oux5.cloudfront.net/_846a550cf4695dce9fa5578132c6e6a1/exxonmobil/db/2288/22725/webcast_transcript/Transcript_-_ExxonMobil_3Q_2026_Earnings_Call.pdf",
+    "Q4Uaru startup/planning metrics expected. No formal December investor day; events could slip beyond December27."
+  ],
+  [
+    "DBC methodology",
+    "https://www.sec.gov/Archives/edgar/data/1328237/000119312526083563/dbc-20251231.htm",
+    "November10,2025methodology change. Pre/post exposure differs; market-regime causality cannot be isolated."
+  ],
+  [
+    "PEP rejected",
+    "https://investor.pepsico.com/docs/pepsico-5v9wci20/media/Files/investors/q3-2026-earnings-release.pdf",
+    "Core operating-profit growth includes4percentage points of tariff-refund support. Thin value cushion after normalization."
+  ],
+  [
+    "CPB rejected",
+    "https://www.thecampbellscompany.com/newsroom/press-releases/campbells-reports-fourth-quarter-fiscal-2026-results/",
+    "Lower fiscal2027 earnings outlook and dividend cut."
+  ],
+  [
+    "SJM rejected",
+    "https://investors.jmsmucker.com/news/news-details/2026/The-J-M--Smucker-Co--Announces-Fiscal-Year-2027-First-Quarter-Results-and-Updates-Full-Year-Fiscal-2027-Outlook/default.aspx",
+    "FY27EPS guidance includes a non-recurring tariff refund."
+  ],
+  [
+    "FDX calendar",
+    "https://investors.fedex.com/",
+    "Issuer lists the next results call in February2027 following its fiscal calendar change."
+  ],
+  [
+    "FDS guidance",
+    "https://investor.factset.com/static-files/ba920b54-c271-426a-84e9-fd1208cfee67",
+    "FY27GAAP EPS17.00-17.50 differs from adjusted19.25-19.65."
+  ],
+  [
+    "FDS event",
+    "https://investor.factset.com/news-releases/news-release-details/factset-host-investor-day-november-10-2026",
+    "Confirmed November10Investor Day."
+  ],
+  [
+    "INTU guidance",
+    "https://investors.intuit.com/news-events/press-releases/detail/1323/intuit-hosts-investor-day-reaffirms-first-quarter-and-fiscal-2027-guidance",
+    "FY27GAAP EPS20.12-20.36, includes SBC. Original unchanged20x valuation used for comparison."
+  ],
+  [
+    "INTU event",
+    "https://investors.intuit.com/",
+    "November19FY27Q1results, confirmed issuer calendar."
+  ],
+  [
+    "HPQ earnings",
+    "https://www.hp.com/us-en/newsroom/press-releases/2026/hp-inc-reports-fiscal-2026-third-quarter-results.html",
+    "FY26GAAP midpoint2.57 less0.19tariff refunds =2.38normalized EPS. FCF guidance3.0-3.2bn."
+  ],
+  [
+    "HPQ event",
+    "https://investor.hp.com/news-events/news/news-details/2026/HP-Inc--to-Announce-Fourth-Quarter-Fiscal-2026-Earnings-on-November-24-2026-and-to-Attend-Upcoming-Investor-Conferences/default.aspx",
+    "November24FY26results and FY27outlook."
+  ],
+  [
+    "ADBE leadership",
+    "https://news.adobe.com/news/2026/09/adobe-announces-anil-chakravarthy-to-become-president-and-ceo",
+    "Announced September3: Anil Chakravarthy becomes CEO December1, with Shantanu Narayen becoming executive chair. Already public, not fresh alpha by itself."
+  ],
+  [
+    "BMO results",
+    "https://newsroom.bmo.com/2026-08-25-BMO-Financial-Group-Reports-Third-Quarter-2026-Results",
+    "Canadian-dollarQ3adjustedEPS3.96. Bank sensitivity is a preliminary valuation gate,not a full dossier."
+  ],
+  [
+    "TD results",
+    "https://td.mediaroom.com/2026-08-27-TD-Bank-Group-Reports-Third-Quarter-2026-Results",
+    "Canadian-dollarQ3adjustedEPS2.77. Current earnings and prior nonrecurring gains remain distinct."
+  ],
+  [
+    "RBC results",
+    "https://www.rbc.com/investor-relations/_assets-custom/pdf/2026q3release.pdf",
+    "Canadian-dollarQ3reportedEPS4.23; adjusted4.28."
+  ],
+  [
+    "LULU results",
+    "https://corporate.lululemon.com/newsroom/press-releases/2026/09-03-2026-210528733",
+    "FY26EPS9.48-9.73includes0.86tariff refunds. Normalize to8.745midpoint."
+  ],
+  [
+    "LULU calendar",
+    "https://corporate.lululemon.com/investors/news-and-events/events-and-presentations",
+    "No upcoming date yet listed. Ordinary late-year Q3report expected from cadence,not a confirmedDecemberdate."
+  ],
+  [
+    "DECK results",
+    "https://www.sec.gov/Archives/edgar/data/910521/000091052126000028/deckex991pressrelease-9302.htm",
+    "FY27EPS7.80-7.95includes0.52tariff net refunds. Results publishedOctober22already known."
+  ],
+  [
+    "DECK calendar",
+    "https://ir.deckers.com/news-events/ir-calendar",
+    "No source-verified company information event before the challenge horizon located. Valuation watchlist only."
+  ],
+  [
+    "Milvexian ACS outcome",
+    "https://www.escardio.org/news/press/press-releases/milvexian-did-not-reduce-cardiovascular-events-in-the-librexia-acs-trial/",
+    "August29primaryclinicalcongressrelease: ACS trial did not reduce major cardiovascular events. Stroke trial is a distinct indication; no success probability assumed."
+  ]
+]
