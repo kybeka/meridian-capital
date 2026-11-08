@@ -7,3 +7,21 @@ __pycache__/
 *.py[cod]
 
 .ipynb_checkpoints/
+
+**/__pycache__/
+
+research/round-2/results/valuation/staggered_windows.csv
+
+research/round-2/submission/presentation-draft/*.aux
+
+research/round-2/submission/presentation-draft/*.log
+
+research/round-2/submission/presentation-draft/*.out
+
+research/round-2/submission/presentation-draft/*.nav
+
+research/round-2/submission/presentation-draft/*.snm
+
+research/round-2/submission/presentation-draft/*.toc
+
+research/round-2/submission/presentation-draft/main.pdf

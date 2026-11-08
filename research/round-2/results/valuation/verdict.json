@@ -1,0 +1,11 @@
+{
+  "headline": "The recorded portfolio is unchanged. Base valuations and downside scenarios are reported separately.",
+  "decision": "Keep all recorded weights and Bloomberg quantities fixed throughout this audit. No new allocation or trade instruction is issued.",
+  "reason": "Financing-consistent cash values corroborate several original earnings valuations. Patent erosion, commodity normalization, AI competition and financing costs remain assumption risks. Stress-case failures are not evidence of sudden business deterioration and do not automatically trigger trades.",
+  "trade_status": "No Bloomberg positions changed. Original NAV, no-fee quantities, the extra SPY and Adobe shares, and residual cash remain the entered-book reference.",
+  "limits": "These are aggregate cash-flow forecasts with explicit financing, not a detailed three-statement operating budget or a drug-level probability model. Cash-income proxies, debt spreads and cash growth are assumptions. Historical replays are not prospective alpha validation.",
+  "requirements": "3-6 US-listed long-only stocks, classroom alpha/residual-variance proportions, one-third continuous stock target, 60 complete monthly observations and 2-5% annual monthly TE. Pro-rata ETF funding is a team research choice. Daily 5% TE and 8% single-stock limits are additional preferences.",
+  "primary_method": "Preserve the original normalized EPS/P-E valuation as the selection record. Independently calculate FCFF/WACC and FCFE values. A lower-of-methods audit value is an additional conservative scenario, not a replacement selection target. The cash schedule for that scenario is reduced consistently to the same audit value.",
+  "alpha_method": "The original class alphas and weights remain recorded. Cash-constrained alphas are fixed-weight sensitivity results. The common 50% alpha scale is a comparison assumption, not a convergence probability. Dividend/cash-convergence IRRs are reported separately.",
+  "scope": "Three valuation improvements on the existing six-stock portfolio. Alternatives are reference cases only. No re-optimization."
+}

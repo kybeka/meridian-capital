@@ -41,13 +41,17 @@
     "website NAV and ETF contributions",
     "executed notebook and CSV",
     "Excel Portfolio!D4 and D24",
-    "final report NAV and budget"
+    "team submission record NAV and budget"
   ],
+  "report": {
+    "url": "https://www.overleaf.com/project/6ae9ddb29f60dfa97d0803c2",
+    "verification": "Overleaf exported PDF checked separately on 8 November. The earlier generated research PDF is removed."
+  },
   "artifact_sha256": {
     "dist/data/challenge-valuations.csv": "f16db0e044bc30190de0c4c6c1ef58fff3912923f243ae0f3324e1c04663022b",
-    "research/round-2/round2_analysis.ipynb": "d5ae920391c7af0418ef8b9cd3bc5766c767ce67d4e18a26930e32fe330290bc",
-    "research/round-2/submission/Meridian_Final_Model.xlsx": "039c025bd66223f2df70b8c12ef7130afad6bb697d11990bb8e07c1b404d3758",
-    "research/round-2/submission/Meridian_Final_Selection.pdf": "783adb7ab0a56aa59e6c5fbf29a6ef49ea343fafaa9a27d4bb03220b671f156f"
+    "research/round-2/round2_analysis.ipynb": "d46cb4226ab4aec54d8236adfa5fdba77fc6a37d235f849ffbc64954c536a683",
+    "research/round-2/submission/Meridian_Final_Model.xlsx": "c35ed4c4dbb7c899e15ee4b5895195315df3f0e72c08fb80e8755b442da2ea00",
+    "research/round-2/submission/submission_record.json": "d4f7a2afb506d70f63d12f857deed2d66751c7f8f5bd728aac67d12fd688030f"
   },
   "bloomberg_status": "Public closing-price reconstruction; actual Bloomberg booked cash and tax treatment were not accessed."
 }

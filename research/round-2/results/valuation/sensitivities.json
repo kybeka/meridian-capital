@@ -1,0 +1,562 @@
+[
+  {
+    "ticker": "ADBE",
+    "scenario": "Base",
+    "dcf_value": 271.14218072679745,
+    "decision_value": 271.14218072679745,
+    "gap": 0.1330638559414854
+  },
+  {
+    "ticker": "ADBE",
+    "scenario": "Cash minus 10%",
+    "dcf_value": 243.8419400436347,
+    "decision_value": 243.8419400436347,
+    "gap": 0.01898010883257295
+  },
+  {
+    "ticker": "ADBE",
+    "scenario": "Cash minus 20%",
+    "dcf_value": 216.54169936047188,
+    "decision_value": 216.54169936047188,
+    "gap": -0.09510363827633983
+  },
+  {
+    "ticker": "ADBE",
+    "scenario": "Cost equity plus 1pp",
+    "dcf_value": 245.93483588137687,
+    "decision_value": 245.93483588137687,
+    "gap": 0.027726017055482055
+  },
+  {
+    "ticker": "ADBE",
+    "scenario": "Cost equity plus 2pp",
+    "dcf_value": 224.89674391479736,
+    "decision_value": 224.89674391479736,
+    "gap": -0.060189118617645865
+  },
+  {
+    "ticker": "ADBE",
+    "scenario": "Debt cost plus 2pp",
+    "dcf_value": 268.18340256682217,
+    "decision_value": 268.18340256682217,
+    "gap": 0.12069955105232832
+  },
+  {
+    "ticker": "ADBE",
+    "scenario": "Zero growth",
+    "dcf_value": 165.31253707251543,
+    "decision_value": 165.31253707251543,
+    "gap": -0.3091828789280593
+  },
+  {
+    "ticker": "ADBE",
+    "scenario": "Terminal growth minus 1pp",
+    "dcf_value": 253.55068854348744,
+    "decision_value": 253.55068854348744,
+    "gap": 0.059551560984067775
+  },
+  {
+    "ticker": "KR",
+    "scenario": "Base",
+    "dcf_value": 87.45143134367358,
+    "decision_value": 78.0,
+    "gap": 0.1521418020679468
+  },
+  {
+    "ticker": "KR",
+    "scenario": "Cash minus 10%",
+    "dcf_value": 76.07806318569841,
+    "decision_value": 76.07806318569841,
+    "gap": 0.1237527797001241
+  },
+  {
+    "ticker": "KR",
+    "scenario": "Cash minus 20%",
+    "dcf_value": 64.70469502772325,
+    "decision_value": 64.70469502772325,
+    "gap": -0.044243795750025905
+  },
+  {
+    "ticker": "KR",
+    "scenario": "Cost equity plus 1pp",
+    "dcf_value": 71.09930006151309,
+    "decision_value": 71.09930006151309,
+    "gap": 0.05021122690565871
+  },
+  {
+    "ticker": "KR",
+    "scenario": "Cost equity plus 2pp",
+    "dcf_value": 58.847241779398566,
+    "decision_value": 58.847241779398566,
+    "gap": -0.13076452319943033
+  },
+  {
+    "ticker": "KR",
+    "scenario": "Debt cost plus 2pp",
+    "dcf_value": 76.32079352966599,
+    "decision_value": 76.32079352966599,
+    "gap": 0.127338161442629
+  },
+  {
+    "ticker": "KR",
+    "scenario": "Zero growth",
+    "dcf_value": 46.50944252334768,
+    "decision_value": 46.50944252334768,
+    "gap": -0.3130067574099309
+  },
+  {
+    "ticker": "KR",
+    "scenario": "Terminal growth minus 1pp",
+    "dcf_value": 69.2198526895901,
+    "decision_value": 69.2198526895901,
+    "gap": 0.022449818162335156
+  },
+  {
+    "ticker": "HRL",
+    "scenario": "Base",
+    "dcf_value": 31.48827974618169,
+    "decision_value": 25.16,
+    "gap": 0.14624145785877007
+  },
+  {
+    "ticker": "HRL",
+    "scenario": "Cash minus 10%",
+    "dcf_value": 27.978468013567703,
+    "decision_value": 25.16,
+    "gap": 0.14624145785877007
+  },
+  {
+    "ticker": "HRL",
+    "scenario": "Cash minus 20%",
+    "dcf_value": 24.46865628095373,
+    "decision_value": 24.46865628095373,
+    "gap": 0.11474516086349573
+  },
+  {
+    "ticker": "HRL",
+    "scenario": "Cost equity plus 1pp",
+    "dcf_value": 25.529654081137203,
+    "decision_value": 25.16,
+    "gap": 0.14624145785877007
+  },
+  {
+    "ticker": "HRL",
+    "scenario": "Cost equity plus 2pp",
+    "dcf_value": 21.30059667842422,
+    "decision_value": 21.30059667842422,
+    "gap": -0.029585572736937515
+  },
+  {
+    "ticker": "HRL",
+    "scenario": "Debt cost plus 2pp",
+    "dcf_value": 29.086374569683475,
+    "decision_value": 25.16,
+    "gap": 0.14624145785877007
+  },
+  {
+    "ticker": "HRL",
+    "scenario": "Zero growth",
+    "dcf_value": 19.699467109763116,
+    "decision_value": 19.699467109763116,
+    "gap": -0.10252997222035909
+  },
+  {
+    "ticker": "HRL",
+    "scenario": "Terminal growth minus 1pp",
+    "dcf_value": 25.744221663554676,
+    "decision_value": 25.16,
+    "gap": 0.14624145785877007
+  },
+  {
+    "ticker": "HRL",
+    "scenario": "Brakebush 25% consideration destroyed",
+    "dcf_value": 31.00903995948564,
+    "decision_value": 25.16,
+    "gap": 0.14624145785877007
+  },
+  {
+    "ticker": "HRL",
+    "scenario": "Brakebush 50% consideration destroyed",
+    "dcf_value": 30.52980017278959,
+    "decision_value": 25.16,
+    "gap": 0.14624145785877007
+  },
+  {
+    "ticker": "HRL",
+    "scenario": "Brakebush 100% consideration destroyed",
+    "dcf_value": 29.57132059939749,
+    "decision_value": 25.16,
+    "gap": 0.14624145785877007
+  },
+  {
+    "ticker": "BMY",
+    "scenario": "Base",
+    "dcf_value": 65.49830166540275,
+    "decision_value": 65.49830166540275,
+    "gap": 0.05404412078214915
+  },
+  {
+    "ticker": "BMY",
+    "scenario": "Cash minus 10%",
+    "dcf_value": 57.4848343293135,
+    "decision_value": 57.4848343293135,
+    "gap": -0.07491415627110554
+  },
+  {
+    "ticker": "BMY",
+    "scenario": "Cash minus 20%",
+    "dcf_value": 49.47136699322426,
+    "decision_value": 49.47136699322426,
+    "gap": -0.20387243332436022
+  },
+  {
+    "ticker": "BMY",
+    "scenario": "Cost equity plus 1pp",
+    "dcf_value": 55.72482207398759,
+    "decision_value": 55.72482207398759,
+    "gap": -0.10323749478616695
+  },
+  {
+    "ticker": "BMY",
+    "scenario": "Cost equity plus 2pp",
+    "dcf_value": 48.07619768618181,
+    "decision_value": 48.07619768618181,
+    "gap": -0.22632446594493394
+  },
+  {
+    "ticker": "BMY",
+    "scenario": "Debt cost plus 2pp",
+    "dcf_value": 59.97105112357997,
+    "decision_value": 59.97105112357997,
+    "gap": -0.034904230389765534
+  },
+  {
+    "ticker": "BMY",
+    "scenario": "Zero growth",
+    "dcf_value": 65.49830166540275,
+    "decision_value": 65.49830166540275,
+    "gap": 0.05404412078214915
+  },
+  {
+    "ticker": "BMY",
+    "scenario": "Terminal growth minus 1pp",
+    "dcf_value": 56.139434690679074,
+    "decision_value": 56.139434690679074,
+    "gap": -0.0965652608516403
+  },
+  {
+    "ticker": "BMY",
+    "scenario": "Patent erosion: cash declines 1% for 5 years",
+    "dcf_value": 61.97622236430574,
+    "decision_value": 61.97622236430574,
+    "gap": -0.0026356233616713354
+  },
+  {
+    "ticker": "BMY",
+    "scenario": "Patent erosion: cash declines 2% for 5 years",
+    "dcf_value": 58.58568827380136,
+    "decision_value": 58.58568827380136,
+    "gap": -0.05719845069518248
+  },
+  {
+    "ticker": "BMY",
+    "scenario": "Patent erosion: cash declines 5% for 5 years",
+    "dcf_value": 49.16542616907125,
+    "decision_value": 49.16542616907125,
+    "gap": -0.20879584536415752
+  },
+  {
+    "ticker": "XOM",
+    "scenario": "Base",
+    "dcf_value": 213.08418068567187,
+    "decision_value": 180.0,
+    "gap": 0.08518719479110137
+  },
+  {
+    "ticker": "XOM",
+    "scenario": "Cash minus 10%",
+    "dcf_value": 191.06905930793843,
+    "decision_value": 180.0,
+    "gap": 0.08518719479110137
+  },
+  {
+    "ticker": "XOM",
+    "scenario": "Cash minus 20%",
+    "dcf_value": 169.05393793020505,
+    "decision_value": 169.05393793020505,
+    "gap": 0.01919538150482336
+  },
+  {
+    "ticker": "XOM",
+    "scenario": "Cost equity plus 1pp",
+    "dcf_value": 168.60525905183036,
+    "decision_value": 168.60525905183036,
+    "gap": 0.01649037831934863
+  },
+  {
+    "ticker": "XOM",
+    "scenario": "Cost equity plus 2pp",
+    "dcf_value": 139.07833422391172,
+    "decision_value": 139.07833422391172,
+    "gap": -0.1615220701518555
+  },
+  {
+    "ticker": "XOM",
+    "scenario": "Debt cost plus 2pp",
+    "dcf_value": 208.7575767291908,
+    "decision_value": 180.0,
+    "gap": 0.08518719479110137
+  },
+  {
+    "ticker": "XOM",
+    "scenario": "Zero growth",
+    "dcf_value": 134.68078441519225,
+    "decision_value": 134.68078441519225,
+    "gap": -0.18803409649006908
+  },
+  {
+    "ticker": "XOM",
+    "scenario": "Terminal growth minus 1pp",
+    "dcf_value": 173.71941882069868,
+    "decision_value": 173.71941882069868,
+    "gap": 0.04732271550430256
+  },
+  {
+    "ticker": "XOM",
+    "scenario": "Lower-cycle median historical CFO",
+    "dcf_value": 166.60888679531791,
+    "decision_value": 166.60888679531791,
+    "gap": 0.004454613825995768
+  },
+  {
+    "ticker": "HPQ",
+    "scenario": "Base",
+    "dcf_value": 34.44492155236372,
+    "decision_value": 32.129999999999995,
+    "gap": 0.12895291637385786
+  },
+  {
+    "ticker": "HPQ",
+    "scenario": "Cash minus 10%",
+    "dcf_value": 30.44697519636789,
+    "decision_value": 30.44697519636789,
+    "gap": 0.0698164158948662
+  },
+  {
+    "ticker": "HPQ",
+    "scenario": "Cash minus 20%",
+    "dcf_value": 26.44902884037205,
+    "decision_value": 26.44902884037205,
+    "gap": -0.07065956288221886
+  },
+  {
+    "ticker": "HPQ",
+    "scenario": "Cost equity plus 1pp",
+    "dcf_value": 30.609353793888793,
+    "decision_value": 30.609353793888793,
+    "gap": 0.07552191826735033
+  },
+  {
+    "ticker": "HPQ",
+    "scenario": "Cost equity plus 2pp",
+    "dcf_value": 27.44256029375335,
+    "decision_value": 27.44256029375335,
+    "gap": -0.035749813993206314
+  },
+  {
+    "ticker": "HPQ",
+    "scenario": "Debt cost plus 2pp",
+    "dcf_value": 32.188006689217,
+    "decision_value": 32.129999999999995,
+    "gap": 0.12895291637385786
+  },
+  {
+    "ticker": "HPQ",
+    "scenario": "Zero growth",
+    "dcf_value": 21.47588915598106,
+    "decision_value": 21.47588915598106,
+    "gap": -0.2454009432192178
+  },
+  {
+    "ticker": "HPQ",
+    "scenario": "Terminal growth minus 1pp",
+    "dcf_value": 31.09922646737381,
+    "decision_value": 31.09922646737381,
+    "gap": 0.09273459126401296
+  },
+  {
+    "ticker": "FDS",
+    "scenario": "Base",
+    "dcf_value": 349.2200007357339,
+    "decision_value": 349.2200007357339,
+    "gap": 0.06505230637022752
+  },
+  {
+    "ticker": "FDS",
+    "scenario": "Cash minus 10%",
+    "dcf_value": 311.16589385258055,
+    "decision_value": 311.16589385258055,
+    "gap": -0.051005233912041925
+  },
+  {
+    "ticker": "FDS",
+    "scenario": "Cash minus 20%",
+    "dcf_value": 273.11178696942727,
+    "decision_value": 273.11178696942727,
+    "gap": -0.16706277419431126
+  },
+  {
+    "ticker": "FDS",
+    "scenario": "Cost equity plus 1pp",
+    "dcf_value": 295.94117297518875,
+    "decision_value": 295.94117297518875,
+    "gap": -0.0974376376980427
+  },
+  {
+    "ticker": "FDS",
+    "scenario": "Cost equity plus 2pp",
+    "dcf_value": 255.64796464397395,
+    "decision_value": 255.64796464397395,
+    "gap": -0.22032399693807692
+  },
+  {
+    "ticker": "FDS",
+    "scenario": "Debt cost plus 2pp",
+    "dcf_value": 337.979873027041,
+    "decision_value": 337.979873027041,
+    "gap": 0.030772127930223547
+  },
+  {
+    "ticker": "FDS",
+    "scenario": "Zero growth",
+    "dcf_value": 185.52582670472506,
+    "decision_value": 185.52582670472506,
+    "gap": -0.43418272376490574
+  },
+  {
+    "ticker": "FDS",
+    "scenario": "Terminal growth minus 1pp",
+    "dcf_value": 302.67210859150657,
+    "decision_value": 302.67210859150657,
+    "gap": -0.07690960812618075
+  },
+  {
+    "ticker": "INTU",
+    "scenario": "Base",
+    "dcf_value": 336.3983137012661,
+    "decision_value": 336.3983137012661,
+    "gap": -0.014939052119279372
+  },
+  {
+    "ticker": "INTU",
+    "scenario": "Cash minus 10%",
+    "dcf_value": 302.5829820242946,
+    "decision_value": 302.5829820242946,
+    "gap": -0.11395905702988407
+  },
+  {
+    "ticker": "INTU",
+    "scenario": "Cash minus 20%",
+    "dcf_value": 268.76765034732307,
+    "decision_value": 268.76765034732307,
+    "gap": -0.21297906194048877
+  },
+  {
+    "ticker": "INTU",
+    "scenario": "Cost equity plus 1pp",
+    "dcf_value": 294.9577855588524,
+    "decision_value": 294.9577855588524,
+    "gap": -0.13628759719223316
+  },
+  {
+    "ticker": "INTU",
+    "scenario": "Cost equity plus 2pp",
+    "dcf_value": 262.4057282364329,
+    "decision_value": 262.4057282364329,
+    "gap": -0.2316084092637397
+  },
+  {
+    "ticker": "INTU",
+    "scenario": "Debt cost plus 2pp",
+    "dcf_value": 330.25674805009965,
+    "decision_value": 330.25674805009965,
+    "gap": -0.032923138945535446
+  },
+  {
+    "ticker": "INTU",
+    "scenario": "Zero growth",
+    "dcf_value": 187.1405369595058,
+    "decision_value": 187.1405369595058,
+    "gap": -0.45200428415957306
+  },
+  {
+    "ticker": "INTU",
+    "scenario": "Terminal growth minus 1pp",
+    "dcf_value": 304.63953521511803,
+    "decision_value": 304.63953521511803,
+    "gap": -0.1079369393407964
+  },
+  {
+    "ticker": "INTU",
+    "scenario": "Repeat FY26 deferred-tax cash benefit",
+    "dcf_value": 419.4282633118406,
+    "decision_value": 404.79999999999995,
+    "gap": 0.18535871156661776
+  },
+  {
+    "ticker": "GILD",
+    "scenario": "Base",
+    "dcf_value": 170.71224239837076,
+    "decision_value": 170.71224239837076,
+    "gap": 0.022902764685545973
+  },
+  {
+    "ticker": "GILD",
+    "scenario": "Cash minus 10%",
+    "dcf_value": 152.04516362521667,
+    "decision_value": 152.04516362521667,
+    "gap": -0.08894982548255326
+  },
+  {
+    "ticker": "GILD",
+    "scenario": "Cash minus 20%",
+    "dcf_value": 133.37808485206267,
+    "decision_value": 133.37808485206267,
+    "gap": -0.20080241565065204
+  },
+  {
+    "ticker": "GILD",
+    "scenario": "Cost equity plus 1pp",
+    "dcf_value": 137.49625139596824,
+    "decision_value": 137.49625139596824,
+    "gap": -0.17612648213812543
+  },
+  {
+    "ticker": "GILD",
+    "scenario": "Cost equity plus 2pp",
+    "dcf_value": 114.2780680678785,
+    "decision_value": 114.2780680678785,
+    "gap": -0.3152491577213823
+  },
+  {
+    "ticker": "GILD",
+    "scenario": "Debt cost plus 2pp",
+    "dcf_value": 162.96416572488255,
+    "decision_value": 162.96416572488255,
+    "gap": -0.023523484181900867
+  },
+  {
+    "ticker": "GILD",
+    "scenario": "Zero growth",
+    "dcf_value": 91.18190993739874,
+    "decision_value": 91.18190993739874,
+    "gap": -0.4536406618886767
+  },
+  {
+    "ticker": "GILD",
+    "scenario": "Terminal growth minus 1pp",
+    "dcf_value": 140.26902804511693,
+    "decision_value": 140.26902804511693,
+    "gap": -0.15951208553468188
+  }
+]

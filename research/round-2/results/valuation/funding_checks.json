@@ -1,0 +1,68 @@
+[
+  {
+    "ticker": "KR",
+    "scenario": "Existing coupons, no extra borrowing",
+    "debt": 16997.0,
+    "fcfe_no_net_borrowing": 2209.0,
+    "annual_dividends": 921.3183720000001,
+    "dividend_cover": 2.3976510912342905,
+    "annualized_or_ttm_buybacks": 3767.0,
+    "after_dividend_cash": 1287.6816279999998,
+    "note": "Funding stress only. Cash investment income is held at the source/proxy used in the CFO bridge. No acquired operating benefit, extra borrowing, dividend cut or future buybacks assumed. Full refinancing at the model rate is not a coupon forecast."
+  },
+  {
+    "ticker": "KR",
+    "scenario": "Refinance debt at model borrowing cost",
+    "debt": 16997.0,
+    "fcfe_no_net_borrowing": 1956.9651520000002,
+    "annual_dividends": 921.3183720000001,
+    "dividend_cover": 2.12409218297885,
+    "annualized_or_ttm_buybacks": 3767.0,
+    "after_dividend_cash": 1035.64678,
+    "note": "Funding stress only. Cash investment income is held at the source/proxy used in the CFO bridge. No acquired operating benefit, extra borrowing, dividend cut or future buybacks assumed. Full refinancing at the model rate is not a coupon forecast."
+  },
+  {
+    "ticker": "HRL",
+    "scenario": "Existing coupons, no extra borrowing",
+    "debt": 2855.123,
+    "fcfe_no_net_borrowing": 755.3609999999999,
+    "annual_dividends": 643.910436,
+    "dividend_cover": 1.1730839535577893,
+    "annualized_or_ttm_buybacks": 0.0,
+    "after_dividend_cash": 111.45056399999987,
+    "note": "Funding stress only. Cash investment income is held at the source/proxy used in the CFO bridge. No acquired operating benefit, extra borrowing, dividend cut or future buybacks assumed. Full refinancing at the model rate is not a coupon forecast."
+  },
+  {
+    "ticker": "HRL",
+    "scenario": "Refinance debt at model borrowing cost",
+    "debt": 2855.123,
+    "fcfe_no_net_borrowing": 688.5158207679998,
+    "annual_dividends": 643.910436,
+    "dividend_cover": 1.0692726538881563,
+    "annualized_or_ttm_buybacks": 0.0,
+    "after_dividend_cash": 44.605384767999794,
+    "note": "Funding stress only. Cash investment income is held at the source/proxy used in the CFO bridge. No acquired operating benefit, extra borrowing, dividend cut or future buybacks assumed. Full refinancing at the model rate is not a coupon forecast."
+  },
+  {
+    "ticker": "HRL",
+    "scenario": "Brakebush fully debt funded, existing coupons",
+    "debt": 3910.123,
+    "fcfe_no_net_borrowing": 708.5358799999998,
+    "annual_dividends": 643.910436,
+    "dividend_cover": 1.1003640264031995,
+    "annualized_or_ttm_buybacks": 0.0,
+    "after_dividend_cash": 64.62544399999979,
+    "note": "Funding stress only. Cash investment income is held at the source/proxy used in the CFO bridge. No acquired operating benefit, extra borrowing, dividend cut or future buybacks assumed. Full refinancing at the model rate is not a coupon forecast."
+  },
+  {
+    "ticker": "HRL",
+    "scenario": "Brakebush debt funded plus full refinancing",
+    "debt": 3910.123,
+    "fcfe_no_net_borrowing": 641.6907007679998,
+    "annual_dividends": 643.910436,
+    "dividend_cover": 0.9965527267335668,
+    "annualized_or_ttm_buybacks": 0.0,
+    "after_dividend_cash": -2.2197352320001755,
+    "note": "Funding stress only. Cash investment income is held at the source/proxy used in the CFO bridge. No acquired operating benefit, extra borrowing, dividend cut or future buybacks assumed. Full refinancing at the model rate is not a coupon forecast."
+  }
+]

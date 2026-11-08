@@ -1,32 +1,9 @@
 {
-  "review_date": "2026-11-08",
-  "price_cutoff": "2026-11-06",
   "notebook": "round2_analysis.ipynb",
-  "sha256": "d5ae920391c7af0418ef8b9cd3bc5766c767ce67d4e18a26930e32fe330290bc",
-  "cells": 53,
-  "executed_code_cells": 25,
+  "executed_from": "repository root",
+  "code_cells": 26,
   "errors": 0,
-  "schema_valid": true,
-  "working_directory": "repository root",
-  "offline_inputs_only": true,
-  "independent_final_case_assertions": "All passed: weights, IR, zero-fee replays, chronological forward risk, post-loss NAV, report/model hashes and all twelve quantities.",
-  "input_manifest_files_verified": 44,
-  "plots": [
-    "round1_performance.png",
-    "residual_correlations.png",
-    "capital_allocation.png",
-    "staggered_replays.png",
-    "forward_risk_validation.png"
-  ],
-  "csv_snapshots_exported": 17,
-  "fees_bps": 0,
-  "spy_shares": 22964,
-  "adbe_shares": 18865,
-  "cash_usd_rounded": 116.05,
-  "limitations": [
-    "Reused history and fixed present-day universe, not an untouched stock-selection holdout.",
-    "Overlapping holding periods are dependent.",
-    "Official monthly TE passes; additional daily and concentration preferences do not both pass.",
-    "No independent live Bloomberg holdings access or native Excel recalculation certification."
-  ]
+  "offline": true,
+  "sha256": "d46cb4226ab4aec54d8236adfa5fdba77fc6a37d235f849ffbc64954c536a683",
+  "verified_on": "2026-11-08"
 }

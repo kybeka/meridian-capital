@@ -33,7 +33,7 @@ The [Round 1 research folder](research/round-1/readme.md) contains an executed J
 
 ## Round 2 code
 
-The [Checkpoint 2 research folder](research/round-2/readme.md) follows the Round 1 layout. Its executed notebook explains the post-loss budget, company valuations, forecast alphas, six-stock selection, information ratio, staggered backtests, forward risk checks and final zero-fee share quantities. Frozen inputs, result tables, the final report and Excel model are included. The notebook separates course requirements from research preferences and retains the weak historical performance and daily risk findings.
+The [Checkpoint 2 research folder](research/round-2/readme.md) follows the Round 1 layout. Its main notebook explains the post-loss budget, valuations, alphas, six-stock selection, information ratio, historical tests, risk and zero-fee share quantities. A companion notebook completes the FCFF/FCFE, implied-growth and return-timing checks at unchanged holdings. Saved inputs, results and the Excel model are included; the team maintains its report in Overleaf. The earlier generated report PDF has been removed. The analysis keeps the weak historical performance and daily risk findings visible.
 
 ## Content status
 
