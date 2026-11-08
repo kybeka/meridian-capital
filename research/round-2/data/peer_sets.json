@@ -1,0 +1,39 @@
+{
+  "ADBE": [
+    "CRM",
+    "INTU",
+    "ORCL"
+  ],
+  "KR": [
+    "ACI",
+    "WMT",
+    "TGT"
+  ],
+  "GILD": [
+    "AMGN",
+    "BMY",
+    "MRK",
+    "ABBV"
+  ],
+  "HRL": [
+    "TSN",
+    "SJM",
+    "CAG"
+  ],
+  "BMY": [
+    "GILD",
+    "AMGN",
+    "MRK",
+    "ABBV"
+  ],
+  "XOM": [
+    "CVX",
+    "COP",
+    "EOG"
+  ],
+  "HPQ": [
+    "DELL",
+    "HPE",
+    "CSCO"
+  ]
+}

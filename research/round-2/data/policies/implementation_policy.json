@@ -1,0 +1,12 @@
+{
+  "trading_cost_bps": 0,
+  "price_cutoff": "2026-11-06",
+  "nav_basis": "Submitted opening book after Round1 losses and entitled distributions; not initial100million.",
+  "stock_target": "Exactly one-third of post-loss NAV before whole-share rounding.",
+  "rounding": "Round each position down, then include the extra SPY and ADBE shares actually bought by the team.",
+  "extra_shares": {
+    "SPY": 1,
+    "ADBE": 1
+  },
+  "cost_stress": "Positive-cost scenarios are optional research sensitivities, not challenge implementation fees."
+}

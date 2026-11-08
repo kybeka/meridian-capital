@@ -1,4 +1,4 @@
-The canonical Desktop checkout is meridian-capital. Start with [research/round-1](research/round-1/readme.md) for the current Bloomberg code, data and results. Earlier implementations remain in Git history.
+The canonical Desktop checkout is meridian-capital. Start with [Round 1](research/round-1/readme.md) or [Round 2 / Checkpoint 2](research/round-2/readme.md) for the notebooks, frozen data, results and final deliverables. Earlier implementations remain in Git history.
 
 # Meridian Capital
 
@@ -30,6 +30,10 @@ Use relative links for local assets and documents so the site works under the re
 ## Round 1 code
 
 The [Round 1 research folder](research/round-1/readme.md) contains an executed Jupyter notebook explaining the data, formulas, optimizer, backtest, independent checks and final positions. A separate notebook contains supplementary studies. Inputs are directly in data/ and results are regular CSV tables. The website’s research-library entry links to this folder on GitHub; the code does not execute in visitors’ browsers.
+
+## Round 2 code
+
+The [Checkpoint 2 research folder](research/round-2/readme.md) follows the Round 1 layout. Its executed notebook explains the post-loss budget, company valuations, forecast alphas, six-stock selection, information ratio, staggered backtests, forward risk checks and final zero-fee share quantities. Frozen inputs, result tables, the final report and Excel model are included. The notebook separates course requirements from research preferences and retains the weak historical performance and daily risk findings.
 
 ## Content status
 

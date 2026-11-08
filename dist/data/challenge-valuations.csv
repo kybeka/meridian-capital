@@ -1,17 +1,17 @@
 date,nav_usd,source
 2026-10-16,100000000.00,User-confirmed Bloomberg holdings at closing prices
-2026-10-19,100079078.40,Yahoo daily close plus cash and dividend receivables
-2026-10-20,100140009.84,Yahoo daily close plus cash and dividend receivables
-2026-10-21,100252669.09,Yahoo daily close plus cash and dividend receivables
-2026-10-22,99989780.94,Yahoo daily close plus cash and dividend receivables
-2026-10-23,100269959.74,Yahoo daily close plus cash and dividend receivables
-2026-10-26,100177338.75,Yahoo daily close plus cash and dividend receivables
-2026-10-27,100234935.88,Yahoo daily close plus cash and dividend receivables
-2026-10-28,100573125.24,Yahoo daily close plus cash and dividend receivables
-2026-10-29,100426399.92,Yahoo daily close plus cash and dividend receivables
-2026-10-30,99818843.08,Yahoo daily close plus cash and dividend receivables
-2026-11-02,98595927.68,Yahoo daily close plus cash and dividend receivables
-2026-11-03,98534249.10,Yahoo daily close plus cash and dividend receivables
-2026-11-04,98213623.02,Yahoo daily close plus cash and dividend receivables
-2026-11-05,96778677.18,Yahoo daily close plus cash and dividend receivables
-2026-11-06,97014152.14,Yahoo daily close plus cash and dividend receivables
+2026-10-19,100079078.88,USD closes rounded to cents plus cash and issuer-verified distributions
+2026-10-20,100140011.25,USD closes rounded to cents plus cash and issuer-verified distributions
+2026-10-21,100252668.64,USD closes rounded to cents plus cash and issuer-verified distributions
+2026-10-22,99989779.48,USD closes rounded to cents plus cash and issuer-verified distributions
+2026-10-23,100269961.79,USD closes rounded to cents plus cash and issuer-verified distributions
+2026-10-26,100177341.49,USD closes rounded to cents plus cash and issuer-verified distributions
+2026-10-27,100234939.07,USD closes rounded to cents plus cash and issuer-verified distributions
+2026-10-28,100573123.44,USD closes rounded to cents plus cash and issuer-verified distributions
+2026-10-29,100426398.51,USD closes rounded to cents plus cash and issuer-verified distributions
+2026-10-30,99818844.93,USD closes rounded to cents plus cash and issuer-verified distributions
+2026-11-02,98696845.20,USD closes rounded to cents plus cash and issuer-verified distributions
+2026-11-03,98635169.12,USD closes rounded to cents plus cash and issuer-verified distributions
+2026-11-04,98314540.78,USD closes rounded to cents plus cash and issuer-verified distributions
+2026-11-05,96879594.88,USD closes rounded to cents plus cash and issuer-verified distributions
+2026-11-06,97115068.58,USD closes rounded to cents plus cash and issuer-verified distributions

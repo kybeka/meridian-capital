@@ -1,6 +1,9 @@
 import importlib.util
+import json
+from datetime import datetime
 from pathlib import Path
 import unittest
+from zoneinfo import ZoneInfo
 
 spec = importlib.util.spec_from_file_location('prices', Path(__file__).resolve().parents[1] / 'scripts/update_challenge_prices.py')
 prices = importlib.util.module_from_spec(spec)
@@ -21,6 +24,25 @@ class AccountingTests(unittest.TestCase):
         self.history['ETF']['splits'] = [{'numerator': 2, 'denominator': 1}]
         with self.assertRaises(ValueError):
             prices.calculate(self.positions, self.history)
+
+    def test_issuer_event_is_credited_on_ex_date_once(self):
+        ledger = [{'ticker': 'ETF', 'ex_date': '2026-10-20', 'pay_date': '2026-10-22', 'amount': 1}]
+        missing = {**self.history['ETF'], 'dividends': {}}
+        corrected = prices.apply_verified_distributions('ETF', missing, ledger)
+        repeated = prices.apply_verified_distributions('ETF', corrected, ledger)
+        self.assertEqual(corrected, repeated)
+        self.assertEqual(missing['dividends'], {})
+        self.assertEqual([r[1] for r in prices.calculate(self.positions, {'ETF': repeated})],
+                         ['1010.00', '1020.00', '1020.00'])
+
+    def test_conflicting_vendor_event_is_rejected(self):
+        ledger = [{'ticker': 'ETF', 'ex_date': '2026-10-20', 'amount': 2}]
+        with self.assertRaisesRegex(ValueError, 'conflict'):
+            prices.apply_verified_distributions('ETF', self.history['ETF'], ledger)
+
+    def test_close_precision_matches_notebook(self):
+        self.history['ETF']['closes']['2026-10-19'] = 100.999998
+        self.assertEqual(prices.calculate(self.positions, self.history)[1][1], '1020.00')
 
     def test_missing_price_does_not_make_partial_portfolio(self):
         self.positions['positions']['OTHER'] = {'shares': 0, 'price': 100}
@@ -50,3 +72,23 @@ class ContributionTests(unittest.TestCase):
     def test_private_or_unexpected_holdings_are_rejected(self):
         with self.assertRaises(ValueError):
             prices.contributions({'positions':{'OTHER':{}}},{},[])
+
+
+class FrozenNovemberBookTests(unittest.TestCase):
+    def test_missing_vendor_distributions_reconcile_to_checkpoint_nav(self):
+        root = Path(__file__).resolve().parents[1]
+        positions = json.loads((root / 'research/tracking/opening-positions.json').read_text())
+        ledger = json.loads((root / 'research/tracking/verified-distributions.json').read_text())
+        histories = {}
+        for ticker in positions['positions']:
+            raw = json.loads((root / f'research/round-2/data/prices/{ticker}.json').read_text())['chart']['result'][0]
+            closes = {datetime.fromtimestamp(stamp, ZoneInfo('America/New_York')).date().isoformat(): close
+                      for stamp, close in zip(raw['timestamp'], raw['indicators']['quote'][0]['close'])
+                      if datetime.fromtimestamp(stamp, ZoneInfo('America/New_York')).date().isoformat()
+                      in ['2026-10-16', '2026-11-02', '2026-11-06']}
+            histories[ticker] = prices.apply_verified_distributions(
+                ticker, {'closes': closes, 'dividends': {}, 'splits': []}, ledger)
+        rows = prices.calculate(positions, histories)
+        self.assertEqual(rows[-1][1], '97115068.58')
+        contributions = prices.contributions(positions, histories, rows)
+        self.assertEqual(contributions['rows'][-1]['nav_usd'], 97115068.58)

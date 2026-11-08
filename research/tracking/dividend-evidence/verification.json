@@ -1,0 +1,30 @@
+{
+  "verified_on": "2026-11-08",
+  "method": "Archived issuer HTML table rows; amounts, ex-dates and payment dates matched independently to both fund issuers.",
+  "sources": [
+    {
+      "ticker": "VGSH",
+      "url": "https://www.vanguardsouthamerica.com/en/product/etf/fixed-income/3142/vanguard-short-term-treasury-etf",
+      "retrieved_utc": "2026-11-08T14:39:29.466712+00:00",
+      "http_status": 200,
+      "sha256": "fc65160d57cbc9208a8f89673487814779f2772b015bb5aa37e00af71cee7524",
+      "bytes": 322779,
+      "issuer_distribution_row": "Income $0.1889 Nov 02 2026 Nov 02 2026 Nov 04 2026",
+      "ex_date": "2026-11-02",
+      "pay_date": "2026-11-04",
+      "amount_usd_per_share": "0.1889"
+    },
+    {
+      "ticker": "STIP",
+      "url": "https://www.ishares.com/us/products/239450/ishares-05-year-tips-bond-etf",
+      "retrieved_utc": "2026-11-08T14:39:29.313745+00:00",
+      "http_status": 200,
+      "sha256": "ce609a2979f9d3f1eab777b3e9a2d050923837ba04f5406f2eaf6ae395a02890",
+      "bytes": 1892601,
+      "issuer_distribution_row": "Nov 02, 2026 Nov 02, 2026 Nov 05, 2026 $0.292917 $0.292917 $0.000000 $0.000000 $0.000000",
+      "ex_date": "2026-11-02",
+      "pay_date": "2026-11-05",
+      "amount_usd_per_share": "0.292917"
+    }
+  ]
+}

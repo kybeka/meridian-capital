@@ -1,0 +1,142 @@
+{
+  "frozen_on": "2026-11-06",
+  "stage": "IR objective: extend the previously frozen values with original issuer-grounded INTU and DIS values, unchanged from first audit. Before ranking combination IR; legacy values not increased to improve scores.",
+  "erp": 0.06114,
+  "rf10y": 0.0484,
+  "alpha_fraction": 0.5,
+  "valuation": {
+    "ADBE": {
+      "eps": 18.145,
+      "pe": 16,
+      "basis": "FY26 company GAAP EPS midpoint18.12-18.17; SBC included.",
+      "reason": "16x discounts current software peer multiples and AI/renewal uncertainty; cash value remains above price.",
+      "cash_growth": 0.08,
+      "terminal_growth": 0.03,
+      "catalyst": "December9 results, confirmed issuer calendar."
+    },
+    "KR": {
+      "eps": 5.2,
+      "pe": 15,
+      "basis": "FY26 company adjusted EPS midpoint5.10-5.30, reaffirmed October20; past fulfilment impairment excluded, not called growth.",
+      "reason": "15x below heterogeneous retail peer forward median; cash cross-check supports roughly78; debt/capital allocation remain warnings.",
+      "cash_growth": 0.03,
+      "terminal_growth": 0.02,
+      "catalyst": "December3 results, confirmed issuer announcement."
+    },
+    "GILD": {
+      "eps": 8.855,
+      "pe": 20,
+      "basis": "FY26 nonGAAP midpoint-1.025 plus issuer-quantified9.88 IPRD impact; acquisition cash remains a real cost.",
+      "reason": "20x normalized FY26 is about17.55x FY27 consensus, near pharma peer median. Binary catalyst and small value gap limit conviction.",
+      "cash_growth": 0.04,
+      "terminal_growth": 0.025,
+      "catalyst": "ASH December12-15 and FDA target December23; decision not guaranteed."
+    },
+    "HRL": {
+      "eps": 1.48,
+      "pe": 17,
+      "basis": "FY26 adjusted guidance1.45-1.51 midpoint; GAAP1.06-1.12 affected by divestiture/impairment/legal items, not organic earnings growth.",
+      "reason": "17x is a judgemental premium to leveraged mixed food peers for brands, Foodservice execution and historically stronger balance sheet. Acquisition increases leverage; dividend coverage is only modest. Cash and modest-growth DDM cross-checks support value around/above25.",
+      "cash_growth": 0.02,
+      "terminal_growth": 0.02,
+      "catalyst": "December3 FY26 results and first FY27 outlook, confirmed issuer calendar; Brakebush integration/funding details.",
+      "acquisition_note": "Primary September30 issuer announcement:1.055bn purchase price, expected fiscal2027Q1 close, adjustedEPS accretion only fromFY2028. No near-term acquisition earnings benefit assumed. Earlier provisional1.675bn note was incorrect."
+    },
+    "PEP": {
+      "eps": 8.3842,
+      "pe": 18,
+      "basis": "FY25 core EPS8.14 x FY26 guide midpoint3% core EPS growth =8.3842; company core basis, not GAAP. Verify FY25 base from primary release. PRIMARY REVIEW: core earnings include non-recurring tariff-refund benefit. Not eligible for final recommendation. Approximate quarterly normalization alone would remove about0.10 EPS; do not capitalize full guide.",
+      "reason": "18x deliberately below premium global staple peers, reflecting weak North America margins and lowered growth guidance. Latest TTM cash improvement, rather than weaker2025 cash, supports the value. Modest3% first-stage cash growth and2% terminal assumptions are a cross-check.",
+      "cash_growth": 0.03,
+      "terminal_growth": 0.02,
+      "catalyst": "Company promised a comprehensive North America supply-chain/go-to-market update in late2026; precise date unconfirmed. Reconfirm against current guidance before selection."
+    },
+    "BMY": {
+      "eps": 6.45,
+      "pe": 11,
+      "basis": "FY26 company nonGAAP6.35-6.55 midpoint; retains0.60 acquired-IPRD/licensing impact rather than adding it back.",
+      "reason": "11x discounts pharma peers for patent/generic erosion and acquisition risk. TTM owner-cash proxy with no growth supports value near69, close to the earnings value70.95; downside cash-decline cases required.",
+      "cash_growth": 0.0,
+      "terminal_growth": 0.0,
+      "catalyst": "Issuer October29 presentation expects remaining2026 Sotyktu SLE and other clinical readouts; conference data at ASH requires primary-program confirmation. No approval probability assumed."
+    },
+    "FDS": {
+      "eps": 17.25,
+      "pe": 21.5,
+      "basis": "FY27 company GAAP EPS17.00-17.50 midpoint; excludes neither SBC nor intangible amortization. Separate adjusted guide19.25-19.65 is not used as GAAP.",
+      "reason": "21.5x GAAP is below financial-data peer valuations and allows for slower ASV growth and cost execution. After-SBC cash check at7% first-stage growth and3% terminal has less upside than primary value; this is not a deep discount. Do not force a position if the margin is too thin.",
+      "cash_growth": 0.07,
+      "terminal_growth": 0.03,
+      "catalyst": "November10 Investor Day, confirmed primary announcement; expected December FY27Q1 results date not yet issuer-confirmed."
+    },
+    "XOM": {
+      "eps": 10.0,
+      "pe": 18,
+      "basis": "Judgemental normalized EPS of USD 10.00, below Yahoo FY2027 consensus USD 12.01328 and close to reported trailing EPS USD 9.72. It deliberately does not annualize Q3 adjusted EPS of USD 4.23. This is an analyst scenario, not company guidance.",
+      "pe_reason": "18x is a judgemental premium for an integrated major with low-cost production growth. Compare integrated Chevron and upstream COP/EOG cautiously; cyclically inflated EPS can make all oil P/Es misleading.",
+      "bear_eps": 7,
+      "bear_pe": 14,
+      "bull_eps": 12,
+      "bull_pe": 18,
+      "normalized_trailing_eps": 9.72,
+      "catalyst_date": "Q4 2026; date unconfirmed",
+      "catalyst": "Management expects Uaru startup in Q4 and a press release with 2027 planning metrics later in Q4. There is explicitly no formal December investor-day event. Expected before year-end, with a real risk of slipping beyond the Dec 27 challenge cutoff.",
+      "invalidation": "Oil/refining margins reverse, Uaru slips, or cash distribution capacity relies on high commodity prices. Low historical market beta does not mean low business risk.",
+      "cash_growth": 0.02,
+      "terminal_growth": 0.02
+    },
+    "HPQ": {
+      "eps": 2.38,
+      "pe": 13.5,
+      "basis": "FY2026 company GAAP EPS midpoint 2.57 less 0.19 of tariff refunds = 2.38. Do not capitalize the refund as recurring earnings.",
+      "pe_reason": "13.5x normalized GAAP earnings is judgemental. A separate same-provider adjusted-forward peer calculation gives about USD 32.98: HPQ FY2027 consensus EPS 3.15375 times the 10.459x median of Dell, HPE and Cisco. HPE's latest annual GAAP loss makes its historical GAAP P/E unusable; it is not treated as a positive comparison.",
+      "bear_eps": 2.15,
+      "bear_pe": 10,
+      "bull_eps": 2.6,
+      "bull_pe": 14,
+      "normalized_trailing_eps": null,
+      "catalyst_date": "2026-11-24",
+      "catalyst": "FY2026 results and FY2027 guidance; PC pricing/memory costs, print supplies and cash generation.",
+      "invalidation": "Printing decline accelerates, cash flow misses or FY2027 guidance falls below normalized expectations. Negative equity makes ROE and D/E meaningless.",
+      "cash_growth": 0.04,
+      "terminal_growth": 0.03,
+      "cash_base_override": 2444870000.0,
+      "cash_base_note": "Company FY2026 FCF midpoint 3.1bn, less a cash-proxy adjustment of 0.19 tariff-refund EPS x 927m diluted shares (176.13m), less latest TTM SBC 479m = 2.44487bn. This is our conservative cash-capacity scenario, not issuer FCFE guidance. It avoids extrapolating the higher TTM FCF."
+    },
+    "INTU": {
+      "eps": 20.24,
+      "pe": 20,
+      "basis": "FY2027 GAAP EPS guidance midpoint (20.12 to 20.36)",
+      "reason": "About the latest annual GAAP P/E of Oracle, below Salesforce, with company-guided 22-24% GAAP EPS growth. A judgemental fair multiple, not analyst consensus.",
+      "cash_growth": 0.08,
+      "terminal_growth": 0.03,
+      "catalyst": "November 19 Q1 FY2027 results; test delivery against company guidance and the first quarter under the new SBC-inclusive adjusted EPS policy",
+      "bear_eps": 18,
+      "bear_pe": 16
+    },
+    "DIS": {
+      "eps": 7.30576,
+      "pe": 18,
+      "basis": "Team scenario for FY2027 adjusted EPS: FY2025 actual 5.93 x 1.12 FY2026 growth excluding the extra week x 1.10 FY2027 growth. Company guides approximately 12% and double-digit growth respectively; 10% is our conservative interpretation, not a dollar EPS forecast from Disney.",
+      "reason": "Judgemental 18x normalized forward earnings for a recovering diversified franchise. Peer businesses are heterogeneous, so no unadjusted peer-average valuation is claimed.",
+      "cash_growth": 0.06,
+      "terminal_growth": 0.025,
+      "catalyst": "November 17 FY2026 results and FY2027 outlook; streaming profitability, parks demand and cash conversion must support the normalization",
+      "bear_eps": 6.3,
+      "bear_pe": 15
+    }
+  },
+  "eligible_research_universe": [
+    "ADBE",
+    "KR",
+    "GILD",
+    "HRL",
+    "BMY",
+    "FDS",
+    "XOM",
+    "HPQ",
+    "INTU",
+    "DIS"
+  ],
+  "rate_date": "2026-11-05"
+}

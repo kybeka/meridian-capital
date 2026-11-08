@@ -1,0 +1,149 @@
+{
+  "nav": 97115068.57561001,
+  "trading_cost_bps": 0,
+  "gross_turnover": 0.6656273953456415,
+  "cost_reserve": 0.0,
+  "actual_reference_cost": 0.0,
+  "net_nav_for_targets": 97115068.57561001,
+  "remaining_cash_after_cost": 116.04560999572277,
+  "rounded_stock_fraction_of_net_nav": 0.3333319897189463,
+  "extra_shares": {
+    "SPY": 1,
+    "ADBE": 1
+  },
+  "holdings": [
+    {
+      "ticker": "SPY",
+      "identifier": "SPY US Equity",
+      "currency": "USD",
+      "price_date": "2026-11-06",
+      "price": 735.29,
+      "weight": 0.17386666666666664,
+      "current_shares": 34169,
+      "target_shares": 22964,
+      "trade_shares": -11205
+    },
+    {
+      "ticker": "EEMV",
+      "identifier": "EEMV US Equity",
+      "currency": "USD",
+      "price_date": "2026-11-06",
+      "price": 69.71,
+      "weight": 0.0644,
+      "current_shares": 133610,
+      "target_shares": 89717,
+      "trade_shares": -43893
+    },
+    {
+      "ticker": "DBC",
+      "identifier": "DBC US Equity",
+      "currency": "USD",
+      "price_date": "2026-11-06",
+      "price": 31.54,
+      "weight": 0.17966666666666667,
+      "current_shares": 798756,
+      "target_shares": 553213,
+      "trade_shares": -245543
+    },
+    {
+      "ticker": "SCHD",
+      "identifier": "SCHD US Equity",
+      "currency": "USD",
+      "price_date": "2026-11-06",
+      "price": 35.17,
+      "weight": 0.02186666666666667,
+      "current_shares": 95488,
+      "target_shares": 60380,
+      "trade_shares": -35108
+    },
+    {
+      "ticker": "VGSH",
+      "identifier": "VGSH US Equity",
+      "currency": "USD",
+      "price_date": "2026-11-06",
+      "price": 57.86,
+      "weight": 0.03333333333333333,
+      "current_shares": 86671,
+      "target_shares": 55948,
+      "trade_shares": -30723
+    },
+    {
+      "ticker": "STIP",
+      "identifier": "STIP US Equity",
+      "currency": "USD",
+      "price_date": "2026-11-06",
+      "price": 100.51,
+      "weight": 0.19353333333333333,
+      "current_shares": 288630,
+      "target_shares": 186996,
+      "trade_shares": -101634
+    },
+    {
+      "ticker": "ADBE",
+      "identifier": "ADBE US Equity",
+      "currency": "USD",
+      "price_date": "2026-11-06",
+      "price": 239.3,
+      "weight": 0.04648439565963925,
+      "current_shares": 0,
+      "target_shares": 18865,
+      "trade_shares": 18865
+    },
+    {
+      "ticker": "KR",
+      "identifier": "KR US Equity",
+      "currency": "USD",
+      "price_date": "2026-11-06",
+      "price": 67.7,
+      "weight": 0.08101524263135795,
+      "current_shares": 0,
+      "target_shares": 116215,
+      "trade_shares": 116215
+    },
+    {
+      "ticker": "HRL",
+      "identifier": "HRL US Equity",
+      "currency": "USD",
+      "price_date": "2026-11-06",
+      "price": 21.95,
+      "weight": 0.06897421673275965,
+      "current_shares": 0,
+      "target_shares": 305167,
+      "trade_shares": 305167
+    },
+    {
+      "ticker": "BMY",
+      "identifier": "BMY US Equity",
+      "currency": "USD",
+      "price_date": "2026-11-06",
+      "price": 62.14,
+      "weight": 0.06334907101317742,
+      "current_shares": 0,
+      "target_shares": 99004,
+      "trade_shares": 99004
+    },
+    {
+      "ticker": "XOM",
+      "identifier": "XOM US Equity",
+      "currency": "USD",
+      "price_date": "2026-11-06",
+      "price": 165.87,
+      "weight": 0.0362115801136642,
+      "current_shares": 0,
+      "target_shares": 21201,
+      "trade_shares": 21201
+    },
+    {
+      "ticker": "HPQ",
+      "identifier": "HPQ US Equity",
+      "currency": "USD",
+      "price_date": "2026-11-06",
+      "price": 28.46,
+      "weight": 0.03729882718273485,
+      "current_shares": 0,
+      "target_shares": 127276,
+      "trade_shares": 127276
+    }
+  ],
+  "status": "Zero-fee November6close sizing from post-loss NAV. Includes one additional SPY share and one additional ADBE share reported bought by the team. Other actual Bloomberg holdings and distribution cash remain to reconcile."
+}

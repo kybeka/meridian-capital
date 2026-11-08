@@ -1,0 +1,7 @@
+,Type,Check,Met
+0,Official / working class,3–6 positive-weight stocks,True
+1,Official,Long only,True
+2,Working class,One-third individual-stock targets,True
+3,Official,Monthly annual TE 2–5%,True
+4,Research preference,Daily63 TE at most 5%,False
+5,Research preference,Largest stock at most 8%,False
