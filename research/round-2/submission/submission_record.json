@@ -144,5 +144,9 @@
   "report_content_pages": 10,
   "report_front_matter_pages": 2,
   "report_pdf": "AMC2_Report.pdf",
-  "portfolio_description_pdf": "AMC2_Portfolio_Description.pdf"
+  "portfolio_description_pdf": "AMC2_Portfolio_Description.pdf",
+  "presentation_pdf": "AMC2_Presentation.pdf",
+  "presentation_url": "https://www.overleaf.com/project/6ae9e2672f6ea8c4f0fddc87",
+  "presentation_main_slides": 15,
+  "presentation_backup_slides": 7
 }

@@ -35,5 +35,19 @@
     "report_pdf_sha256": "efaf0f12f446292733d8fda910f307b11c4fcdfc0ffa9ef6b59be37425bc43a4",
     "portfolio_description_pdf": "submission/AMC2_Portfolio_Description.pdf"
   },
-  "entry_date": "2026-11-07"
+  "entry_date": "2026-11-07",
+  "presentation": {
+    "url": "https://www.overleaf.com/project/6ae9e2672f6ea8c4f0fddc87",
+    "verified_on": "2026-11-09",
+    "main_slides": 15,
+    "backup_slides": 7,
+    "physical_pages": 22,
+    "live_compile_errors": 0,
+    "live_compile_warnings": 0,
+    "font": "DM Sans",
+    "pdf": "submission/AMC2_Presentation.pdf",
+    "pdf_sha256": "40533f581ef3de5bef1d4bcdb18040dca0f8b30a487dd39c93476aa76aaa9b0a",
+    "source_sha256": "241e0c096982fdfcc21d165883fe3c65b93a9a8466363d01347265a484b678c0",
+    "speaker_notes": "submission/presentation/rehearsal_notes.md"
+  }
 }

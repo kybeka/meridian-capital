@@ -14,5 +14,10 @@
     "XOM",
     "HPQ"
   ],
-  "source": "https://github.com/kybeka/meridian-capital/tree/main/research/round-2"
+  "source": "https://github.com/kybeka/meridian-capital/tree/main/research/round-2",
+  "presentation": "materials/round-2-presentation.pdf",
+  "presentation_sha256": "40533f581ef3de5bef1d4bcdb18040dca0f8b30a487dd39c93476aa76aaa9b0a",
+  "presentation_revision": "2026-11-09",
+  "presentation_main_slides": 15,
+  "presentation_backup_slides": 7
 }

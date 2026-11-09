@@ -47,7 +47,7 @@ Rebuild the page with an explicitly chosen report export:
 python scripts/build_round2_page.py --report /absolute/path/to/AMC2_Team_Report.pdf
 ```
 
-The team approved publication on 8 November 2026. The report PDF matches the final submission archive; Overleaf remains the editable report source. The presentation is being completed separately.
+The team approved publication on 8 November 2026. The report PDF matches the final submission archive; Overleaf remains the editable report source. The final presentation, editable source and rehearsal notes are in the Round 2 submission folder.
 
 ## Content status
 
