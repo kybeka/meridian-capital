@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 RESEARCH = ROOT / 'research/round-2'
 DIST = ROOT / 'dist'
 REPORT = 'materials/round-2-report.pdf'
+PRESENTATION = 'materials/round-2-presentation.pdf'
 MODEL = 'https://github.com/kybeka/meridian-capital/blob/main/research/round-2/submission/Meridian_Final_Model.xlsx'
 CODE = 'https://github.com/kybeka/meridian-capital/tree/main/research/round-2'
 
@@ -123,7 +124,7 @@ def build(report_path):
 <main id="main"><div class="research-back"><a class="text-link" href="index.html#research">← Back to research library</a></div><section class="section allocation-section">
 <div class="section-top"><div><p class="eyebrow">Round 2 / Discretionary equity investing</p><h1 class="research-title">Round 2 allocation</h1></div><p class="snapshot-note">Entered 7 November 2026<br>Prices: 6 November close</p></div>
 <p class="allocation-intro">We allocate one-third of our post-loss portfolio to six stocks. Their valuations and catalysts guide the selection; their residual risk determines the proportions. The original six-ETF SAA remains our benchmark.</p>
-<div class="submission-links" aria-label="Round 2 materials"><a class="text-link" href="{REPORT}">Read final report (PDF) →</a><a class="text-link" href="{MODEL}">Open Excel model ↗</a><a class="text-link" href="{CODE}">Notebooks and data ↗</a></div>
+<div class="submission-links" aria-label="Round 2 materials"><a class="text-link" href="{REPORT}">Read final report (PDF) →</a><a class="text-link" href="{PRESENTATION}">View presentation (PDF) →</a><a class="text-link" href="{MODEL}">Open Excel model ↗</a><a class="text-link" href="{CODE}">Notebooks and data ↗</a></div>
 <nav class="research-sections" aria-label="On this page"><span>On this page</span><a href="#allocation" aria-current="location">Allocation</a><a href="#valuations">Stock cases</a><a href="#catalysts">Catalysts</a><a href="#risk">Risk</a><a href="#backtests">Backtests</a><a href="#round1-review">Round 1</a><a href="#implementation">Holdings</a></nav>
 
 <section id="allocation" aria-labelledby="allocation-title"><h2 id="allocation-title" class="r2-section-title">How the portfolio changes</h2>
@@ -165,18 +166,24 @@ def build(report_path):
 
 <section class="editorial-section" id="methodology" aria-labelledby="methodology-title">{heading('methodology-title', 'From research to the recorded allocation', 'The report and notebooks document the assumptions and calculations behind this page. Stock weights and quantities remain unchanged throughout the later valuation checks.')}
 <ol class="r2-method"><li><h3>Value the companies</h3><p>Choose normalized EPS and a P/E multiple, then examine financial quality, capital allocation, cash flow and catalyst timing.</p></li><li><h3>Translate the cases into alpha inputs</h3><p>Apply a common 50% haircut to annual full-convergence valuation premia. This is a judgment about uncertainty; the short challenge horizon calls for caution.</p></li><li><h3>Size and fund the basket</h3><p>Use alpha divided by residual variance, allocate one-third of NAV to stocks and scale the ETF targets proportionally. Compare all 420 three-to-six-stock combinations from nine researched names.</p></li><li><h3>Check the allocation and enter whole shares</h3><p>Test monthly and daily risk, staggered holding periods, cash assumptions and slower convergence. Use reconciled post-loss NAV and zero fees for the implementation quantities.</p></li></ol>
-<div class="publication-note"><div><h3>Research record</h3><p>Prices at 6 November 2026<br>Report revised 8 November 2026</p></div><div><p>The latest team report uses the same NAV and quantities as this page. Read the full valuation dossiers and source references, or reproduce the calculations from the saved inputs.</p><p><a class="text-link" href="{REPORT}">Final report (PDF) →</a> &nbsp; <a class="text-link" href="{MODEL}">Excel model ↗</a> &nbsp; <a class="text-link" href="{CODE}">Notebooks and data ↗</a></p><p class="source-note">The team's presentation is being finalized separately.</p></div></div></section>
+<div class="publication-note"><div><h3>Research record</h3><p>Prices at 6 November 2026<br>Report revised 8 November 2026</p></div><div><p>The latest team report uses the same NAV and quantities as this page. Read the full valuation dossiers and source references, or reproduce the calculations from the saved inputs.</p><p><a class="text-link" href="{REPORT}">Final report (PDF) →</a> &nbsp; <a class="text-link" href="{PRESENTATION}">Presentation (PDF) →</a> &nbsp; <a class="text-link" href="{MODEL}">Excel model ↗</a> &nbsp; <a class="text-link" href="{CODE}">Notebooks and data ↗</a></p><p class="source-note">The presentation has 15 main slides and 7 backup slides. <a href="{CODE}/submission/presentation">Editable slides and rehearsal notes ↗</a></p></div></div></section>
 </section></main><footer><div><a class="wordmark" href="index.html#main">MERIDIAN<span>CAPITAL</span></a><p>Asset Management Challenge 2026<br>Academic simulation · Not an investment offering</p></div><div class="footer-links"><a href="round-1.html">Round 1 research</a><a href="{CODE}">Round 2 code &amp; data ↗</a><a href="#main">Back to top</a></div></footer>
 <script type="application/json" id="round2-data">{json.dumps({'valuations': valuation_data, 'replay': {k: {q: v[q] for q in ['start_first', 'end_last', 'n_overlapping', 'nonoverlap_n_min', 'nonoverlap_n_max', 'mean_active', 'outperform_rate', 'active_mean_ci_block']} for k, v in replay.items()}})}</script></body></html>'''
     (DIST / 'round-2.html').write_text(page)
     shutil.copy2(report_path, DIST / REPORT)
     shutil.copy2(RESEARCH / 'results/valuation/entered_holdings.csv', DIST / 'data/round2-holdings.csv')
+    presentation_path = RESEARCH / 'submission/AMC2_Presentation.pdf'
+    shutil.copy2(presentation_path, DIST / PRESENTATION)
+    presentation_sha = hashlib.sha256(presentation_path.read_bytes()).hexdigest()
     report_sha = hashlib.sha256(report_path.read_bytes()).hexdigest()
     (DIST / 'data/round2-publication.json').write_text(json.dumps({
         'status': 'Published', 'price_date': record['price_date'],
         'entry_date': record['bloomberg_entry_date'], 'nav_usd': nav,
         'report': REPORT, 'report_sha256': report_sha, 'report_revision': '2026-11-08',
-        'stock_tickers': analysis['stocks'], 'source': CODE}, indent=2) + '\n')
+        'stock_tickers': analysis['stocks'], 'source': CODE,
+        'presentation': PRESENTATION, 'presentation_sha256': presentation_sha,
+        'presentation_revision': '2026-11-09', 'presentation_main_slides': 15,
+        'presentation_backup_slides': 7}, indent=2) + '\n')
     print(f'Built Round 2 page; report SHA-256 {report_sha}')
 
 

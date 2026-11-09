@@ -6,7 +6,7 @@ The layout follows [Round 1](../round-1/readme.md): one main notebook, frozen in
 
 - [data/](data/readme.md): archived prices, statements, rate observations, source corrections, valuation assumptions, company notes and source register. An input manifest records SHA-256 hashes.
 - [results/](results/readme.md): calculation tables, charts, frozen comparison results and execution checks. Percentages in CSV files are decimal fractions unless the column says otherwise.
-- [submission/](submission/readme.md): the report, portfolio description, Excel model, editable LaTeX and a presentation draft for team review.
+- [submission/](submission/readme.md): the report, portfolio description, Excel model, editable LaTeX and the final presentation and rehearsal notes.
 - [code/](code/readme.md): shared cash-flow and validation calculations used by the companion notebook.
 
 ## The decision
