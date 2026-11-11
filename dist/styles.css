@@ -219,3 +219,9 @@ html:has(.research-page){scroll-padding-top:0}
 .contribution-detail small{display:block;font-size:.65rem;line-height:1.5;color:#58676d}
 
 @media(max-width:600px){.peer-plot.with-contributions{min-height:410px}}
+
+.peer-tooltip.expanded-holdings{width:460px}
+.expanded-holdings .contribution-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 1rem}
+.expanded-holdings .contribution-row{grid-template-columns:34px 1fr 58px;gap:.35rem;font-size:.7rem}
+@media(max-width:600px){.expanded-holdings .contribution-list{gap:0 .7rem}.expanded-holdings .contribution-row{grid-template-columns:30px 1fr 52px;font-size:.65rem;gap:.2rem}}
+.peer-plot.with-contributions{min-height:450px}

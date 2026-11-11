@@ -1,0 +1,195 @@
+{
+  "sixfold": {
+    "cash_usd": 1079.09,
+    "capital_usd": 97736900.37,
+    "positions": {
+      "SPY": {
+        "shares": 30326,
+        "price": 735.29
+      },
+      "XLE": {
+        "shares": 104383,
+        "price": 61.62
+      },
+      "HEEM": {
+        "shares": 368316,
+        "price": 37.83
+      },
+      "STIP": {
+        "shares": 231039,
+        "price": 100.51
+      },
+      "IEI": {
+        "shares": 131044,
+        "price": 115.29
+      },
+      "GLD": {
+        "shares": 15725,
+        "price": 372.52
+      },
+      "ADBE": {
+        "shares": 14441,
+        "price": 239.3
+      },
+      "FDS": {
+        "shares": 13005,
+        "price": 327.89
+      },
+      "WDAY": {
+        "shares": 16404,
+        "price": 192.9
+      }
+    },
+    "source_url": "https://sixfold-capital.github.io/performance.html?lang=en",
+    "reference_date": "2026-11-06",
+    "holdings_verified_on": "2026-11-11"
+  },
+  "swissstreet": {
+    "cash_usd": 138463.38,
+    "positions": {
+      "VTI": {
+        "shares": 71691,
+        "price": 361.93
+      },
+      "VEA": {
+        "shares": 150743,
+        "price": 67.9
+      },
+      "VWO": {
+        "shares": 79408,
+        "price": 55.29
+      },
+      "GLD": {
+        "shares": 22421,
+        "price": 372.52
+      },
+      "BIL": {
+        "shares": 384244,
+        "price": 91.46
+      },
+      "NVDA": {
+        "shares": 25512,
+        "price": 186.64
+      },
+      "INTU": {
+        "shares": 13073,
+        "price": 341.5
+      },
+      "ENS": {
+        "shares": 22419,
+        "price": 147.02
+      },
+      "CRM": {
+        "shares": 7310,
+        "price": 213.65
+      }
+    },
+    "source_url": "https://assetmanagement-theta.vercel.app/#/portfolio",
+    "capital_usd": 98290544.25,
+    "reference_date": "2026-11-06",
+    "holdings_verified_on": "2026-11-11"
+  },
+  "matterhorn": {
+    "cash_usd": 8707.9,
+    "capital_usd": 98212801.27,
+    "positions": {
+      "VTI": {
+        "shares": 23084,
+        "price": 361.93
+      },
+      "VEA": {
+        "shares": 115597,
+        "price": 67.9
+      },
+      "IEMG": {
+        "shares": 108607,
+        "price": 72.2
+      },
+      "BND": {
+        "shares": 142724,
+        "price": 71.59
+      },
+      "BNDX": {
+        "shares": 265436,
+        "price": 47.59
+      },
+      "TIP": {
+        "shares": 110068,
+        "price": 106.27
+      },
+      "GLD": {
+        "shares": 22942,
+        "price": 372.52
+      },
+      "BCI": {
+        "shares": 385745,
+        "price": 24.64
+      },
+      "NVDA": {
+        "shares": 9618,
+        "price": 186.64
+      },
+      "PEP": {
+        "shares": 54063,
+        "price": 141.34
+      },
+      "ABBV": {
+        "shares": 19594,
+        "price": 291.31
+      },
+      "DRI": {
+        "shares": 28349,
+        "price": 226.35
+      }
+    },
+    "source_url": "https://matterhorncapitalmanagement.com/data/holdings.json",
+    "price_source": "Yahoo daily close on 6 November rounded to cents; source publishes shares and cash.",
+    "reference_date": "2026-11-06",
+    "holdings_verified_on": "2026-11-11"
+  },
+  "rivemont": {
+    "cash_usd": 935,
+    "capital_usd": 97858700,
+    "positions": {
+      "IVV": {
+        "shares": 27139,
+        "price": 738.68
+      },
+      "VXUS": {
+        "shares": 99098,
+        "price": 80.92
+      },
+      "VGIT": {
+        "shares": 305401,
+        "price": 57.74
+      },
+      "VTIP": {
+        "shares": 283517,
+        "price": 48.79
+      },
+      "BCI": {
+        "shares": 488171,
+        "price": 24.64
+      },
+      "GLDM": {
+        "shares": 107306,
+        "price": 80.41
+      },
+      "INTU": {
+        "shares": 12363,
+        "price": 341.5
+      },
+      "HQY": {
+        "shares": 64262,
+        "price": 103.63
+      },
+      "AMG": {
+        "shares": 18698,
+        "price": 362.96
+      }
+    },
+    "source_url": "https://rivemontcap.netlify.app/js/live-data.js?v=20261109h",
+    "reference_date": "2026-11-06",
+    "holdings_verified_on": "2026-11-11"
+  }
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "ticker": "IEI",
+    "amount": 0.380905,
+    "ex_date": "2026-11-02",
+    "pay_date": "2026-11-05",
+    "source": "https://www.ishares.com/us/products/239455/ishares-37-year-treasury-bond-etf",
+    "evidence": "Issuer distribution table",
+    "verified_on": "2026-11-11"
+  },
+  {
+    "ticker": "BIL",
+    "amount": 0.30849,
+    "ex_date": "2026-11-02",
+    "pay_date": "2026-11-05",
+    "source": "https://stockanalysis.com/etf/bil/",
+    "evidence": "Distribution cross-checked with https://www.dividendvision.com/dividends/bil-dividend-history",
+    "verified_on": "2026-11-11"
+  },
+  {
+    "ticker": "VGIT",
+    "amount": 0.199,
+    "ex_date": "2026-11-02",
+    "pay_date": "2026-11-04",
+    "source": "https://companiesmarketcap.com/vanguard-intermediate-term-treasury-index-fund-etf-shares/distributions/",
+    "evidence": "Distribution cross-checked with https://dividendstacker.com/etfs/vgit",
+    "verified_on": "2026-11-11"
+  },
+  {
+    "ticker": "TIP",
+    "amount": 0.161241,
+    "ex_date": "2026-11-02",
+    "pay_date": "2026-11-05",
+    "source": "https://www.ishares.com/us/products/239467/ishares-tips-bond-etf",
+    "evidence": "Issuer distribution table",
+    "verified_on": "2026-11-11"
+  },
+  {
+    "ticker": "BND",
+    "amount": 0.256802,
+    "ex_date": "2026-11-02",
+    "pay_date": "2026-11-04",
+    "source": "https://matterhorncapitalmanagement.com/data/holdings.json",
+    "evidence": "Peer-published Bloomberg distribution record",
+    "verified_on": "2026-11-11"
+  },
+  {
+    "ticker": "BNDX",
+    "amount": 0.12,
+    "ex_date": "2026-11-02",
+    "pay_date": "2026-11-04",
+    "source": "https://matterhorncapitalmanagement.com/data/holdings.json",
+    "evidence": "Peer-published Bloomberg distribution record",
+    "verified_on": "2026-11-11"
+  }
+]

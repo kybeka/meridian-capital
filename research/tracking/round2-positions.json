@@ -1,0 +1,57 @@
+{
+  "reference_date": "2026-11-06",
+  "entry_date": "2026-11-07",
+  "capital_usd": 97115068.57561,
+  "cash_usd": 116.04561,
+  "source_url": "https://github.com/kybeka/meridian-capital/blob/main/research/round-2/submission/submission_record.json",
+  "positions": {
+    "SPY": {
+      "shares": 22964,
+      "price": 735.29
+    },
+    "EEMV": {
+      "shares": 89717,
+      "price": 69.71
+    },
+    "DBC": {
+      "shares": 553213,
+      "price": 31.54
+    },
+    "SCHD": {
+      "shares": 60380,
+      "price": 35.17
+    },
+    "VGSH": {
+      "shares": 55948,
+      "price": 57.86
+    },
+    "STIP": {
+      "shares": 186996,
+      "price": 100.51
+    },
+    "ADBE": {
+      "shares": 18865,
+      "price": 239.3
+    },
+    "KR": {
+      "shares": 116215,
+      "price": 67.7
+    },
+    "HRL": {
+      "shares": 305167,
+      "price": 21.95
+    },
+    "BMY": {
+      "shares": 99004,
+      "price": 62.14
+    },
+    "XOM": {
+      "shares": 21201,
+      "price": 165.87
+    },
+    "HPQ": {
+      "shares": 127276,
+      "price": 28.46
+    }
+  }
+}

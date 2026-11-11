@@ -1,4 +1,5 @@
 """Value confirmed holdings from Yahoo daily closes; never replace the opening NAV."""
+import argparse
 import csv
 import io
 import json
@@ -86,6 +87,67 @@ def contributions(positions, histories, rows):
     return {'tickers': tickers, 'reference_date': opening, 'rows': output}
 
 
+def calculate_timeline(snapshots, histories, link_rounds=False):
+    """Value each confirmed basket over its holding period and carry attributed P&L."""
+    if not snapshots or any(b['reference_date'] <= a['reference_date'] for a, b in zip(snapshots, snapshots[1:])):
+        raise ValueError('Holding snapshots must be in chronological order')
+    initial = snapshots[0]['capital_usd']
+    tickers = list(dict.fromkeys(t for snapshot in snapshots for t in snapshot['positions']))
+    cumulative = {t: 0.0 for t in tickers}
+    rows, attribution, boundaries = [], [], []
+    for index, snapshot in enumerate(snapshots):
+        start = snapshot['reference_date']
+        end = snapshots[index + 1]['reference_date'] if index + 1 < len(snapshots) else None
+        selected = {}
+        for ticker, holding in snapshot['positions'].items():
+            if any(not math.isfinite(holding[k]) or holding[k] <= 0 for k in ('shares', 'price')):
+                raise ValueError(f'{ticker}: invalid holding')
+            history = histories[ticker]
+            close = history['closes'].get(start)
+            if close is None or abs(round(close, 2) - holding['price']) > .011:
+                raise ValueError(f'{ticker}: snapshot price differs from closing price')
+            selected[ticker] = {**history, 'closes': {
+                d: v for d, v in history['closes'].items() if d >= start and (end is None or d <= end)
+            }}
+        if not math.isfinite(snapshot['cash_usd']) or snapshot['cash_usd'] < 0:
+            raise ValueError('Invalid snapshot cash')
+        basket = snapshot['cash_usd'] + sum(p['shares'] * p['price'] for p in snapshot['positions'].values())
+        if abs(basket - snapshot['capital_usd']) > (1 if link_rounds else .011):
+            raise ValueError('Snapshot holdings and cash do not reconcile to published capital')
+        phase_rows = calculate({**snapshot, 'capital_usd': basket}, selected)
+        scale = 1.0
+        if rows:
+            if rows[-1][0] != start:
+                raise ValueError('Missing rebalance close')
+            prior_nav = float(rows[-1][1])
+            if not link_rounds and abs(prior_nav - basket) > .011:
+                raise ValueError('Rebalance would create an unexplained NAV jump')
+            scale = prior_nav / basket if link_rounds else 1.0
+            boundaries.append({'date': start, 'prior_nav_usd': prior_nav,
+                'published_basket_usd': round(basket, 2), 'difference_usd': round(basket-prior_nav, 2)})
+        previous_values = {t: h['shares'] * h['price'] for t, h in snapshot['positions'].items()}
+        previous_nav = basket * scale
+        for day, _, source in phase_rows:
+            if day == start and index:
+                continue
+            values = {t: h['shares'] * (h['price'] if day == start else
+                round(selected[t]['closes'][day], 2) + sum(v for ex, v in selected[t]['dividends'].items() if start < ex <= day))
+                for t, h in snapshot['positions'].items()}
+            nav = (snapshot['cash_usd'] + sum(values.values())) * scale
+            pnl = {t: (values.get(t, 0)-previous_values.get(t, 0))*scale for t in tickers}
+            for ticker in tickers:
+                cumulative[ticker] += pnl[ticker]
+            if abs(initial + sum(cumulative.values()) - nav) > .011:
+                raise ValueError('Attributed P&L does not reconcile to NAV')
+            rows.append((day, f'{nav:.2f}', source))
+            attribution.append({'date': day, 'nav_usd': round(nav, 2),
+                'since': {t: cumulative[t]/initial*100 for t in tickers},
+                'daily': {t: pnl[t]/previous_nav*100 for t in tickers}})
+            previous_values, previous_nav = values, nav
+    return rows, {'reference_date': snapshots[0]['reference_date'], 'tickers': tickers,
+        'rebalance_dates': [s['reference_date'] for s in snapshots[1:]], 'rows': attribution}, boundaries
+
+
 def fetch_history(ticker, opening, now):
     start = int(datetime.fromisoformat(opening).replace(tzinfo=NY).timestamp())
     url = f'https://query1.finance.yahoo.com/v8/finance/chart/{ticker}?period1={start}&period2={int(now.timestamp())}&interval=1d&events=div%2Csplits&includeAdjustedClose=false'
@@ -121,13 +183,19 @@ def fetch_history(ticker, opening, now):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--history-file', type=Path)
+    args = parser.parse_args()
     positions = json.loads((ROOT / 'research/tracking/opening-positions.json').read_text())
+    round2 = json.loads((ROOT / 'research/tracking/round2-positions.json').read_text())
     ledger = json.loads((ROOT / 'research/tracking/verified-distributions.json').read_text())
     now = datetime.now(NY)
-    histories = {ticker: apply_verified_distributions(
-        ticker, fetch_history(ticker, positions['reference_date'], now), ledger
-    ) for ticker in positions['positions']}
-    rows = calculate(positions, histories)
+    tickers = set(positions['positions']) | set(round2['positions'])
+    saved = json.loads(args.history_file.read_text()) if args.history_file else None
+    histories = {ticker: apply_verified_distributions(ticker,
+        saved[ticker] if saved else fetch_history(ticker, positions['reference_date'], now), ledger
+    ) for ticker in sorted(tickers)}
+    rows, attribution, _ = calculate_timeline([positions, round2], histories)
     if (now.date() - datetime.fromisoformat(rows[-1][0]).date()).days > 4:
         raise ValueError('Latest complete valuation is stale; preserving published data')
     output = ROOT / 'dist/data/challenge-valuations.csv'
@@ -138,8 +206,7 @@ def main():
     writer = csv.writer(buffer, lineterminator='\n')
     writer.writerow(['date', 'nav_usd', 'source'])
     writer.writerows(rows)
-    attribution = contributions(positions, histories, rows)
-    attribution_path = ROOT / 'dist/data/round1-contributions.json'
+    attribution_path = ROOT / 'dist/data/portfolio-contributions.json'
     attribution_temp = attribution_path.with_suffix('.tmp')
     attribution_temp.write_text(json.dumps(attribution, indent=2) + '\n')
     temporary = output.with_suffix('.tmp')

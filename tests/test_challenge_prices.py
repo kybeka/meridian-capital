@@ -92,3 +92,60 @@ class FrozenNovemberBookTests(unittest.TestCase):
         self.assertEqual(rows[-1][1], '97115068.58')
         contributions = prices.contributions(positions, histories, rows)
         self.assertEqual(contributions['rows'][-1]['nav_usd'], 97115068.58)
+
+
+class RebalanceTests(unittest.TestCase):
+    def setUp(self):
+        self.opening = dict(reference_date='2026-10-16', capital_usd=1000, cash_usd=0,
+                            positions={'ETF': dict(shares=10, price=100)})
+        self.rebalance = dict(reference_date='2026-11-06', capital_usd=1110, cash_usd=10,
+                              positions={'ETF': dict(shares=5, price=110), 'STOCK': dict(shares=11, price=50)})
+        self.histories = {
+            'ETF': dict(closes={'2026-10-16':100,'2026-11-06':110,'2026-11-09':111},
+                        dividends={'2026-11-06':1,'2026-11-09':2}, splits=[]),
+            'STOCK': dict(closes={'2026-11-06':50,'2026-11-09':51},dividends={},splits=[])}
+
+    def test_rebalance_preserves_history_and_uses_entitled_quantities(self):
+        rows, attribution, boundaries = prices.calculate_timeline([self.opening,self.rebalance],self.histories)
+        self.assertEqual([r[1] for r in rows],['1000.00','1110.00','1136.00'])
+        self.assertEqual(boundaries[0]['difference_usd'],0)
+        final=attribution['rows'][-1]
+        self.assertAlmostEqual(final['since']['ETF'],12.5)
+        self.assertAlmostEqual(final['since']['STOCK'],1.1)
+        self.assertAlmostEqual(sum(final['daily'].values()),26/1110*100)
+        self.assertEqual(attribution['rows'][1]['since']['STOCK'],0)
+
+    def test_unexplained_own_rebalance_jump_fails(self):
+        self.rebalance['cash_usd']+=100
+        self.rebalance['capital_usd']+=100
+        with self.assertRaisesRegex(ValueError,'NAV jump'):
+            prices.calculate_timeline([self.opening,self.rebalance],self.histories)
+
+    def test_peer_round_returns_link_without_artificial_gain(self):
+        self.rebalance['cash_usd']+=100
+        self.rebalance['capital_usd']+=100
+        rows, _, boundaries=prices.calculate_timeline([self.opening,self.rebalance],self.histories,link_rounds=True)
+        self.assertAlmostEqual(float(rows[-1][1]),1110*(1236/1210),places=2)
+        self.assertEqual(boundaries[0]['difference_usd'],100)
+
+    def test_missing_rebalance_close_fails(self):
+        del self.histories['STOCK']['closes']['2026-11-06']
+        with self.assertRaisesRegex(ValueError,'snapshot price'):
+            prices.calculate_timeline([self.opening,self.rebalance],self.histories)
+
+    def test_published_contributions_and_peer_line_match_nav(self):
+        import csv
+        root=Path(__file__).resolve().parents[1]
+        rows=list(csv.DictReader((root/'dist/data/challenge-valuations.csv').read_text().splitlines()))
+        attribution=json.loads((root/'dist/data/portfolio-contributions.json').read_text())['rows']
+        peers=json.loads((root/'dist/data/peer-valuations.json').read_text())
+        own=next(s for s in peers['series'] if s['id']=='meridian')
+        peer_values=dict(zip(peers['dates'],own['values']))
+        self.assertEqual(len(rows),len(attribution))
+        for i,(row,entry) in enumerate(zip(rows,attribution)):
+            nav=float(row['nav_usd']); previous=float(rows[max(0,i-1)]['nav_usd'])
+            self.assertEqual(entry['date'],row['date'])
+            self.assertAlmostEqual(sum(entry['since'].values()),(nav/1e8-1)*100,places=7)
+            self.assertAlmostEqual(sum(entry['daily'].values()),(nav/previous-1)*100,places=7)
+            if row['date'] in peer_values:
+                self.assertAlmostEqual(peer_values[row['date']],nav/1e6,places=7)

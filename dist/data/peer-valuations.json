@@ -15,7 +15,9 @@
     "2026-11-03",
     "2026-11-04",
     "2026-11-05",
-    "2026-11-06"
+    "2026-11-06",
+    "2026-11-09",
+    "2026-11-10"
   ],
   "series": [
     {
@@ -23,6 +25,14 @@
       "name": "Meridian Capital",
       "source_url": "https://github.com/kybeka/meridian-capital/blob/main/research/tracking/opening-positions.json",
       "holdings_verified_on": "2026-10-16",
+      "rebalance_reconciliation": [
+        {
+          "date": "2026-11-06",
+          "prior_nav_usd": 97115068.58,
+          "published_basket_usd": 97115068.58,
+          "difference_usd": -0.0
+        }
+      ],
       "opening_reconciliation_usd": 0.0,
       "values": [
         100.0,
@@ -36,18 +46,28 @@
         100.57312344,
         100.42639851,
         99.81884493,
-        98.59592841,
-        98.53425233,
-        98.21362399,
-        96.77867809,
-        97.01415179
+        98.6968452,
+        98.63516912,
+        98.31454078,
+        96.87959488,
+        97.11506858,
+        97.35390962,
+        97.20949625
       ]
     },
     {
       "id": "sixfold",
       "name": "Sixfold Capital",
       "source_url": "https://sixfold-capital.github.io/performance.html?lang=en",
-      "holdings_verified_on": "2026-10-29",
+      "holdings_verified_on": "2026-11-11",
+      "rebalance_reconciliation": [
+        {
+          "date": "2026-11-06",
+          "prior_nav_usd": 97737451.39,
+          "published_basket_usd": 97736900.37,
+          "difference_usd": -551.02
+        }
+      ],
       "opening_reconciliation_usd": 0.0,
       "values": [
         100.0,
@@ -61,18 +81,28 @@
         100.48461647,
         100.23619895,
         99.42261695,
-        98.9489422,
-        98.87530662,
-        99.28624803,
-        97.30004587,
-        97.60158553
+        99.08480806,
+        99.01117248,
+        99.42211389,
+        97.43591173,
+        97.73745139,
+        98.5697138,
+        98.07241635
       ]
     },
     {
       "id": "swissstreet",
       "name": "SwissStreet",
       "source_url": "https://assetmanagement-theta.vercel.app/#/portfolio",
-      "holdings_verified_on": "2026-10-29",
+      "holdings_verified_on": "2026-11-11",
+      "rebalance_reconciliation": [
+        {
+          "date": "2026-11-06",
+          "prior_nav_usd": 98290632.95,
+          "published_basket_usd": 98290544.25,
+          "difference_usd": -88.7
+        }
+      ],
       "opening_reconciliation_usd": 0.0,
       "values": [
         100.0,
@@ -86,18 +116,28 @@
         100.30070556,
         100.08197642,
         98.92001356,
-        98.85969734,
-        98.82728346,
-        99.99388187,
-        98.0522001,
-        98.15223878
+        98.99809151,
+        98.96567763,
+        100.13227604,
+        98.19059427,
+        98.29063295,
+        99.37005755,
+        98.72165791
       ]
     },
     {
       "id": "matterhorn",
       "name": "Matterhorn Capital",
       "source_url": "https://matterhorncapitalmanagement.com/data/holdings.json",
-      "holdings_verified_on": "2026-10-29",
+      "holdings_verified_on": "2026-11-11",
+      "rebalance_reconciliation": [
+        {
+          "date": "2026-11-06",
+          "prior_nav_usd": 98212695.68,
+          "published_basket_usd": 98212801.35,
+          "difference_usd": 105.67
+        }
+      ],
       "opening_reconciliation_usd": 0.0,
       "values": [
         100.0,
@@ -111,18 +151,28 @@
         100.13642499,
         99.88506943,
         98.89322696,
-        98.6991163,
-        98.49293803,
-        99.22141436,
-        98.01623247,
-        98.09907563
+        98.81273635,
+        98.60655808,
+        99.33503441,
+        98.12985252,
+        98.21269568,
+        99.06876818,
+        98.42547484
       ]
     },
     {
       "id": "rivemont",
       "name": "Rivemont Capital",
       "source_url": "https://rivemontcap.netlify.app/performance.html",
-      "holdings_verified_on": "2026-10-29",
+      "holdings_verified_on": "2026-11-11",
+      "rebalance_reconciliation": [
+        {
+          "date": "2026-11-06",
+          "prior_nav_usd": 97858713.54,
+          "published_basket_usd": 97858700.39,
+          "difference_usd": -13.15
+        }
+      ],
       "opening_reconciliation_usd": 0.08,
       "values": [
         100.0,
@@ -136,13 +186,15 @@
         99.99060676,
         99.78849611,
         98.8565326,
-        98.4780789,
-        98.34291484,
-        99.04554354,
-        97.8371709,
-        97.78212632
+        98.55466604,
+        98.41950198,
+        99.12213068,
+        97.91375804,
+        97.85871346,
+        98.86231554,
+        98.76133613
       ]
     }
   ],
-  "basis": "Published Round 1 shares held unchanged; daily USD closes, cash and ex-date dividend receivables."
+  "basis": "Published holdings through Round 2; daily USD closes and ex-date dividends. Peer round returns are linked at the rebalance to avoid jumps from differing published NAV bases."
 }
