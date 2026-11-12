@@ -1,0 +1,123 @@
+{
+  "verified_on": "2026-11-12",
+  "command": "python scripts/build_documents.py",
+  "compiler": "XeTeX 3.141592653-2.6-0.999997 (TeX Live 2025)",
+  "source_snapshots": {
+    "round_1_presentation": "https://www.overleaf.com/project/6acf74587cbaa56d0ba71183",
+    "round_2_presentation": "https://www.overleaf.com/project/6ae9e2672f6ea8c4f0fddc87"
+  },
+  "documents": [
+    {
+      "name": "round-1-report",
+      "source": "research/round-1/submission/latex/main.tex",
+      "source_files_sha256": {
+        "research/round-1/submission/latex/figures/Meridian-Capital-Official-Logo.png": "dce0330e6b2fc382d1b9d8bbe0eec5ad74d13c62ec06a9368b81ae93e4abb23d",
+        "research/round-1/submission/latex/figures/Rplot1.pdf": "e7ba4f44b0f57cb05c82849705dc9c02d7d917ff5e1b7603bfbc0e7c76bef94a",
+        "research/round-1/submission/latex/figures/Rplot2.pdf": "d034d8845e2f5e791133b56d0c008914bb7f00e2945f06e0cc6ad2ae04d7cd21",
+        "research/round-1/submission/latex/figures/Rplot4.pdf": "3023c4c72e290c15112c532ba4278a487b278595ca59601ec8467592053e702c",
+        "research/round-1/submission/latex/figures/Rplotpie2.pdf": "ab02056f353d70e70c0095ad17b8c92949f3af71178f36aa5cd62481e58e9cc2",
+        "research/round-1/submission/latex/figures/allocation.pdf": "f77eba778f5bc093848ba099ee64a44e6d72ec83ab3c5a6ecb151e3faa6532b4",
+        "research/round-1/submission/latex/figures/asset-classes.pdf": "7f00d46eb5508fe103d84c3786b16a986a5c9696a22b330c2b64ab8a077241d3",
+        "research/round-1/submission/latex/figures/cumulative-returns.pdf": "517be14af2693d052f4e6c28bed6164667882507214921122bfae6a092113f11",
+        "research/round-1/submission/latex/figures/efficient-frontier.pdf": "0d5c3f06d28f03efdef3d259878a7b40c8a588d5c90c9a9ac83990f08ec5cc2b",
+        "research/round-1/submission/latex/figures/rolling-volatility.pdf": "33e84e12bd3d3d497bdbf06d0732ea3a3a975af79893bdf90fe900c70bf8cf3e",
+        "research/round-1/submission/latex/figures/stress-comparison.pdf": "e8743875ac1d44d92f17197ed337e2076b9303bc53d6ca7386fe9cf8433634b7",
+        "research/round-1/submission/latex/fonts/DMSans-Bold.ttf": "b473854e2f6ab9e741b8dee057db382b0a8baa88fa1cfa8f9df29fb331fc6212",
+        "research/round-1/submission/latex/fonts/DMSans-BoldItalic.ttf": "b36f0a1a55bf7b1d0d6a53517450c07ddb0c4fb69ad9d9f553a812bf68d5b583",
+        "research/round-1/submission/latex/fonts/DMSans-Italic.ttf": "ff5909f92c368e40f590a30ad884b12ca4177e1e221728f9f0df61ae51daeb67",
+        "research/round-1/submission/latex/fonts/DMSans-Regular.ttf": "b9b59abf6cf38ff23af68247bf9669bb2347b5345c75a4255f103eebbc983553",
+        "research/round-1/submission/latex/main.tex": "76472c800b29030670ff2e3cb8469e8fd31230c078e15844413af6439472cd1c"
+      },
+      "saved_pdf": "research/round-1/submission/report.pdf",
+      "saved_pdf_sha256": "6939359fb7916c333bd8d64e2d5e2457407fabb7a9404eb1dce143a0099ab4fd",
+      "pages": 13,
+      "build_succeeded": true,
+      "rebuilt_pdf_text_matches_saved_pdf": true
+    },
+    {
+      "name": "round-1-presentation",
+      "source": "research/round-1/submission/presentation/main.tex",
+      "source_files_sha256": {
+        "research/round-1/submission/presentation/Meridian-Capital-Official-Logo.png": "dce0330e6b2fc382d1b9d8bbe0eec5ad74d13c62ec06a9368b81ae93e4abb23d",
+        "research/round-1/submission/presentation/allocation.pdf": "f77eba778f5bc093848ba099ee64a44e6d72ec83ab3c5a6ecb151e3faa6532b4",
+        "research/round-1/submission/presentation/asset-classes.pdf": "7f00d46eb5508fe103d84c3786b16a986a5c9696a22b330c2b64ab8a077241d3",
+        "research/round-1/submission/presentation/cumulative-returns.pdf": "517be14af2693d052f4e6c28bed6164667882507214921122bfae6a092113f11",
+        "research/round-1/submission/presentation/fonts/DMSans-Bold.ttf": "b473854e2f6ab9e741b8dee057db382b0a8baa88fa1cfa8f9df29fb331fc6212",
+        "research/round-1/submission/presentation/fonts/DMSans-BoldItalic.ttf": "b36f0a1a55bf7b1d0d6a53517450c07ddb0c4fb69ad9d9f553a812bf68d5b583",
+        "research/round-1/submission/presentation/fonts/DMSans-Italic.ttf": "ff5909f92c368e40f590a30ad884b12ca4177e1e221728f9f0df61ae51daeb67",
+        "research/round-1/submission/presentation/fonts/DMSans-Regular.ttf": "b9b59abf6cf38ff23af68247bf9669bb2347b5345c75a4255f103eebbc983553",
+        "research/round-1/submission/presentation/fonts/OFL.txt": "2af94f4fb533be8fa23282eb33e08ca311ddf47c2f32777e2040b282deeec65c",
+        "research/round-1/submission/presentation/main.tex": "b4984136e4bd2369f77414e5bbbb5582726e3a1698c9880d1133a8ec5e4592fc",
+        "research/round-1/submission/presentation/readme.md": "d702660dddba6df26d2b5eb189f3f77556440f49c1210fbbcbd7a4112000955a"
+      },
+      "saved_pdf": "research/round-1/submission/presentation.pdf",
+      "saved_pdf_sha256": "078c737495662e840832a170e103348ba3c94859484d3da37e544b6f47725a0f",
+      "pages": 16,
+      "build_succeeded": true,
+      "rebuilt_pdf_text_matches_saved_pdf": true
+    },
+    {
+      "name": "round-2-report",
+      "source": "research/round-2/submission/latex/main.tex",
+      "source_files_sha256": {
+        "research/round-2/submission/latex/DMSans-Bold.ttf": "b473854e2f6ab9e741b8dee057db382b0a8baa88fa1cfa8f9df29fb331fc6212",
+        "research/round-2/submission/latex/DMSans-BoldItalic.ttf": "b36f0a1a55bf7b1d0d6a53517450c07ddb0c4fb69ad9d9f553a812bf68d5b583",
+        "research/round-2/submission/latex/DMSans-Italic.ttf": "ff5909f92c368e40f590a30ad884b12ca4177e1e221728f9f0df61ae51daeb67",
+        "research/round-2/submission/latex/DMSans-Regular.ttf": "b9b59abf6cf38ff23af68247bf9669bb2347b5345c75a4255f103eebbc983553",
+        "research/round-2/submission/latex/Meridian-Capital-Official-Logo.png": "dce0330e6b2fc382d1b9d8bbe0eec5ad74d13c62ec06a9368b81ae93e4abb23d",
+        "research/round-2/submission/latex/OFL.txt": "7ec15e79c59bc14b86436a17e5eb7926b46cbcaeb08e1a7e6c110b415e6eb2a2",
+        "research/round-2/submission/latex/main.tex": "b82b49b9389e2cb78cec47e42bfbbc6664e39732b80cc16a75e8648eb84c8782",
+        "research/round-2/submission/latex/portfolio_description.tex": "4d6c6d93203255dbf9758bc10309126f19e145189bd713e867da5a8300a3947e"
+      },
+      "saved_pdf": "research/round-2/submission/AMC2_Report.pdf",
+      "saved_pdf_sha256": "efaf0f12f446292733d8fda910f307b11c4fcdfc0ffa9ef6b59be37425bc43a4",
+      "pages": 12,
+      "build_succeeded": true,
+      "rebuilt_pdf_text_matches_saved_pdf": true
+    },
+    {
+      "name": "round-2-portfolio-description",
+      "source": "research/round-2/submission/latex/portfolio_description.tex",
+      "source_files_sha256": {
+        "research/round-2/submission/latex/DMSans-Bold.ttf": "b473854e2f6ab9e741b8dee057db382b0a8baa88fa1cfa8f9df29fb331fc6212",
+        "research/round-2/submission/latex/DMSans-BoldItalic.ttf": "b36f0a1a55bf7b1d0d6a53517450c07ddb0c4fb69ad9d9f553a812bf68d5b583",
+        "research/round-2/submission/latex/DMSans-Italic.ttf": "ff5909f92c368e40f590a30ad884b12ca4177e1e221728f9f0df61ae51daeb67",
+        "research/round-2/submission/latex/DMSans-Regular.ttf": "b9b59abf6cf38ff23af68247bf9669bb2347b5345c75a4255f103eebbc983553",
+        "research/round-2/submission/latex/Meridian-Capital-Official-Logo.png": "dce0330e6b2fc382d1b9d8bbe0eec5ad74d13c62ec06a9368b81ae93e4abb23d",
+        "research/round-2/submission/latex/OFL.txt": "7ec15e79c59bc14b86436a17e5eb7926b46cbcaeb08e1a7e6c110b415e6eb2a2",
+        "research/round-2/submission/latex/main.tex": "b82b49b9389e2cb78cec47e42bfbbc6664e39732b80cc16a75e8648eb84c8782",
+        "research/round-2/submission/latex/portfolio_description.tex": "4d6c6d93203255dbf9758bc10309126f19e145189bd713e867da5a8300a3947e"
+      },
+      "saved_pdf": "research/round-2/submission/AMC2_Portfolio_Description.pdf",
+      "saved_pdf_sha256": "97386bc44bbb5ca9481b5225f541cc76ee735e7214db77f5d15ab2e58a694001",
+      "pages": 3,
+      "build_succeeded": true,
+      "rebuilt_pdf_text_matches_saved_pdf": true
+    },
+    {
+      "name": "round-2-presentation",
+      "source": "research/round-2/submission/presentation/main.tex",
+      "source_files_sha256": {
+        "research/round-2/submission/presentation/DMSans-Bold.ttf": "b473854e2f6ab9e741b8dee057db382b0a8baa88fa1cfa8f9df29fb331fc6212",
+        "research/round-2/submission/presentation/DMSans-BoldItalic.ttf": "b36f0a1a55bf7b1d0d6a53517450c07ddb0c4fb69ad9d9f553a812bf68d5b583",
+        "research/round-2/submission/presentation/DMSans-Italic.ttf": "ff5909f92c368e40f590a30ad884b12ca4177e1e221728f9f0df61ae51daeb67",
+        "research/round-2/submission/presentation/DMSans-Regular.ttf": "b9b59abf6cf38ff23af68247bf9669bb2347b5345c75a4255f103eebbc983553",
+        "research/round-2/submission/presentation/Meridian-Capital-Official-Logo.png": "dce0330e6b2fc382d1b9d8bbe0eec5ad74d13c62ec06a9368b81ae93e4abb23d",
+        "research/round-2/submission/presentation/OFL.txt": "2af94f4fb533be8fa23282eb33e08ca311ddf47c2f32777e2040b282deeec65c",
+        "research/round-2/submission/presentation/main.tex": "bbe597b004405bcc593c8d4bdf85fc772bcc8b60df816591b0a58ef58bbb6101",
+        "research/round-2/submission/presentation/readme.md": "d7b3df5c0761e85e85c57dd75701e9e5e46d3e6f89f1cb281d3fccba7d4e5977",
+        "research/round-2/submission/presentation/rehearsal_notes.md": "cf85c93a37a307fb86a6110df15f763959ca09e563c6bb84ec955fc7f8cf9fe9"
+      },
+      "saved_pdf": "research/round-2/submission/AMC2_Presentation.pdf",
+      "saved_pdf_sha256": "625a01c01591e478b1c3b0b0ef6c8c2543d83816dafb8e756a71cf877ed88a79",
+      "pages": 17,
+      "build_succeeded": true,
+      "rebuilt_pdf_text_matches_saved_pdf": true
+    }
+  ],
+  "notes": [
+    "Both presentation source snapshots were downloaded on 12 November 2026; all downloaded source files are unchanged.",
+    "Saved reports, portfolio description and workbook remain unchanged.",
+    "PDF metadata and rendering details may vary with TeX versions."
+  ]
+}

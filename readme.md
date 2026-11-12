@@ -1,5 +1,7 @@
 The canonical Desktop checkout is meridian-capital. Start with [Round 1](research/round-1/readme.md) or [Round 2 / Checkpoint 2](research/round-2/readme.md) for the notebooks, frozen data, results and final deliverables. Earlier implementations remain in Git history.
 
+Both rounds' reports and presentations include their complete LaTeX sources, fonts and figures. See [Rebuilding the reports and slides](research/documents.md) for the single build command and Overleaf instructions.
+
 # Meridian Capital
 
 Website for Meridian Capital's participation in the Asset Management Challenge 2026 at USI.

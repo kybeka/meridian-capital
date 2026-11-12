@@ -166,7 +166,7 @@ def build(report_path):
 
 <section class="editorial-section" id="methodology" aria-labelledby="methodology-title">{heading('methodology-title', 'From research to the recorded allocation', 'The report and notebooks document the assumptions and calculations behind this page. Stock weights and quantities remain unchanged throughout the later valuation checks.')}
 <ol class="r2-method"><li><h3>Value the companies</h3><p>Choose normalized EPS and a P/E multiple, then examine financial quality, capital allocation, cash flow and catalyst timing.</p></li><li><h3>Translate the cases into alpha inputs</h3><p>Apply a common 50% haircut to annual full-convergence valuation premia. This is a judgment about uncertainty; the short challenge horizon calls for caution.</p></li><li><h3>Size and fund the basket</h3><p>Use alpha divided by residual variance, allocate one-third of NAV to stocks and scale the ETF targets proportionally. Compare all 420 three-to-six-stock combinations from nine researched names.</p></li><li><h3>Check the allocation and enter whole shares</h3><p>Test monthly and daily risk, staggered holding periods, cash assumptions and slower convergence. Use reconciled post-loss NAV and zero fees for the implementation quantities.</p></li></ol>
-<div class="publication-note"><div><h3>Research record</h3><p>Prices at 6 November 2026<br>Report revised 8 November 2026</p></div><div><p>The latest team report uses the same NAV and quantities as this page. Read the full valuation dossiers and source references, or reproduce the calculations from the saved inputs.</p><p><a class="text-link" href="{REPORT}">Final report (PDF) →</a> &nbsp; <a class="text-link" href="{PRESENTATION}">Presentation (PDF) →</a> &nbsp; <a class="text-link" href="{MODEL}">Excel model ↗</a> &nbsp; <a class="text-link" href="{CODE}">Notebooks and data ↗</a></p><p class="source-note">The presentation has 15 main slides and 7 backup slides. <a href="{CODE}/submission/presentation">Editable slides and rehearsal notes ↗</a></p></div></div></section>
+<div class="publication-note"><div><h3>Research record</h3><p>Prices at 6 November 2026<br>Report revised 8 November 2026</p></div><div><p>The latest team report uses the same NAV and quantities as this page. Read the full valuation dossiers and source references, or reproduce the calculations from the saved inputs.</p><p><a class="text-link" href="{REPORT}">Final report (PDF) →</a> &nbsp; <a class="text-link" href="{PRESENTATION}">Presentation (PDF) →</a> &nbsp; <a class="text-link" href="{MODEL}">Excel model ↗</a> &nbsp; <a class="text-link" href="{CODE}">Notebooks and data ↗</a></p><p class="source-note">The presentation has {record['presentation_main_slides']} numbered main slides, an unnumbered thank-you slide and {record['presentation_backup_slides']} backup slides. <a href="{CODE}/submission/presentation">Editable slides and rehearsal notes ↗</a></p></div></div></section>
 </section></main><footer><div><a class="wordmark" href="index.html#main">MERIDIAN<span>CAPITAL</span></a><p>Asset Management Challenge 2026<br>Academic simulation · Not an investment offering</p></div><div class="footer-links"><a href="round-1.html">Round 1 research</a><a href="{CODE}">Round 2 code &amp; data ↗</a><a href="#main">Back to top</a></div></footer>
 <script type="application/json" id="round2-data">{json.dumps({'valuations': valuation_data, 'replay': {k: {q: v[q] for q in ['start_first', 'end_last', 'n_overlapping', 'nonoverlap_n_min', 'nonoverlap_n_max', 'mean_active', 'outperform_rate', 'active_mean_ci_block']} for k, v in replay.items()}})}</script></body></html>'''
     (DIST / 'round-2.html').write_text(page)
@@ -182,8 +182,11 @@ def build(report_path):
         'report': REPORT, 'report_sha256': report_sha, 'report_revision': '2026-11-08',
         'stock_tickers': analysis['stocks'], 'source': CODE,
         'presentation': PRESENTATION, 'presentation_sha256': presentation_sha,
-        'presentation_revision': '2026-11-09', 'presentation_main_slides': 15,
-        'presentation_backup_slides': 7}, indent=2) + '\n')
+        'presentation_revision': record['presentation_revision'],
+        'presentation_main_slides': record['presentation_main_slides'],
+        'presentation_thank_you_slides': record['presentation_thank_you_slides'],
+        'presentation_backup_slides': record['presentation_backup_slides'],
+        'presentation_pdf_pages': record['presentation_pdf_pages']}, indent=2) + '\n')
     print(f'Built Round 2 page; report SHA-256 {report_sha}')
 
 
