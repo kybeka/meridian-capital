@@ -6,7 +6,6 @@ The submitted report and the team's latest presentation.
 - [Presentation (PDF)](presentation.pdf): the latest shared slide deck (16 slides), synced from Overleaf on 12 November 2026.
 - [Report LaTeX source](latex/main.tex): saved report project, including figures and bundled DM Sans fonts.
 - [Presentation LaTeX source](presentation/main.tex): the full slide project, charts, fonts and logo. A [source ZIP](Presentation_Source.zip) is also included.
-
 - [Printable speaking notes](speaking_notes.docx): the prompts prepared for slides 13–15.
 
 ## Editing the report later
