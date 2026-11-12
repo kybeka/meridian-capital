@@ -1,6 +1,6 @@
 The canonical Desktop checkout is meridian-capital. Start with [Round 1](research/round-1/readme.md) or [Round 2 / Checkpoint 2](research/round-2/readme.md) for the notebooks, frozen data, results and final deliverables. Earlier committed versions remain in Git history.
 
-Both rounds' reports and presentations include their complete LaTeX sources, fonts and figures. See [Rebuilding the reports and slides](research/documents.md) for the single build command and Overleaf instructions.
+The Round 1 and Round 2 reports and presentations include their complete LaTeX sources, fonts and figures. See [Rebuilding the reports and slides](research/documents.md) for the single build command and Overleaf instructions.
 
 # Meridian Capital
 
@@ -37,6 +37,10 @@ The [Round 1 research folder](research/round-1/readme.md) contains an executed J
 ## Round 2 code
 
 The [Checkpoint 2 research folder](research/round-2/readme.md) follows the Round 1 layout. Its main notebook explains the post-loss budget, valuations, alphas, six-stock selection, information ratio, historical tests, risk and zero-fee share quantities. A companion notebook completes the FCFF/FCFE, implied-growth and return-timing checks at unchanged holdings. Saved inputs, results, the Excel model, submitted reports and editable report/slide sources are included. The team also edits the documents in Overleaf. The [post-submission checks](research/round-2/post-submission/readme.md) contain the beta audit and dividend discount models. The analysis keeps the weak historical performance and daily risk findings visible.
+
+## Round 3 setup
+
+The [Round 3 starter folder](research/round-3/readme.md) has places for data, shared code, results and deliverables, including report and slide sources. The analysis will be set up once the Round 3 brief is available.
 
 ## Round 2 website
 
