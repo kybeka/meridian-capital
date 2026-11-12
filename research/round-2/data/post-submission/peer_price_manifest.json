@@ -1,0 +1,138 @@
+{
+  "purpose": "Archived peer prices for the 10 November beta audit",
+  "files": [
+    {
+      "ticker": "ABBV",
+      "path": "data/post-submission/peer_prices/ABBV.json",
+      "sha256": "d57102cb13f3e2fde64d6ac59f3528cd29aa80aeb400f71ce2110f426faa5dd4",
+      "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/ABBV?period1=1262304000&period2=1793923200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_utc": "2026-11-06T12:35:14.148268+00:00"
+    },
+    {
+      "ticker": "ACI",
+      "path": "data/post-submission/peer_prices/ACI.json",
+      "sha256": "e42deaf759ca6aadebad64303deb0d9d3f8ec3dfc757febfbe58611cdad1fe95",
+      "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/ACI?period1=1630454400&period2=1793923200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_utc": "2026-11-06T02:08:16.498501+00:00"
+    },
+    {
+      "ticker": "AMGN",
+      "path": "data/post-submission/peer_prices/AMGN.json",
+      "sha256": "05fdc786688180c8428e572796673dbf214d527cc1d1cf6e370c6ce3ba8d1c3a",
+      "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/AMGN?period1=1262304000&period2=1793923200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_utc": "2026-11-06T12:35:14.314312+00:00"
+    },
+    {
+      "ticker": "CAG",
+      "path": "data/post-submission/peer_prices/CAG.json",
+      "sha256": "4262c7c8dc2fd0663b97dbd6509dc23503cc2328cdbbffeb8a6d81acf133464c",
+      "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/CAG?period1=1262304000&period2=1793923200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_utc": "2026-11-06T12:35:11.708656+00:00"
+    },
+    {
+      "ticker": "COP",
+      "path": "data/post-submission/peer_prices/COP.json",
+      "sha256": "0bb4e5add036d5826be45df3c848fc27c33b26d46321773a766fe0b081329797",
+      "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/COP?period1=1630454400&period2=1793923200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_utc": "2026-11-06T02:30:54.925395+00:00"
+    },
+    {
+      "ticker": "CRM",
+      "path": "data/post-submission/peer_prices/CRM.json",
+      "sha256": "db0a8a6c628a418505943e042754e397d95b8fd25605b3fae720881f8d7bd7f2",
+      "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/CRM?period1=1630454400&period2=1793923200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_utc": "2026-11-06T02:08:15.363135+00:00"
+    },
+    {
+      "ticker": "CSCO",
+      "path": "data/post-submission/peer_prices/CSCO.json",
+      "sha256": "ff3f5ef66fc653a2b6210a774e5f7770b8e6bd172ecb2fa574187cd1103b323d",
+      "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/CSCO?period1=1630454400&period2=1793923200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_utc": "2026-11-06T02:08:14.940358+00:00"
+    },
+    {
+      "ticker": "CVX",
+      "path": "data/post-submission/peer_prices/CVX.json",
+      "sha256": "f44e4ff1b3392614bb37ce2e35b046fedbd75e49eb3b1ec3c728e37f06ddc304",
+      "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/CVX?period1=1630454400&period2=1793923200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_utc": "2026-11-06T02:30:54.528309+00:00"
+    },
+    {
+      "ticker": "DELL",
+      "path": "data/post-submission/peer_prices/DELL.json",
+      "sha256": "433c84d0059bd67b57569fe3808784fe8f443e056af795badd987c082af0e1ba",
+      "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/DELL?period1=1630454400&period2=1793923200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_utc": "2026-11-06T02:08:16.113897+00:00"
+    },
+    {
+      "ticker": "EOG",
+      "path": "data/post-submission/peer_prices/EOG.json",
+      "sha256": "572a814e021cefc16b277422d0b21a7a1eba8a0cd7b24834a73c2c5e9d3a985f",
+      "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/EOG?period1=1630454400&period2=1793923200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_utc": "2026-11-06T02:30:55.342088+00:00"
+    },
+    {
+      "ticker": "GILD",
+      "path": "data/prices/GILD.json",
+      "sha256": "43aa4025c6d373944980f831b65279d8dbf2a219cea5338065146a0510108c99",
+      "request_url": null,
+      "retrieved_utc": null
+    },
+    {
+      "ticker": "HPE",
+      "path": "data/post-submission/peer_prices/HPE.json",
+      "sha256": "6e40dd12e93457e1d60a02d0336580d42a95b14a6b323c508fb618d34bb99362",
+      "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/HPE?period1=1630454400&period2=1793923200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_utc": "2026-11-06T02:08:15.925387+00:00"
+    },
+    {
+      "ticker": "INTU",
+      "path": "data/prices/INTU.json",
+      "sha256": "6942dc13723e5754ef02fd789b06499bad0fd941eacda86098cd278601b1f236",
+      "request_url": null,
+      "retrieved_utc": null
+    },
+    {
+      "ticker": "MRK",
+      "path": "data/post-submission/peer_prices/MRK.json",
+      "sha256": "8bd0555586925a047a1c53681f89f17014145ee820b9794a16208b921b041233",
+      "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/MRK?period1=1262304000&period2=1793923200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_utc": "2026-11-06T12:35:13.833869+00:00"
+    },
+    {
+      "ticker": "ORCL",
+      "path": "data/post-submission/peer_prices/ORCL.json",
+      "sha256": "22dfcb049c9ace8b706c9bb9d710a4dd2c8d0481fe0d7fc95c8cb09307448a52",
+      "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/ORCL?period1=1630454400&period2=1793923200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_utc": "2026-11-06T02:08:15.567242+00:00"
+    },
+    {
+      "ticker": "SJM",
+      "path": "data/post-submission/peer_prices/SJM.json",
+      "sha256": "2824ae7df6091469ec59cdc2dfc061247e63bb9eb92b0d1cbceb50f3fc1fef2e",
+      "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/SJM?period1=1262304000&period2=1793923200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_utc": "2026-11-06T12:35:11.447740+00:00"
+    },
+    {
+      "ticker": "TGT",
+      "path": "data/post-submission/peer_prices/TGT.json",
+      "sha256": "dbc180a56289a2bfbe326f7fe07184e373714834b3b1f0aee5a1a7895e3e2790",
+      "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/TGT?period1=1630454400&period2=1793923200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_utc": "2026-11-06T02:08:16.350438+00:00"
+    },
+    {
+      "ticker": "TSN",
+      "path": "data/post-submission/peer_prices/TSN.json",
+      "sha256": "cf03d0e8256770b5c266c925bb51a427ff60633000ed657ad6a7faf99d25118e",
+      "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/TSN?period1=1262304000&period2=1793923200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_utc": "2026-11-06T12:35:11.844711+00:00"
+    },
+    {
+      "ticker": "WMT",
+      "path": "data/post-submission/peer_prices/WMT.json",
+      "sha256": "ae26f325a14c0e3bb4eeee24bc02d7d017ee75d2a1099550afdcecb4d1dbf47e",
+      "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/WMT?period1=1262304000&period2=1793923200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_utc": "2026-11-06T12:35:15.452923+00:00"
+    }
+  ]
+}

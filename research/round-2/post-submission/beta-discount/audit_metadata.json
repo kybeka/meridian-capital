@@ -1,0 +1,31 @@
+{
+  "valuation_date": "2026-11-06",
+  "audit_date": "2026-11-10",
+  "monthly_sample": [
+    "2021-11-30",
+    "2026-10-31"
+  ],
+  "source_root": "research/round-2",
+  "extra_peer_prices": "data/post-submission/peer_prices",
+  "all_six_recorded_market_betas_and_base_cash_values_reproduced": true,
+  "all_eighteen_recorded_base_and_equity_rate_scenarios_reproduced": true,
+  "all_nineteen_peer_regressions_have_sixty_observations": true,
+  "interpretation": [
+    "Beta uncertainty intervals are historical regression diagnostics, not confidence intervals for future fair value.",
+    "Rate shocks, shrinkage and raw peer medians are sensitivity scenarios, not validated replacement discount rates.",
+    "Raw peer equity betas are not adjusted for leverage, cash holdings or business mix and are not bottom-up betas.",
+    "Daily252 changes both frequency and lookback; weekly uses approximately the same calendar period as the monthly regression.",
+    "Each cash valuation holds starting FCFF, growth, debt cost and balances unchanged while changing the equity hurdle and recalculating WACC.",
+    "No submitted workbook, report, notebook or holdings have been changed."
+  ],
+  "source_sha256": {
+    "results/valuation/inputs.json": "1ecedb3f434ef3b6d41c5ad5099adb3912410f2a54571330fbb96491a4378f04",
+    "results/valuation/valuations.csv": "b6f8587f31670f1ad74532d983fadd12daca96b0d2a5e8b77b46c7f482ce976a",
+    "results/valuation/sensitivities.csv": "bad3da5524de77e82dad9b779b561962c964842732ceccdf52814d45101c7820",
+    "data/policies/valuation_policy_v4.json": "a5d7298fb836e6b432e8e501ca9749d53c1cc4f93531221696aebf61943619c9",
+    "data/input_manifest.json": "b4b8981c7266ca1fdefdffb3eaf222c5937c7ac1b84bfae69ce7dcb3c60b02a1",
+    "data/fred_history.csv": "1f2fd956a5679f5c447814ca71e0b91d123852fe041f464b37dfee663fdd94d7",
+    "data/peer_sets.json": "51c72d39ca6456322d6ad7b0566524fbf937fae29d6f4d6780cce2c8d09f0c1d",
+    "data/post-submission/peer_price_manifest.json": "a23fcffe5b2d27e508757e854069c24eccf32883a71c7356414a215e8103ea72"
+  }
+}
