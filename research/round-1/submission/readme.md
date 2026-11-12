@@ -7,6 +7,8 @@ The submitted report and the team's latest presentation.
 - [Report LaTeX source](latex/main.tex): saved report project, including figures and bundled DM Sans fonts.
 - [Presentation LaTeX source](presentation/main.tex): the full slide project, charts, fonts and logo. A [source ZIP](Presentation_Source.zip) is also included.
 
+- [Printable speaking notes](speaking_notes.docx): the prompts prepared for slides 13–15.
+
 ## Editing the report later
 
 Open `latex/main.tex` in Overleaf with the `fonts/` and `figures/` folders alongside it. Select XeLaTeX as the compiler. Alternatively, from the `latex` directory, run `latexmk -xelatex main.tex` with a suitable TeX installation.
