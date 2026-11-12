@@ -147,6 +147,8 @@
   "portfolio_description_pdf": "AMC2_Portfolio_Description.pdf",
   "presentation_pdf": "AMC2_Presentation.pdf",
   "presentation_url": "https://www.overleaf.com/project/6ae9e2672f6ea8c4f0fddc87",
-  "presentation_main_slides": 15,
-  "presentation_backup_slides": 7
+  "presentation_main_slides": 14,
+  "presentation_backup_slides": 2,
+  "presentation_thank_you_slides": 1,
+  "presentation_pdf_pages": 17
 }

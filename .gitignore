@@ -25,3 +25,6 @@ research/round-2/submission/presentation-draft/*.snm
 research/round-2/submission/presentation-draft/*.toc
 
 research/round-2/submission/presentation-draft/main.pdf
+
+# Local drafts and consolidation records.
+_local/
