@@ -15,7 +15,7 @@ NY = ZoneInfo('America/New_York')
 
 
 def apply_verified_distributions(ticker, history, ledger):
-    """Fill missing vendor events once; reject a conflicting reported amount."""
+    """Keep documented precision when Yahoo reports the same event to three decimals."""
     dividends = history['dividends'].copy()
     for event in ledger:
         if event['ticker'] != ticker:
@@ -24,8 +24,12 @@ def apply_verified_distributions(ticker, history, ledger):
         day = event['ex_date']
         if not math.isfinite(amount) or amount < 0:
             raise ValueError(f'{ticker}: invalid verified distribution on {day}')
-        if day in dividends and not math.isclose(dividends[day], amount, rel_tol=0, abs_tol=1e-8):
-            raise ValueError(f'{ticker}: vendor and issuer distributions conflict on {day}')
+        if day in dividends:
+            vendor = dividends[day]
+            exact_match = math.isclose(vendor, amount, rel_tol=0, abs_tol=1e-8)
+            rounded_match = math.isclose(vendor, round(amount, 3), rel_tol=0, abs_tol=1e-8)
+            if not exact_match and not rounded_match:
+                raise ValueError(f'{ticker}: vendor distribution {vendor} and documented amount {amount} conflict on {day}')
         dividends[day] = amount
     return {**history, 'dividends': dividends}
 

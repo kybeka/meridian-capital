@@ -51,8 +51,8 @@ within the existing $1 tolerance for published rounding.
 
 `peer-distributions.json` supplements vendor events with documented November
 distributions. It distinguishes issuer, peer-reported Bloomberg, and cross-checked
-public distribution sources. Conflicting vendor amounts fail validation rather
-than being silently overwritten. These additions also improve the historical
+public distribution sources. Yahoo events that exactly match the documented amount rounded to three decimals
+retain the documented full precision. Other conflicting vendor amounts fail validation. These additions also improve the historical
 peer comparison, where the vendor had omitted November bond ETF distributions.
 
 Peer Round 2 returns are linked to the reconstructed Round 1 closing index.

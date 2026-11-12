@@ -40,6 +40,23 @@ class AccountingTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'conflict'):
             prices.apply_verified_distributions('ETF', self.history['ETF'], ledger)
 
+    def test_vendor_rounding_preserves_documented_dividend_precision(self):
+        for ticker, exact, rounded in [('STIP', .292917, .293), ('VGSH', .1889, .189),
+                                       ('BIL', .30849, .308), ('TIP', .161241, .161)]:
+            with self.subTest(ticker=ticker):
+                history = {'closes': {}, 'dividends': {'2026-11-02': rounded}, 'splits': []}
+                ledger = [{'ticker': ticker, 'ex_date': '2026-11-02', 'amount': exact}]
+                corrected = prices.apply_verified_distributions(ticker, history, ledger)
+                self.assertEqual(corrected['dividends']['2026-11-02'], exact)
+                self.assertEqual(prices.apply_verified_distributions(ticker, corrected, ledger), corrected)
+                self.assertEqual(history['dividends']['2026-11-02'], rounded)
+
+    def test_small_non_rounding_discrepancy_is_still_rejected(self):
+        ledger = [{'ticker': 'STIP', 'ex_date': '2026-11-02', 'amount': .292917}]
+        for vendor in [.2928, .294, 0, float('nan')]:
+            with self.subTest(vendor=vendor), self.assertRaisesRegex(ValueError, 'conflict'):
+                prices.apply_verified_distributions('STIP', {'dividends': {'2026-11-02': vendor}}, ledger)
+
     def test_close_precision_matches_notebook(self):
         self.history['ETF']['closes']['2026-10-19'] = 100.999998
         self.assertEqual(prices.calculate(self.positions, self.history)[1][1], '1020.00')
