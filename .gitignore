@@ -28,3 +28,16 @@ research/round-2/submission/presentation-draft/main.pdf
 
 # Local drafts and consolidation records.
 _local/
+
+# Rebuilt documents and temporary LaTeX files.
+/build/
+research/round-*/submission/**/*.aux
+research/round-*/submission/**/*.fdb_latexmk
+research/round-*/submission/**/*.fls
+research/round-*/submission/**/*.log
+research/round-*/submission/**/*.nav
+research/round-*/submission/**/*.out
+research/round-*/submission/**/*.snm
+research/round-*/submission/**/*.synctex.gz
+research/round-*/submission/**/*.toc
+research/round-*/submission/**/*.xdv

@@ -38,7 +38,7 @@
   "entry_date": "2026-11-07",
   "presentation": {
     "url": "https://www.overleaf.com/project/6ae9e2672f6ea8c4f0fddc87",
-    "verified_on": "2026-11-09",
+    "verified_on": "2026-11-12",
     "main_slides": 14,
     "backup_slides": 2,
     "physical_pages": 17,
@@ -46,11 +46,16 @@
     "live_compile_warnings": 0,
     "font": "DM Sans",
     "pdf": "submission/AMC2_Presentation.pdf",
-    "pdf_sha256": "1afc77de2cd13873cd99cbf0bd487ae2df99ced4f2ecdbcb43710d2f4996b47d",
-    "source_sha256": "613c471f048646d4b1a51afa522a260e6bab9aa7af049af03825525672e22951",
+    "pdf_sha256": "625a01c01591e478b1c3b0b0ef6c8c2543d83816dafb8e756a71cf877ed88a79",
+    "source_sha256": "a8171e80d6c7d35212dbe24a527d1ef2c3a08e48ddabe2f1a234c09e59b4adf9",
     "speaker_notes": "submission/presentation/rehearsal_notes.md",
     "thank_you_slides": 1,
-    "team_revision_date": "2026-11-09",
-    "repository_sync_date": "2026-11-12"
+    "repository_sync_date": "2026-11-12",
+    "source_download_date": "2026-11-12",
+    "local_compile_errors": 0,
+    "local_compile_warnings": 0,
+    "last_live_compile_verified_on": "2026-11-09",
+    "source_snapshot_date": "2026-11-12",
+    "overleaf_last_modified_display_on_snapshot": "2 days ago by Katherine Lerner-Teves"
   }
 }
