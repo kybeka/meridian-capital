@@ -8,8 +8,18 @@ Open `round1_analysis.ipynb` for the allocation method, formulas, input charts, 
 - `results/`: main calculation tables and charts. Charts are saved as PNG and PDF for use in the report.
 - `studies/`: supporting calculation tables and charts.
 
-Open Jupyter from this folder so the relative paths resolve. Package requirements are in `requirements.txt`.
+Open Jupyter from this folder so the relative paths resolve. From the repository root, using the existing environment on this Mac:
+
+```bash
+conda activate base
+cd research/round-1
+jupyter lab
+```
+
+Run `round1_analysis.ipynb` first, then `supplementary_studies.ipynb`. Each can also run independently from the saved repository inputs. Package requirements are in [requirements.txt](requirements.txt). Rerunning refreshes tables and charts in `results/` and `studies/`; PDF metadata can change when a chart is regenerated.
+
+Both notebooks passed a fresh-kernel check on **12 November 2026**: 28 and 45 code cells respectively, with zero errors and no external project files or data downloads.
 
 ## Final submission materials
 
-The [submission folder](submission/) contains the final report and presentation PDFs, plus the report’s LaTeX project, figures and fonts.
+The [submission folder](submission/readme.md) contains the submitted report, latest shared presentation, printable speaking notes and complete LaTeX projects for both documents, including fonts, logo and figures. See [Rebuilding the reports and slides](../documents.md) for the single build command. The report has 13 pages and the presentation has 16.

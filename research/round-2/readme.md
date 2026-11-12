@@ -10,6 +10,20 @@ The layout follows [Round 1](../round-1/readme.md): one main notebook, frozen in
 - [code/](code/readme.md): shared cash-flow and validation calculations used by the companion notebook.
 - [post-submission/](post-submission/readme.md): beta/discount-rate audit and dividend discount checks run on 10 November, with scripts, results and archived peer prices. These checks were added after submission and leave the submitted files and holdings unchanged.
 
+## Running the notebooks
+
+From the repository root, using the existing environment on this Mac:
+
+```bash
+conda activate base
+cd research/round-2
+jupyter lab
+```
+
+Run the main notebook first, then the valuation companion. Each can also run independently from the saved inputs. Both passed a fresh-kernel check on **12 November 2026**: 25 and 16 code cells respectively, with zero errors and no external project files or data downloads. The main notebook displays recomputed results; the companion refreshes tables under `results/valuation/`.
+
+The [document guide](../documents.md) rebuilds the report, portfolio description and slides using the saved LaTeX, fonts and figures. It also covers Round 1.
+
 ## The decision
 
 The original six-ETF SAA remains the benchmark. Our funding choice scales each ETF target to two-thirds and allocates one-third of the **post-loss** portfolio value to **ADBE, KR, HRL, BMY, XOM and HPQ**. Stock proportions follow positive forward alpha divided by residual variance. Selection is explained using information ratio; Sharpe reporting and the theoretical SAA link are separate supplementary calculations.
@@ -18,7 +32,7 @@ The frozen price cutoff is **6 November 2026**. Calibration uses **60 complete m
 
 Implementation uses **zero fees and no reserve**. The verified closing-price NAV is **$97,115,068.58**, including the VGSH and STIP distributions paid before 6 November; the one-third stock budget is **$32,371,689.53**. The final share counts include the additional SPY and Adobe purchases reported by the team: **22,964 SPY**, **18,865 ADBE**, and **$116.05 residual cash**. Bloomberg entry date is **7 November 2026**, as confirmed by the team; the price date is **6 November close**. The notebook calculates all twelve quantities. The separate reconciliation record compares them with the Excel model and website. The [cross-artifact reconciliation](../tracking/nav-reconciliation-2026-11-06.json) checks these figures against the website; [issuer evidence](../tracking/dividend-evidence/verification.json) records the distribution amounts and dates.
 
-The final [team report](submission/AMC2_Report.pdf) contains ten content pages plus the cover and contents page. The [portfolio description](submission/AMC2_Portfolio_Description.pdf) contains the full holdings, trades and the team's security profiles. Editable LaTeX is in [submission/latex](submission/latex). Overleaf remains the shared editing project. These files are ready for the team to submit; no email has been sent.
+The final [team report](submission/AMC2_Report.pdf) contains ten content pages plus the cover and contents page. The [portfolio description](submission/AMC2_Portfolio_Description.pdf) contains the full holdings, trades and the team's security profiles. Editable LaTeX is in [submission/latex](submission/latex). Overleaf remains the shared editing project. The team has confirmed submission. The report and portfolio description are also published on the fund website; the latest presentation and its editable source are included in the submission folder.
 
 ## What the evidence supports
 

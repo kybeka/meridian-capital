@@ -7,4 +7,4 @@ The companion notebook imports four small modules:
 - `replay_methods.py`: staggered holding periods, non-overlapping offsets, block bootstrap and chronological risk estimates.
 - `valuation_validation.py`: reruns those tests for the agreed weights, entered holdings, SAA and simple controls.
 
-All data comes from the repository. No live downloads or trading calls are made. Monetary company inputs use USD millions; per-share prices use USD. The original EPS/P-E selection and the conservative cash-flow sensitivity remain distinct.
+All data comes from the repository. No live downloads or trading calls are made. Monetary company inputs use USD millions; per-share prices use USD. The original EPS/P-E selection and the conservative cash-flow sensitivity remain distinct. The additional [beta and dividend checks](../post-submission/readme.md) use these shared inputs and valuation functions from separate scripts; they are labelled as post-submission work.
