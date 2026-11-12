@@ -39,15 +39,18 @@
   "presentation": {
     "url": "https://www.overleaf.com/project/6ae9e2672f6ea8c4f0fddc87",
     "verified_on": "2026-11-09",
-    "main_slides": 15,
-    "backup_slides": 7,
-    "physical_pages": 22,
+    "main_slides": 14,
+    "backup_slides": 2,
+    "physical_pages": 17,
     "live_compile_errors": 0,
     "live_compile_warnings": 0,
     "font": "DM Sans",
     "pdf": "submission/AMC2_Presentation.pdf",
-    "pdf_sha256": "40533f581ef3de5bef1d4bcdb18040dca0f8b30a487dd39c93476aa76aaa9b0a",
-    "source_sha256": "241e0c096982fdfcc21d165883fe3c65b93a9a8466363d01347265a484b678c0",
-    "speaker_notes": "submission/presentation/rehearsal_notes.md"
+    "pdf_sha256": "1afc77de2cd13873cd99cbf0bd487ae2df99ced4f2ecdbcb43710d2f4996b47d",
+    "source_sha256": "613c471f048646d4b1a51afa522a260e6bab9aa7af049af03825525672e22951",
+    "speaker_notes": "submission/presentation/rehearsal_notes.md",
+    "thank_you_slides": 1,
+    "team_revision_date": "2026-11-09",
+    "repository_sync_date": "2026-11-12"
   }
 }
