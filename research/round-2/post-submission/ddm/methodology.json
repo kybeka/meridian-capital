@@ -1,0 +1,21 @@
+{
+  "audit_date": "2026-11-10",
+  "valuation_reference_date": "2026-11-06",
+  "source": "results/valuation/inputs.json",
+  "source_sha256": "1ecedb3f434ef3b6d41c5ad5099adb3912410f2a54571330fbb96491a4378f04",
+  "conventions": [
+    "Use saved current annualized dividend rates as D0, with next annual dividend D1=D0*(1+g). This is an annual timing approximation.",
+    "The saved dividend rates are not newly verified live declarations or guaranteed next-year payments.",
+    "Use the submitted equity discount rate k, not WACC. Its beta uncertainty remains present in every DDM result.",
+    "Uniform 2% perpetual dividend growth is an illustrative common scenario, not an independently estimated forecast.",
+    "The saved growth assumption was 2% for KR, HRL, XOM and HPQ, and 0% for BMY. These were cash-retention scenario inputs, not a standalone submitted DDM.",
+    "No buyback amount, cash balance or retained earnings is added separately. Their effect on future per-share dividends would require an explicit payout/share-count model.",
+    "Implied growth solves for the assumption needed to match entry or target; it is not evidence that such growth is achievable.",
+    "The original report, workbook, notebooks and holdings remain unchanged."
+  ],
+  "checks": {
+    "constant_growth_equals_two_stage_when_growth_matches": true,
+    "all_implied_growth_roots_reprice_entry_and_target": true,
+    "higher_equity_discount_rates_reduce_values": true
+  }
+}

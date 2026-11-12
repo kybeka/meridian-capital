@@ -8,6 +8,7 @@ The layout follows [Round 1](../round-1/readme.md): one main notebook, frozen in
 - [results/](results/readme.md): calculation tables, charts, frozen comparison results and execution checks. Percentages in CSV files are decimal fractions unless the column says otherwise.
 - [submission/](submission/readme.md): the report, portfolio description, Excel model, editable LaTeX and the final presentation and rehearsal notes.
 - [code/](code/readme.md): shared cash-flow and validation calculations used by the companion notebook.
+- [post-submission/](post-submission/readme.md): beta/discount-rate audit and dividend discount checks run on 10 November, with scripts, results and archived peer prices. These checks were added after submission and leave the submitted files and holdings unchanged.
 
 ## The decision
 
