@@ -23,7 +23,7 @@
     if (!rows.length) throw Error('Empty valuations');
     const contributionData = contributionResult.status === 'fulfilled' ? contributionResult.value : null;
     const contributionRows = new Map();
-    const holdingTickers = ['SPY','EEMV','DBC','VGSH','SCHD','STIP','ADBE','KR','HRL','BMY','XOM','HPQ'];
+    const holdingTickers = Object.freeze(['SPY','EEMV','DBC','VGSH','SCHD','STIP','ADBE','KR','HRL','BMY','XOM','HPQ']);
     if (contributionData?.reference_date === rows[0].date && Array.isArray(contributionData.rows)) {
       for (const entry of contributionData.rows) {
         const matching = rows.find(r => r.date === entry.date);
@@ -97,7 +97,7 @@
           const magnitude = Math.max(...Object.values(values).map(Math.abs), .000001);
           const title = document.createElement('p'); title.textContent = contributionMode === 'since' ? 'Return drivers since inception' : 'Return drivers for this close'; section.append(title);
           const list = document.createElement('div'); list.className = 'contribution-list';
-          const visibleTickers = data.dates[selected] <= '2026-11-06' ? holdingTickers.slice(0,6) : holdingTickers;
+          const visibleTickers = data.dates[selected] <= '2026-11-06' ? holdingTickers.slice(0,6) : [...holdingTickers];
           tooltip.classList.toggle('expanded-holdings', visibleTickers.length > 6);
           visibleTickers.sort((a,b) => values[b]-values[a]).forEach(t => {
             const row = document.createElement('div'); row.className = 'contribution-row';
