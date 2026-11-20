@@ -23,8 +23,19 @@ jobs:
       - name: Fetch completed daily prices
         run: python scripts/update_challenge_prices.py
       - name: Refresh peer comparison
+        id: peers
         continue-on-error: true
-        run: python scripts/update_peer_prices.py
+        run: |
+          for delay in 0 15 30; do
+            sleep "$delay"
+            if python scripts/update_peer_prices.py; then exit 0; fi
+          done
+          exit 1
+      - name: Report delayed peer data
+        if: steps.peers.outcome == 'failure'
+        run: |
+          echo "::warning::Peer prices are incomplete. Meridian updated; comparison retains its last complete valuation."
+          echo "Peer comparison refresh failed after three attempts. The site shows the comparison date separately from Meridian's latest valuation." >> "$GITHUB_STEP_SUMMARY"
       - name: Save validated valuations
         run: |
           git add dist/data/challenge-valuations.csv dist/data/peer-valuations.json dist/data/portfolio-contributions.json

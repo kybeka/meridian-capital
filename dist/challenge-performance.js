@@ -41,9 +41,6 @@
     if (peers && (!Array.isArray(peers.dates) || !peers.dates.length || !Array.isArray(peers.series) || peers.series.length !== 5 || peers.dates.some((d,i) => !/^\d{4}-\d{2}-\d{2}$/.test(d) || (i && d <= peers.dates[i-1])) || peers.series.some(s => s.values.length !== peers.dates.length || s.values.some(v => !Number.isFinite(v) || v <= 0) || Math.abs(s.values[0]-100) > .0001))) peers = null;
     const peerLabels = {sixfold: 'Team A', swissstreet: 'Team B', matterhorn: 'Team C', rivemont: 'Team D'};
     if (peers) peers.series = peers.series.map(series => ({...series, name: peerLabels[series.id] || series.name}));
-    document.querySelector('#challenge-return').textContent = pct(last.nav / first.nav * 100 - 100);
-    document.querySelector('#challenge-asof').textContent = `Meridian · Since ${dateLabel(first.date)} · Valued ${dateLabel(last.date)}`;
-    document.querySelector('#challenge-nav').textContent = `${new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(last.nav)} portfolio value, including cash and dividend receivables`;
     document.querySelector('#tracking-status').textContent = 'Public-price estimate';
     const chart = document.querySelector('#challenge-chart');
     chart.setAttribute('viewBox','0 0 1000 350');
@@ -120,8 +117,21 @@
       tooltip.style.left = Math.max(4, Math.min(left, plot.clientWidth-tooltip.offsetWidth-4)) + 'px';
       tooltip.style.top = '12px';
     }
+    function updateSummary(view) {
+      const date = view.dates.at(-1);
+      const value = view.series.find(series => series.id === 'meridian').values.at(-1);
+      document.querySelector('#challenge-return').textContent = pct(value - 100);
+      document.querySelector('#challenge-asof').textContent = `Meridian · Since ${dateLabel(first.date)} · Valued ${dateLabel(date)}`;
+      document.querySelector('#challenge-nav').textContent = `${new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(first.nav * value / 100)} portfolio value, including cash and dividend receivables`;
+      const notice = document.querySelector('#peer-availability');
+      notice.hidden = Boolean(peers) && !(comparing && date < last.date);
+      notice.textContent = comparing && date < last.date
+        ? `Comparison awaiting complete prices: all lines and the headline use ${dateLabel(date)}. The Meridian tab is updated through ${dateLabel(last.date)}.`
+        : 'Peer comparison is temporarily unavailable. Meridian’s tracker is shown below.';
+    }
     function render() {
       data = comparing ? peers : own;
+      updateSummary(data);
       selected = Math.min(selected, data.dates.length-1);
       shown = data.series.map((s,i) => ({...s,colour:colours[i],pattern:patterns[i]})).filter(s => !comparing || enabled.has(s.id));
       const width = chart.clientWidth < 600 ? Math.max(340, chart.clientWidth) : 1000;
